@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stdout": "2026-11-07T10:45:40.347264+00:00 cks4u kernel: amdgpu 0000:03:00.0: MES(1) failed to respond to msg=INVALIDATE_TLBS\n2026-11-07T10:45:43.863257+00:00 cks4u kernel: amdgpu 0000:e3:00.0: MES(1) failed to respond to msg=INVALIDATE_TLBS\n2026-11-07T10:45:44.078206+00:00 cks4u kernel: amdgpu 0000:73:00.0: MES(1) failed to respond to msg=INVALIDATE_TLBS\n2026-11-07T10:45:44.135385+00:00 cks4u kernel: amdgpu 0000:83:00.0: MES(1) failed to respond to msg=INVALIDATE_TLBS\n2026-11-07T10:46:02.274263+00:00 cks4u kernel: workqueue: delayed_fput hogged CPU for >10000us 8 times, consider switching to WQ_UNBOUND\n",
+  "stderr": ""
+}

@@ -1,0 +1,38 @@
+{
+  "baseline_compile_passed": true,
+  "candidate_compile_passed": true,
+  "kernel": "6.8.0-147-generic",
+  "compiler": "gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "module_info": {
+    "name": "amdgpu",
+    "version": "7.1.9.31600000",
+    "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+    "signer": "",
+    "license": "GPL and additional rights"
+  },
+  "changed_build_outputs": [
+    "amd/amdgpu/amdgpu.ko",
+    "amd/amdgpu/mes_v12_0.o"
+  ],
+  "module_symvers_unchanged": true,
+  "functional_patch_changed_files": [
+    "amd/amdgpu/mes_v12_0.c"
+  ],
+  "mock_passed": 18,
+  "mock_failed": 0,
+  "driver_installed": false,
+  "driver_loaded": false,
+  "driver_signed": false,
+  "gpu_validation_of_patch": false,
+  "notes": [
+    "Compiler-name warning only: kernel used x86_64-linux-gnu-gcc-13 and build used gcc-13, with identical Ubuntu 13.3.0-6ubuntu2~24.04.1 version.",
+    "BTF generation skipped because no private vmlinux was provided; all nine .ko modules linked.",
+    "The candidate compile was incremental after a complete pristine baseline build; only MES object and amdgpu module content changed."
+  ],
+  "checkpatch_errors": 0,
+  "checkpatch_warnings": 0,
+  "patch_applies_without_fuzz": true,
+  "host_state_unchanged": true,
+  "file_hashes_checked": 14,
+  "patch_sha256": "6fb0880475aaee42cd9ea2e4bde904531202e3b1094f88d0fd12883d5c0b6c29"
+}

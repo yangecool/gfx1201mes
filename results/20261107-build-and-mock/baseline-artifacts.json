@@ -1,0 +1,48 @@
+{
+  "artifacts": {
+    "amd/amdgpu/amdgpu.ko": {
+      "bytes": 868466976,
+      "sha256": "f3c23e6a87ee6027c1bb678d23ad2ae4d399760db4eec533a481d7e8d268406f"
+    },
+    "amd/amdkcl/amdkcl.ko": {
+      "bytes": 2177440,
+      "sha256": "06f7076fe638f15c6923ef9bb2815eed6871bd35c94699a230d6255659b35a99"
+    },
+    "amd/amdxcp/amdxcp.ko": {
+      "bytes": 350544,
+      "sha256": "42c3933978645df8e62d2fbc4df22a7674db5ca8ae48073e2fe5cdf95eb42d3a"
+    },
+    "amddrm_buddy.ko": {
+      "bytes": 407320,
+      "sha256": "8341256f11575db9046e7f1e64afbbed305c66b45d3b372156cebba0d2d83f50"
+    },
+    "amddrm_exec.ko": {
+      "bytes": 427888,
+      "sha256": "4f445a3b369233a409f5c71aeb73bcc2a18a29c2809f5be6c56ae1b9524a69ae"
+    },
+    "amddrm_suballoc_helper.ko": {
+      "bytes": 386880,
+      "sha256": "8d8152c9de09debbca2d37620a69df5242b400b1c48ec1306e4e11e6b6023d53"
+    },
+    "amddrm_ttm_helper.ko": {
+      "bytes": 420712,
+      "sha256": "838331889a2d0a242aea1025fea83973342fde2b2a3b4b570f169bb9d3d0a801"
+    },
+    "scheduler/amd-sched.ko": {
+      "bytes": 1527944,
+      "sha256": "ecf67a4397572f1bd2dbc515afc00d9aea14539e24800e9d96e8dbafc883f535"
+    },
+    "ttm/amdttm.ko": {
+      "bytes": 4105056,
+      "sha256": "bf60c59792a34098a4b1201f9b6e56978f55bfb1aac8fb8aa649666935b46c46"
+    },
+    "Module.symvers": {
+      "bytes": 24816,
+      "sha256": "b3b6fba59e727fe92775778cf98774c71c9263e842934bab6253d193f7ad4843"
+    },
+    "amd/amdgpu/mes_v12_0.o": {
+      "bytes": 939296,
+      "sha256": "5f85f26090da2272b590e2dd6aaff79808f138e9d6dd0a127c34cd42f51d4a44"
+    }
+  }
+}

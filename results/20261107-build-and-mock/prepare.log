@@ -1,0 +1,487 @@
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for gcc... gcc-13
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc-13 accepts -g... yes
+checking for gcc-13 option to enable C11 features... none needed
+checking how to run the C preprocessor... gcc-13 -E
+checking kernel source directory... /tmp/cks4u-mes-build-mpszxy8i/headers/linux-headers-6.8.0-147-generic
+checking kernel build directory... /tmp/cks4u-mes-build-mpszxy8i/headers/linux-headers-6.8.0-147-generic
+checking kernel source version... 6.8.0-147-generic
+checking kernel file name for module symbols... Module.symvers
+checking for linux/bits.h... yes
+checking for linux/io-64-nonatomic-lo-hi.h... yes
+checking for asm/set_memory.h... yes
+checking for asm/fpu/api.h... yes
+checking for linux/compiler_attributes.h... yes
+checking for linux/fence-array.h... no
+checking for linux/dma-resv.h... yes
+checking for linux/mmap_lock.h... yes
+checking for linux/pci-p2pdma.h... yes
+checking for linux/dma-attrs.h... no
+checking for linux/dma-buf-map.h... no
+checking for linux/iosys-map.h... yes
+checking for linux/stdarg.h... yes
+checking for linux/dma-fence-chain.h... yes
+checking for linux/container_of.h... yes
+checking for linux/cc_platform.h... yes
+checking for linux/processor.h... yes
+checking for linux/dma-map-ops.h... yes
+checking for linux/apple-gmux.h... yes
+checking for linux/device/class.h... yes
+checking for linux/build_bug.h... yes
+checking for linux/acpi_amd_wbrf.h... yes
+checking for linux/units.h... yes
+checking for linux/dma-fence-unwrap.h... yes
+checking for linux/aperture.h... yes
+checking for linux/minmax.h... yes
+checking for linux/cgroup_dmem.h... no
+checking for linux/cleanup.h... yes
+checking for linux/args.h... yes
+checking for linux/compiler_types.h... yes
+checking for kunit/test-bug.h... yes
+checking for linux/dev_printk.h... yes
+checking for linux/string_choices.h... yes
+checking for linux/array_size.h... yes
+checking for linux/math.h... yes
+checking for linux/sunrpc/xdrgen/_defs.h... no
+checking for linux/mutex_types.h... yes
+checking for nproc... yes
+checking for drm/drm_backport.h... no
+checking for drm/amdgpu_pciid.h... no
+checking for drm/drm_probe_helper.h... yes
+checking for drm/drmP.h... no
+checking for drm/task_barrier.h... yes
+checking for drm/drm_managed.h... yes
+checking for drm/amd_asic_type.h... yes
+checking for drm/drm_aperture.h... yes
+checking for drm/drm_privacy_screen_consumer.h... yes
+checking for drm/dp/drm_dp_helper.h... no
+checking for drm/dp/drm_dp_mst_helper.h... no
+checking for drm/drm_gem_atomic_helper.h... yes
+checking for drm/display/drm_dp_helper.h... yes
+checking for drm/display/drm_dp_mst_helper.h... yes
+checking for drm/display/drm_dsc.h... yes
+checking for drm/display/drm_dsc_helper.h... yes
+checking for drm/display/drm_hdmi_helper.h... yes
+checking for drm/display/drm_hdcp_helper.h... yes
+checking for drm/display/drm_hdcp.h... yes
+checking for drm/display/drm_dp.h... yes
+checking for linux/pgtable.h... yes
+checking for drm/drm_fbdev_generic.h... yes
+checking for drm/drm_eld.h... yes
+checking for drm/drm_panic.h... no
+checking for drm/drm_fbdev_ttm.h... no
+checking for linux/unaligned.h... no
+checking for drm/drm_client_setup.h... no
+checking for drm/clients/drm_client_setup.h... no
+checking for drm/drm_client_event.h... no
+checking for drm/drm_vblank_helper.h... no
+checking for drm/drm_colorop.h... no
+checking for nproc... (cached) yes
+checking for supported chips... done
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking if pm_runtime_put_autosuspend includes pm_runtime_mark_last_busy... no
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+grep: /usr/src/ofa_kernel*/x86_64/6.8.0-147-generic/Module.symvers: No such file or directory
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for nproc... (cached) yes
+checking for module configuration... done
+configure: creating ./config.status
+config.status: creating config/config.h
+Enabled configurations:
+
+export OS_NAME=ubuntu
+export OS_VERSION=24.04
+subdir-ccflags-y += -DOS_NAME_UBUNTU
+subdir-ccflags-y += -DOS_VERSION_MAJOR=24
+subdir-ccflags-y += -DOS_VERSION_MINOR=04
+subdir-ccflags-y += -DUBUNTU_BUILD_NUM=147
+subdir-ccflags-y += -DOS_NAME_UBUNTU_24_04
+subdir-ccflags-y += -DDRM_VER=6 -DDRM_PATCH=8 -DDRM_SUB="0"
+export CONFIG_HSA_AMD_P2P_AMDKCL=y
+subdir-ccflags-y += -DCONFIG_HSA_AMD_P2P_AMDKCL
+
+export CONFIG_HSA_AMD_SVM_AMDKCL=y
+subdir-ccflags-y += -DCONFIG_HSA_AMD_SVM_AMDKCL
+
+export CONFIG_HSA_AMD_AMDKCL=y
+subdir-ccflags-y += -DCONFIG_HSA_AMD_AMDKCL
+
+export CONFIG_DRM_AMDGPU_CIK_AMDKCL=y
+subdir-ccflags-y += -DCONFIG_DRM_AMDGPU_CIK_AMDKCL
+
+export CONFIG_DRM_AMDGPU_SI_AMDKCL=y
+subdir-ccflags-y += -DCONFIG_DRM_AMDGPU_SI_AMDKCL
+
+export CONFIG_DRM_AMDGPU_USERPTR_AMDKCL=y
+subdir-ccflags-y += -DCONFIG_DRM_AMDGPU_USERPTR_AMDKCL
+
+export CONFIG_DRM_AMD_DC_AMDKCL=y
+subdir-ccflags-y += -DCONFIG_DRM_AMD_DC_AMDKCL
+
+****************
+Disabled configurations:
+
+****************

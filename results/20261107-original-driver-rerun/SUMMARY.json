@@ -1,0 +1,70 @@
+{
+  "original_driver_only": true,
+  "candidate_installed": false,
+  "stop_reason": "mes_failure_captured",
+  "kernel_mes_errors": 4,
+  "matching_error_snapshots": 4,
+  "events": [
+    {
+      "t_ns": "29277391923321",
+      "tid": "321221",
+      "device": "0000:03:00.0",
+      "pasid": "47178",
+      "hub": "0",
+      "flush": "2",
+      "fence_completed": "1",
+      "cpu_status_low": "0",
+      "api_status_late": "0x1",
+      "elapsed_us": "223"
+    },
+    {
+      "t_ns": "29280907056474",
+      "tid": "321147",
+      "device": "0000:e3:00.0",
+      "pasid": "46986",
+      "hub": "0",
+      "flush": "2",
+      "fence_completed": "1",
+      "cpu_status_low": "0",
+      "api_status_late": "0x1",
+      "elapsed_us": "35"
+    },
+    {
+      "t_ns": "29281122906891",
+      "tid": "321182",
+      "device": "0000:73:00.0",
+      "pasid": "47069",
+      "hub": "0",
+      "flush": "2",
+      "fence_completed": "1",
+      "cpu_status_low": "0",
+      "api_status_late": "0x1",
+      "elapsed_us": "40"
+    },
+    {
+      "t_ns": "29281180089442",
+      "tid": "321251",
+      "device": "0000:83:00.0",
+      "pasid": "47268",
+      "hub": "0",
+      "flush": "2",
+      "fence_completed": "1",
+      "cpu_status_low": "0",
+      "api_status_late": "0x1",
+      "elapsed_us": "29"
+    }
+  ],
+  "sel_before": 318,
+  "sel_after": 318,
+  "numa_before": 0,
+  "numa_after": 0,
+  "boot_id_unchanged": true,
+  "owned_container_removed": true,
+  "first_error_beijing": "2026-11-07 18:45:40.347264+08:00",
+  "last_error_beijing": "2026-11-07 18:45:44.135385+08:00",
+  "notes": [
+    "Stop initiated at first captured error; three additional errors occurred during shutdown.",
+    "This is an instrumented original-driver baseline, not hardware validation of the candidate patch."
+  ],
+  "executed_remote_program_sha256": "349ae7b47690b6c114401b026b9ed6ac2d16f1eb4fb6f25882b7203ca2b3fcd1"
+}

@@ -1,0 +1,191 @@
+{
+  "tests": [
+    {
+      "name": "normal_success",
+      "original_rc": 0,
+      "candidate_rc": 0,
+      "candidate_reads": 1,
+      "delay_calls": 0,
+      "nominal_delay_us": 0,
+      "pass": true
+    },
+    {
+      "name": "observed_zero_then_success",
+      "original_rc": -110,
+      "candidate_rc": 0,
+      "candidate_reads": 2,
+      "delay_calls": 0,
+      "nominal_delay_us": 0,
+      "pass": true
+    },
+    {
+      "name": "delayed_success",
+      "original_rc": -110,
+      "candidate_rc": 0,
+      "candidate_reads": 3,
+      "delay_calls": 1,
+      "nominal_delay_us": 1,
+      "pass": true
+    },
+    {
+      "name": "firmware_error_not_retried",
+      "original_rc": -110,
+      "candidate_rc": -110,
+      "candidate_reads": 1,
+      "delay_calls": 0,
+      "nominal_delay_us": 0,
+      "pass": true
+    },
+    {
+      "name": "firmware_error_after_zero",
+      "original_rc": -110,
+      "candidate_rc": -110,
+      "candidate_reads": 3,
+      "delay_calls": 1,
+      "nominal_delay_us": 1,
+      "pass": true
+    },
+    {
+      "name": "debug_only_not_retried",
+      "original_rc": -110,
+      "candidate_rc": -110,
+      "candidate_reads": 1,
+      "delay_calls": 0,
+      "nominal_delay_us": 0,
+      "pass": true
+    },
+    {
+      "name": "success_with_high_debug",
+      "original_rc": 0,
+      "candidate_rc": 0,
+      "candidate_reads": 1,
+      "delay_calls": 0,
+      "nominal_delay_us": 0,
+      "pass": true
+    },
+    {
+      "name": "preserve_existing_nonzero_low_rule",
+      "original_rc": 0,
+      "candidate_rc": 0,
+      "candidate_reads": 1,
+      "delay_calls": 0,
+      "nominal_delay_us": 0,
+      "pass": true
+    },
+    {
+      "name": "permanently_zero_is_bounded",
+      "original_rc": -110,
+      "candidate_rc": -110,
+      "candidate_reads": 6,
+      "delay_calls": 3,
+      "nominal_delay_us": 3,
+      "pass": true
+    },
+    {
+      "name": "fence_timeout_even_with_success",
+      "original_rc": -110,
+      "candidate_rc": -110,
+      "candidate_reads": 1,
+      "delay_calls": 0,
+      "nominal_delay_us": 0,
+      "pass": true
+    },
+    {
+      "name": "negative_fence_even_with_success",
+      "original_rc": -110,
+      "candidate_rc": -110,
+      "candidate_reads": 1,
+      "delay_calls": 0,
+      "nominal_delay_us": 0,
+      "pass": true
+    },
+    {
+      "name": "zero_budget_never_unbounded",
+      "original_rc": -110,
+      "candidate_rc": -110,
+      "candidate_reads": 1,
+      "delay_calls": 0,
+      "nominal_delay_us": 0,
+      "pass": true
+    },
+    {
+      "name": "negative_budget_never_polled",
+      "original_rc": -110,
+      "candidate_rc": -110,
+      "candidate_reads": 1,
+      "delay_calls": 0,
+      "nominal_delay_us": 0,
+      "pass": true
+    },
+    {
+      "name": "one_us_remaining",
+      "original_rc": -110,
+      "candidate_rc": 0,
+      "candidate_reads": 3,
+      "delay_calls": 1,
+      "nominal_delay_us": 1,
+      "pass": true
+    },
+    {
+      "name": "success_outside_budget_rejected",
+      "original_rc": -110,
+      "candidate_rc": -110,
+      "candidate_reads": 6,
+      "delay_calls": 3,
+      "nominal_delay_us": 3,
+      "pass": true
+    },
+    {
+      "name": "error_snapshot_misc_log",
+      "original_rc": -110,
+      "candidate_rc": -110,
+      "candidate_reads": 1,
+      "delay_calls": 0,
+      "nominal_delay_us": 0,
+      "pass": true
+    },
+    {
+      "name": "error_snapshot_opcode_log",
+      "original_rc": -110,
+      "candidate_rc": -110,
+      "candidate_reads": 1,
+      "delay_calls": 0,
+      "nominal_delay_us": 0,
+      "pass": true
+    },
+    {
+      "name": "error_snapshot_numeric_log",
+      "original_rc": -110,
+      "candidate_rc": -110,
+      "candidate_reads": 1,
+      "delay_calls": 0,
+      "nominal_delay_us": 0,
+      "pass": true
+    }
+  ],
+  "passed": 18,
+  "failed": 0,
+  "hardware_access": false,
+  "compiler_command": [
+    "gcc-13",
+    "-std=gnu11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261107-build-and-mock/mock/mes_status_mock.c",
+    "-o",
+    "/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261107-build-and-mock/mock/mes_status_mock"
+  ],
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "input_sha256": {
+    "/tmp/cks4u-mes-build-mpszxy8i/mes_v12_0.c.pristine": "c32c4ebcdbb9cca62c3464d4043f15c935d986fcc30e6a4600e9cbbfb119ac7b",
+    "/tmp/cks4u-mes-build-mpszxy8i/package/usr/src/amdgpu-7.1.9-2407772.24.04/amd/amdgpu/mes_v12_0.c": "4a619daa5ffb8f644e1702eb9e908d2cd95ddefd6e32c8dc71f0d61c3f4276ba",
+    "/tmp/cks4u-mes-build-mpszxy8i/headers/linux-headers-6.8.0-147/include/linux/iopoll.h": "ae14ea5396f486ab5be2c364fe9ce10226c7088dbc1d798c6a6d8b88854b1558"
+  }
+}

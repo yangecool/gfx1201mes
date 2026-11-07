@@ -1,0 +1,83 @@
+Subject: [PATCH RFC] drm/amdgpu/mes12: confirm unwritten API status after scheduler fence
+
+Compile-only candidate for AMD amdgpu-dkms
+1:7.1.9.31600000-2407772.24.04 (Ubuntu 24.04).
+
+Two captured INV_TLBS calls observed a completed scheduler fence and zero
+API status, followed by API success at the selected error branch. When
+status is entirely zero, poll within the remaining nominal fence budget.
+Keep the existing low-32-bit success interpretation. Stop immediately on
+nonzero firmware error/debug status; preserve fence timeout failures.
+
+Use one CPU status snapshot for the decision and diagnostic message.
+This is not a claim to repair DMA visibility or firmware write ordering.
+True-timeout writeback-slot lifetime and GMC/KFD error propagation are
+unchanged and require separate protocol/recovery review before deployment.
+No hardware validation or installation is authorized by this patch.
+
+---
+
+diff --git a/amd/amdgpu/mes_v12_0.c b/amd/amdgpu/mes_v12_0.c
+--- a/amd/amdgpu/mes_v12_0.c
++++ b/amd/amdgpu/mes_v12_0.c
+@@ -22,6 +22,7 @@
+  */
+ 
+ #include <linux/firmware.h>
++#include <linux/iopoll.h>
+ #include <linux/module.h>
+ #include "amdgpu.h"
+ #include "gfx_v12_0.h"
+@@ -165,6 +166,7 @@
+ 	u64 status_gpu_addr;
+ 	u32 seq, status_offset;
+ 	u64 *status_ptr;
++	u64 status;
+ 	signed long r;
+ 	int ret;
+ 
+@@ -234,20 +236,35 @@
+ 	r = amdgpu_fence_wait_polling(ring, seq, timeout);
+ 
+ 	/*
+-	 * status_ptr[31:0] == 0 (fail) or status_ptr[63:0] == 1 (success).
+-	 * If status_ptr[31:0] == 0 then status_ptr[63:32] will have debug error information.
++	 * A completed scheduler fence can be observed before the API status
++	 * writeback. If the status is still unwritten, use only the remaining
++	 * fence timeout budget to wait for it. Stop on any nonzero status so
++	 * firmware error/debug information is not treated as pending work.
++	 * READ_ONCE provides a CPU snapshot, not a firmware ordering guarantee.
+ 	 */
+-	if (r < 1 || !(lower_32_bits(*status_ptr))) {
++	status = READ_ONCE(*status_ptr);
++	if (r > 0 && !status)
++		read_poll_timeout_atomic(READ_ONCE, status, status, 1, r, false,
++					 *status_ptr);
++
++	/* Low 32 bits indicate success; high 32 bits may carry error details. */
++	if (r < 1 || !lower_32_bits(status)) {
+ 
+ 		if (misc_op_str)
+-			dev_err(adev->dev, "MES(%d) failed to respond to msg=%s (%s)\n",
+-				pipe, op_str, misc_op_str);
++			dev_err(adev->dev,
++				"MES(%d) failed to respond to msg=%s (%s) fence_wait_ret=%ld status=0x%08x_%08x\n",
++				pipe, op_str, misc_op_str, r,
++				upper_32_bits(status), lower_32_bits(status));
+ 		else if (op_str)
+-			dev_err(adev->dev, "MES(%d) failed to respond to msg=%s\n",
+-				pipe, op_str);
++			dev_err(adev->dev,
++				"MES(%d) failed to respond to msg=%s fence_wait_ret=%ld status=0x%08x_%08x\n",
++				pipe, op_str, r,
++				upper_32_bits(status), lower_32_bits(status));
+ 		else
+-			dev_err(adev->dev, "MES(%d) failed to respond to msg=%d\n",
+-				pipe, x_pkt->header.opcode);
++			dev_err(adev->dev,
++				"MES(%d) failed to respond to msg=%d fence_wait_ret=%ld status=0x%08x_%08x\n",
++				pipe, x_pkt->header.opcode, r,
++				upper_32_bits(status), lower_32_bits(status));
+ 
+ 		while (halt_if_hws_hang)
+ 			schedule();

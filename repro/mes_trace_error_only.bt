@@ -1,0 +1,39 @@
+
+BEGIN { printf("MES_TRACE_READY\n"); }
+kprobe:mes_v12_0_inv_tlbs_pasid {
+ @started[tid] = nsecs;
+ @pasid[tid] = *(uint16 *)(arg1 + 4);
+ @hub[tid] = *(uint8 *)(arg1 + 6);
+ @flush[tid] = *(uint8 *)(arg1 + 7);
+}
+kretprobe:mes_v12_0_inv_tlbs_pasid /@started[tid]/ {
+ $r = (int32)retval;
+ @calls[@hub[tid], $r] = count();
+ @callers[kstack(8)] = count();
+ if ($r != 0) { @mes_failed[tid] = 1; }
+ @duration_us = hist((nsecs - @started[tid]) / 1000);
+ if ($r != 0) {
+  printf("MES_RETURN t_ns=%llu tid=%d comm=%s pasid=%u hub=%u flush=%u ret=%d duration_us=%llu\n", nsecs, tid, comm, @pasid[tid], @hub[tid], @flush[tid], $r, (nsecs-@started[tid])/1000);
+  printf("%s\n", kstack(12));
+ }
+ delete(@started[tid]); delete(@pasid[tid]); delete(@hub[tid]); delete(@flush[tid]);
+}
+kprobe:mes_v12_0_submit_pkt_and_poll_completion.constprop.0+0x3f0 /@started[tid]/ {
+ $bp = reg("bp");
+ $statusp = *(uint64 *)($bp - 0x180);
+ $status = *(uint64 *)$statusp;
+ $rax = reg("ax");
+ $device = (struct device *)*(uint64 *)reg("r13");
+ printf("MES_ERROR_BRANCH t_ns=%llu tid=%d device=%s pasid=%u hub=%u flush=%u fence_completed=%u cpu_status_low=%u api_status_late=0x%llx elapsed_us=%llu\n", nsecs, tid, str($device->kobj.name), @pasid[tid], @hub[tid], @flush[tid], $rax == $statusp, (uint32)reg("dx"), $status, (nsecs-@started[tid])/1000);
+ printf("%s\n", kstack(14));
+}
+END { clear(@started); clear(@pasid); clear(@hub); clear(@flush); clear(@mes_failed); clear(@gmc_pasid); clear(@gmc_all); }
+
+kprobe:amdgpu_gmc_flush_gpu_tlb_pasid { @gmc_pasid[tid] = arg1; @gmc_all[tid] = arg3; }
+kretprobe:amdgpu_gmc_flush_gpu_tlb_pasid {
+ @gmc_returns[@gmc_all[tid], (int32)retval] = count();
+ if (@mes_failed[tid]) {
+  printf("GMC_AFTER_MES_FAILURE tid=%d pasid=%u all_hub=%u outer_ret=%d\n", tid, @gmc_pasid[tid], @gmc_all[tid], (int32)retval);
+ }
+ delete(@mes_failed[tid]); delete(@gmc_pasid[tid]); delete(@gmc_all[tid]);
+}

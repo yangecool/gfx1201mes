@@ -1,0 +1,15 @@
+{
+  "command": [
+    "make",
+    "sanity-check",
+    "amd/dkms/dkms-config.mk",
+    "KERNELVER=6.8.0-147-generic",
+    "kernel_build_dir=/tmp/cks4u-mes-build-mpszxy8i/headers/linux-headers-6.8.0-147-generic",
+    "module_build_dir=/tmp/cks4u-mes-build-mpszxy8i/module-source-link",
+    "CC=gcc-13"
+  ],
+  "cwd": "/tmp/cks4u-mes-build-mpszxy8i/package/usr/src/amdgpu-7.1.9-2407772.24.04",
+  "returncode": 0,
+  "elapsed_seconds": 15.124,
+  "log": "/tmp/cks4u-mes-build-mpszxy8i/prepare.log"
+}

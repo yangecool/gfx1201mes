@@ -1,0 +1,4 @@
+# Unified-diff context prefixes and raw diagnostic records are preserved verbatim.
+*.patch -whitespace
+results/**/*.log -whitespace
+results/**/*.stdout -whitespace

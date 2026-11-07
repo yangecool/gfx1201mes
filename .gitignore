@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.o
+*.ko
+*.ko.*
+*.deb
+*.tar*
+mes_status_mock
+rendered_remote_program.py
+orchestration.stdout

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "make",
+    "-C",
+    "/tmp/cks4u-mes-build-mpszxy8i/headers/linux-headers-6.8.0-147-generic",
+    "M=/tmp/cks4u-mes-build-mpszxy8i/package/usr/src/amdgpu-7.1.9-2407772.24.04",
+    "-j8",
+    "CC=gcc-13",
+    "TTM_NAME=amdttm",
+    "SCHED_NAME=amd-sched",
+    "modules"
+  ],
+  "cwd": "/tmp/cks4u-mes-build-mpszxy8i/package/usr/src/amdgpu-7.1.9-2407772.24.04",
+  "returncode": 0,
+  "elapsed_seconds": 6.865,
+  "log": "/tmp/cks4u-mes-build-mpszxy8i/candidate-build.log"
+}
