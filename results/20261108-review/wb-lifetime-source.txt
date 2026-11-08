@@ -1,0 +1,423 @@
+SOURCE: amd/amdgpu/amdgpu_wb.c
+// SPDX-License-Identifier: GPL-2.0 OR MIT
+/*
+ * Copyright 2026 Advanced Micro Devices, Inc.
+
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ * THE COPYRIGHT HOLDER(S) OR AUTHOR(S) BE LIABLE FOR ANY CLAIM, DAMAGES OR
+ * OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ */
+#include <linux/spinlock.h>
+
+#include "amdgpu.h"
+#include "amdgpu_wb.h"
+
+/*
+ * amdgpu_wb_*()
+ * Writeback is the method by which the GPU updates special pages in memory
+ * with the status of certain GPU events (fences, ring pointers,etc.).
+ */
+
+/**
+ * amdgpu_wb_fini - Disable Writeback and free memory
+ *
+ * @adev: amdgpu_device pointer
+ *
+ * Disables Writeback and frees the Writeback memory (all asics).
+ * Used at driver shutdown.
+ */
+void amdgpu_wb_fini(struct amdgpu_device *adev)
+{
+	if (adev->wb.wb_obj) {
+		amdgpu_bo_free_kernel(&adev->wb.wb_obj,
+				      &adev->wb.gpu_addr,
+				      (void **)&adev->wb.wb);
+		adev->wb.wb_obj = NULL;
+	}
+}
+
+/**
+ * amdgpu_wb_init - Init Writeback driver info and allocate memory
+ *
+ * @adev: amdgpu_device pointer
+ *
+ * Initializes writeback and allocates writeback memory (all asics).
+ * Used at driver startup.
+ * Returns 0 on success or an -error on failure.
+ */
+int amdgpu_wb_init(struct amdgpu_device *adev)
+{
+	int r;
+
+	if (adev->wb.wb_obj == NULL) {
+		/* AMDGPU_MAX_WB * sizeof(uint32_t) * 8 = AMDGPU_MAX_WB 256bit slots */
+		r = amdgpu_bo_create_kernel(adev, AMDGPU_MAX_WB * sizeof(uint32_t) * 8,
+					    PAGE_SIZE, AMDGPU_GEM_DOMAIN_GTT,
+					    &adev->wb.wb_obj, &adev->wb.gpu_addr,
+					    (void **)&adev->wb.wb);
+		if (r) {
+			dev_warn(adev->dev, "(%d) create WB bo failed\n", r);
+			return r;
+		}
+
+		adev->wb.num_wb = AMDGPU_MAX_WB;
+		memset(&adev->wb.used, 0, sizeof(adev->wb.used));
+
+		/* clear wb memory */
+		memset((char *)adev->wb.wb, 0, AMDGPU_MAX_WB * sizeof(uint32_t) * 8);
+	}
+
+	return 0;
+}
+
+/**
+ * amdgpu_wb_get - Allocate a wb entry
+ *
+ * @adev: amdgpu_device pointer
+ * @wb: wb index
+ *
+ * Allocate a wb slot for use by the driver (all asics).
+ * Returns 0 on success or -EINVAL on failure.
+ */
+int amdgpu_wb_get(struct amdgpu_device *adev, u32 *wb)
+{
+	unsigned long flags, offset;
+
+	spin_lock_irqsave(&adev->wb.lock, flags);
+	offset = find_first_zero_bit(adev->wb.used, adev->wb.num_wb);
+	if (offset < adev->wb.num_wb) {
+		__set_bit(offset, adev->wb.used);
+		spin_unlock_irqrestore(&adev->wb.lock, flags);
+		*wb = offset << 3; /* convert to dw offset */
+		return 0;
+	} else {
+		spin_unlock_irqrestore(&adev->wb.lock, flags);
+		return -EINVAL;
+	}
+}
+
+/**
+ * amdgpu_wb_free - Free a wb entry
+ *
+ * @adev: amdgpu_device pointer
+ * @wb: wb index
+ *
+ * Free a wb slot allocated for use by the driver (all asics)
+ */
+void amdgpu_wb_free(struct amdgpu_device *adev, u32 wb)
+{
+	unsigned long flags;
+
+	wb >>= 3;
+	spin_lock_irqsave(&adev->wb.lock, flags);
+	if (wb < adev->wb.num_wb)
+		__clear_bit(wb, adev->wb.used);
+	spin_unlock_irqrestore(&adev->wb.lock, flags);
+}
+
+SOURCE: mes_v12_0.c current offline review-v2
+/*
+ * Copyright 2023 Advanced Micro Devices, Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ * THE COPYRIGHT HOLDER(S) OR AUTHOR(S) BE LIABLE FOR ANY CLAIM, DAMAGES OR
+ * OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ *
+ */
+
+#include <linux/firmware.h>
+#include <linux/iopoll.h>
+#include <linux/module.h>
+#include "amdgpu.h"
+#include "gfx_v12_0.h"
+#include "soc15_common.h"
+#include "soc24.h"
+#include "gc/gc_12_0_0_offset.h"
+#include "gc/gc_12_0_0_sh_mask.h"
+#include "gc/gc_11_0_0_default.h"
+#include "v12_structs.h"
+#include "mes_v12_api_def.h"
+
+MODULE_FIRMWARE("amdgpu/gc_12_0_0_mes.bin");
+MODULE_FIRMWARE("amdgpu/gc_12_0_0_mes1.bin");
+MODULE_FIRMWARE("amdgpu/gc_12_0_0_uni_mes.bin");
+MODULE_FIRMWARE("amdgpu/gc_12_0_1_mes.bin");
+MODULE_FIRMWARE("amdgpu/gc_12_0_1_mes1.bin");
+MODULE_FIRMWARE("amdgpu/gc_12_0_1_uni_mes.bin");
+
+static int mes_v12_0_hw_init(struct amdgpu_ip_block *ip_block);
+static int mes_v12_0_hw_fini(struct amdgpu_ip_block *ip_block);
+static int mes_v12_0_kiq_hw_init(struct amdgpu_device *adev, uint32_t xcc_id);
+static int mes_v12_0_kiq_hw_fini(struct amdgpu_device *adev, uint32_t xcc_id);
+
+#define MES_EOP_SIZE   2048
+
+#define MES12_HUNG_DB_OFFSET_ARRAY_SIZE 8 /* [0:3] = db offset [4:7] hqd info */
+#define MES12_HUNG_HQD_INFO_OFFSET	4
+
+static void mes_v12_0_ring_set_wptr(struct amdgpu_ring *ring)
+{
+	struct amdgpu_device *adev = ring->adev;
+
+	if (ring->use_doorbell) {
+		atomic64_set((atomic64_t *)ring->wptr_cpu_addr,
+			     ring->wptr);
+		WDOORBELL64(ring->doorbell_index, ring->wptr);
+	} else {
+		dev_warn_once(adev->dev, "%s requires doorbell!\n", __func__);
+	}
+}
+
+static u64 mes_v12_0_ring_get_rptr(struct amdgpu_ring *ring)
+{
+	return *ring->rptr_cpu_addr;
+}
+
+static u64 mes_v12_0_ring_get_wptr(struct amdgpu_ring *ring)
+{
+	struct amdgpu_device *adev = ring->adev;
+	u64 wptr;
+
+	if (ring->use_doorbell) {
+		wptr = atomic64_read((atomic64_t *)ring->wptr_cpu_addr);
+	} else {
+		dev_warn_once(adev->dev, "%s requires doorbell!\n", __func__);
+		wptr = 0;
+	}
+	return wptr;
+}
+
+static const struct amdgpu_ring_funcs mes_v12_0_ring_funcs = {
+	.type = AMDGPU_RING_TYPE_MES,
+	.align_mask = 1,
+	.nop = 0,
+	.support_64bit_ptrs = true,
+	.get_rptr = mes_v12_0_ring_get_rptr,
+	.get_wptr = mes_v12_0_ring_get_wptr,
+	.set_wptr = mes_v12_0_ring_set_wptr,
+	.insert_nop = amdgpu_ring_insert_nop,
+};
+
+static const char *mes_v12_0_opcodes[] = {
+	"SET_HW_RSRC",
+	"SET_SCHEDULING_CONFIG",
+	"ADD_QUEUE",
+	"REMOVE_QUEUE",
+	"PERFORM_YIELD",
+	"SET_GANG_PRIORITY_LEVEL",
+	"SUSPEND",
+	"RESUME",
+	"RESET",
+	"SET_LOG_BUFFER",
+	"CHANGE_GANG_PRORITY",
+	"QUERY_SCHEDULER_STATUS",
+	"unused",
+	"SET_DEBUG_VMID",
+	"MISC",
+	"UPDATE_ROOT_PAGE_TABLE",
+	"AMD_LOG",
+	"SET_SE_MODE",
+	"SET_GANG_SUBMIT",
+	"SET_HW_RSRC_1",
+	"INVALIDATE_TLBS",
+};
+
+static const char *mes_v12_0_misc_opcodes[] = {
+	"WRITE_REG",
+	"INV_GART",
+	"QUERY_STATUS",
+	"READ_REG",
+	"WAIT_REG_MEM",
+	"SET_SHADER_DEBUGGER",
+	"NOTIFY_WORK_ON_UNMAPPED_QUEUE",
+	"NOTIFY_TO_UNMAP_PROCESSES",
+};
+
+static const char *mes_v12_0_get_op_string(union MESAPI__MISC *x_pkt)
+{
+	const char *op_str = NULL;
+
+	if (x_pkt->header.opcode < ARRAY_SIZE(mes_v12_0_opcodes))
+		op_str = mes_v12_0_opcodes[x_pkt->header.opcode];
+
+	return op_str;
+}
+
+static const char *mes_v12_0_get_misc_op_string(union MESAPI__MISC *x_pkt)
+{
+	const char *op_str = NULL;
+
+	if ((x_pkt->header.opcode == MES_SCH_API_MISC) &&
+	    (x_pkt->opcode < ARRAY_SIZE(mes_v12_0_misc_opcodes)))
+		op_str = mes_v12_0_misc_opcodes[x_pkt->opcode];
+
+	return op_str;
+}
+
+static int mes_v12_0_submit_pkt_and_poll_completion(struct amdgpu_mes *mes,
+					    int pipe, void *pkt, int size,
+					    int api_status_off)
+{
+	union MESAPI__QUERY_MES_STATUS mes_status_pkt;
+	signed long timeout = 2100000; /* 2100 ms */
+	struct amdgpu_device *adev = mes->adev;
+	struct amdgpu_ring *ring = &mes->ring[pipe];
+	spinlock_t *ring_lock = &mes->ring_lock[pipe];
+	struct MES_API_STATUS *api_status;
+	union MESAPI__MISC *x_pkt = pkt;
+	const char *op_str, *misc_op_str;
+	unsigned long flags;
+	u64 status_gpu_addr;
+	u32 seq, status_offset;
+	u64 *status_ptr;
+	u64 status;
+	signed long r;
+	int ret;
+
+	if (x_pkt->header.opcode >= MES_SCH_API_MAX)
+		return -EINVAL;
+
+	if (amdgpu_emu_mode) {
+		timeout *= 100;
+	} else if (amdgpu_sriov_vf(adev)) {
+		/* Worst case in sriov where all other 15 VF timeout, each VF needs about 600ms */
+		timeout = 15 * 600 * 1000;
+	}
+
+	ret = amdgpu_wb_get(adev, &status_offset);
+	if (ret)
+		return ret;
+
+	status_gpu_addr = adev->wb.gpu_addr + (status_offset * 4);
+	status_ptr = (u64 *)&adev->wb.wb[status_offset];
+	*status_ptr = 0;
+
+	spin_lock_irqsave(ring_lock, flags);
+	r = amdgpu_ring_alloc(ring, (size + sizeof(mes_status_pkt)) / 4);
+	if (r)
+		goto error_unlock_free;
+
+	seq = ++ring->fence_drv.sync_seq;
+	r = amdgpu_fence_wait_polling(ring,
+				      seq - ring->fence_drv.num_fences_mask,
+				      timeout);
+	if (r < 1)
+		goto error_undo;
+
+	api_status = (struct MES_API_STATUS *)((char *)pkt + api_status_off);
+	api_status->api_completion_fence_addr = status_gpu_addr;
+	api_status->api_completion_fence_value = 1;
+
+	amdgpu_ring_write_multiple(ring, pkt, size / 4);
+
+	memset(&mes_status_pkt, 0, sizeof(mes_status_pkt));
+	mes_status_pkt.header.type = MES_API_TYPE_SCHEDULER;
+	mes_status_pkt.header.opcode = MES_SCH_API_QUERY_SCHEDULER_STATUS;
+	mes_status_pkt.header.dwsize = API_FRAME_SIZE_IN_DWORDS;
+	mes_status_pkt.api_status.api_completion_fence_addr =
+		ring->fence_drv.gpu_addr;
+	mes_status_pkt.api_status.api_completion_fence_value = seq;
+
+	amdgpu_ring_write_multiple(ring, &mes_status_pkt,
+				   sizeof(mes_status_pkt) / 4);
+
+	amdgpu_ring_commit(ring);
+	spin_unlock_irqrestore(ring_lock, flags);
+
+	op_str = mes_v12_0_get_op_string(x_pkt);
+	misc_op_str = mes_v12_0_get_misc_op_string(x_pkt);
+
+	if (misc_op_str)
+		dev_dbg(adev->dev, "MES(%d) msg=%s (%s) was emitted\n",
+			pipe, op_str, misc_op_str);
+	else if (op_str)
+		dev_dbg(adev->dev, "MES(%d) msg=%s was emitted\n",
+			pipe, op_str);
+	else
+		dev_dbg(adev->dev, "MES(%d) msg=%d was emitted\n",
+			pipe, x_pkt->header.opcode);
+
+	r = amdgpu_fence_wait_polling(ring, seq, timeout);
+
+	/*
+	 * A completed scheduler fence can be observed before the API status
+	 * writeback. Give an unwritten status at most 100 us of the remaining
+	 * fence timeout budget, without delaying the normal success path.
+	 * Stop on any nonzero value; an error must never be polled away.
+	 * READ_ONCE provides a CPU snapshot, not a firmware ordering guarantee.
+	 */
+	status = READ_ONCE(*status_ptr);
+	if (r > 0 && !status)
+		read_poll_timeout_atomic(READ_ONCE, status, status, 1,
+					min_t(signed long, r, 100), false,
+					*status_ptr);
+
+	/* Only the exact value submitted above is accepted as success. */
+	if (r < 1 || status != 1) {
+
+		if (misc_op_str)
+			dev_err(adev->dev,
+				"MES(%d) failed to respond to msg=%s (%s) fence_wait_ret=%ld status=0x%08x_%08x\n",
+				pipe, op_str, misc_op_str, r,
+				upper_32_bits(status), lower_32_bits(status));
+		else if (op_str)
+			dev_err(adev->dev,
+				"MES(%d) failed to respond to msg=%s fence_wait_ret=%ld status=0x%08x_%08x\n",
+				pipe, op_str, r,
+				upper_32_bits(status), lower_32_bits(status));
+		else
+			dev_err(adev->dev,
+				"MES(%d) failed to respond to msg=%d fence_wait_ret=%ld status=0x%08x_%08x\n",
+				pipe, x_pkt->header.opcode, r,
+				upper_32_bits(status), lower_32_bits(status));
+
+		while (halt_if_hws_hang)
+			schedule();
+
+		r = -ETIMEDOUT;
+		goto error_wb_free;
+	}
+
+	amdgpu_wb_free(adev, status_offset);
+	return 0;
+
+error_undo:
+	dev_err(adev->dev, "MES ring buffer is full.\n");
+	amdgpu_ring_undo(ring);
+
+error_unlock_free:
+	spin_unlock_irqrestore(ring_lock, flags);
+
+error_wb_free:
+	amdgpu_wb_free(adev, status_offset);
+	return r;
+}
+

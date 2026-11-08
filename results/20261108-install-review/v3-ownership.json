@@ -1,0 +1,271 @@
+{
+  "hardware_access": false,
+  "firmware_ordering": "scheduled CPU fault injection, not an observed hardware interleaving",
+  "original_sha256": "c32c4ebcdbb9cca62c3464d4043f15c935d986fcc30e6a4600e9cbbfb119ac7b",
+  "candidate_sha256": "bef5f84483c90c31b815bb8ab1795895874c0434e3f1f0e3a740ac08ab83ce83",
+  "sources_sha256": {
+    "amd/amdgpu/amdgpu_wb.c": "40fa170ddd174c021f634f1648011e2f686043db23cd30241de13fd3f0489ec9",
+    "amd/amdgpu/amdgpu_fence.c": "2dd7103028ce36fef9a5408db72e4bdc77a2792a2cc6b2e0162cafacd1ed0e19",
+    "amd/include/mes_v12_api_def.h": "b41acfb382312e6ff5492ebd48687e9d4fd94d5b7b539f269d99342302bd70db",
+    "include/linux/iopoll.h": "ae14ea5396f486ab5be2c364fe9ce10226c7088dbc1d798c6a6d8b88854b1558"
+  },
+  "cases": [
+    {
+      "version": "installed_source",
+      "schedule": "A_late_B_error_same_slot",
+      "A_rc": -110,
+      "B_rc": -110,
+      "A_wb_addr": 32800,
+      "B_wb_addr": 32800,
+      "B_query_seq": 2,
+      "last_status_writer_when_B_returned": "CPU clear",
+      "B_return_us": 2100002,
+      "B_own_terminal_status": "0x8100140700000000",
+      "false_success": false
+    },
+    {
+      "version": "candidate",
+      "schedule": "A_late_B_error_same_slot",
+      "A_rc": -110,
+      "B_rc": -110,
+      "A_wb_addr": 49152,
+      "B_wb_addr": 49184,
+      "B_query_seq": 2,
+      "last_status_writer_when_B_returned": "B",
+      "B_return_us": 2100005,
+      "B_own_terminal_status": "0x8100140700000000",
+      "false_success": false
+    },
+    {
+      "version": "installed_source",
+      "schedule": "A_late_B_error_distinct_slot",
+      "A_rc": -110,
+      "B_rc": -110,
+      "A_wb_addr": 32800,
+      "B_wb_addr": 32832,
+      "B_query_seq": 2,
+      "last_status_writer_when_B_returned": "CPU clear",
+      "B_return_us": 2100002,
+      "B_own_terminal_status": "0x8100140700000000",
+      "false_success": false
+    },
+    {
+      "version": "candidate",
+      "schedule": "A_late_B_error_distinct_slot",
+      "A_rc": -110,
+      "B_rc": -110,
+      "A_wb_addr": 49152,
+      "B_wb_addr": 49184,
+      "B_query_seq": 2,
+      "last_status_writer_when_B_returned": "B",
+      "B_return_us": 2100005,
+      "B_own_terminal_status": "0x8100140700000000",
+      "false_success": false
+    },
+    {
+      "version": "installed_source",
+      "schedule": "B_own_late_success",
+      "A_rc": -110,
+      "B_rc": -110,
+      "A_wb_addr": 32800,
+      "B_wb_addr": 32800,
+      "B_query_seq": 2,
+      "last_status_writer_when_B_returned": "CPU clear",
+      "B_return_us": 2100002,
+      "B_own_terminal_status": "0x0000000000000001",
+      "false_success": false
+    },
+    {
+      "version": "candidate",
+      "schedule": "B_own_late_success",
+      "A_rc": -110,
+      "B_rc": 0,
+      "A_wb_addr": 49152,
+      "B_wb_addr": 49152,
+      "B_query_seq": 2,
+      "last_status_writer_when_B_returned": "B",
+      "B_return_us": 2100003,
+      "B_own_terminal_status": "0x0000000000000001",
+      "false_success": false
+    },
+    {
+      "version": "installed_source",
+      "schedule": "B_own_late_error",
+      "A_rc": -110,
+      "B_rc": -110,
+      "A_wb_addr": 32800,
+      "B_wb_addr": 32800,
+      "B_query_seq": 2,
+      "last_status_writer_when_B_returned": "CPU clear",
+      "B_return_us": 2100002,
+      "B_own_terminal_status": "0x8100140700000000",
+      "false_success": false
+    },
+    {
+      "version": "candidate",
+      "schedule": "B_own_late_error",
+      "A_rc": -110,
+      "B_rc": -110,
+      "A_wb_addr": 49152,
+      "B_wb_addr": 49152,
+      "B_query_seq": 2,
+      "last_status_writer_when_B_returned": "B",
+      "B_return_us": 2100003,
+      "B_own_terminal_status": "0x8100140700000000",
+      "false_success": false
+    },
+    {
+      "version": "installed_source",
+      "schedule": "B_own_immediate_success",
+      "A_rc": -110,
+      "B_rc": 0,
+      "A_wb_addr": 32800,
+      "B_wb_addr": 32800,
+      "B_query_seq": 2,
+      "last_status_writer_when_B_returned": "B",
+      "B_return_us": 2100002,
+      "B_own_terminal_status": "0x0000000000000001",
+      "false_success": false
+    },
+    {
+      "version": "candidate",
+      "schedule": "B_own_immediate_success",
+      "A_rc": -110,
+      "B_rc": 0,
+      "A_wb_addr": 49152,
+      "B_wb_addr": 49152,
+      "B_query_seq": 2,
+      "last_status_writer_when_B_returned": "B",
+      "B_return_us": 2100002,
+      "B_own_terminal_status": "0x0000000000000001",
+      "false_success": false
+    },
+    {
+      "check": "immediate_success_without_delay",
+      "pass": true,
+      "extra_delay_us": 0,
+      "commits": 1,
+      "undo": 0,
+      "error_logs": 0
+    },
+    {
+      "check": "never_written_100us_cap_and_log",
+      "pass": true,
+      "extra_delay_us": 100,
+      "commits": 1,
+      "undo": 0,
+      "error_logs": 1
+    },
+    {
+      "check": "remaining_fence_budget_2us",
+      "pass": true,
+      "extra_delay_us": 2,
+      "commits": 1,
+      "undo": 0,
+      "error_logs": 1
+    },
+    {
+      "check": "ring_fence_timeout_with_own_terminal_success",
+      "pass": true,
+      "extra_delay_us": 0,
+      "commits": 1,
+      "undo": 0,
+      "error_logs": 1
+    },
+    {
+      "check": "unsubmitted_ring_alloc_failure_releases_slot",
+      "pass": true,
+      "extra_delay_us": 0,
+      "commits": 0,
+      "undo": 0,
+      "error_logs": 0
+    },
+    {
+      "check": "unsubmitted_ring_fence_timeout_releases_slot",
+      "pass": true,
+      "extra_delay_us": 0,
+      "commits": 0,
+      "undo": 1,
+      "error_logs": 1
+    },
+    {
+      "check": "malformed_low",
+      "pass": true,
+      "extra_delay_us": 0,
+      "commits": 1,
+      "undo": 0,
+      "error_logs": 1
+    },
+    {
+      "check": "mixed_error_success",
+      "pass": true,
+      "extra_delay_us": 0,
+      "commits": 1,
+      "undo": 0,
+      "error_logs": 1
+    },
+    {
+      "check": "unexpected_high_bits",
+      "pass": true,
+      "extra_delay_us": 0,
+      "commits": 1,
+      "undo": 0,
+      "error_logs": 1
+    },
+    {
+      "check": "firmware_error_snapshot",
+      "pass": true,
+      "extra_delay_us": 0,
+      "commits": 1,
+      "undo": 0,
+      "error_logs": 1
+    },
+    {
+      "check": "exhaustion_submits_without_accepting_overflow_then_reclaims",
+      "pass": true,
+      "extra_delay_us": 0,
+      "commits": 1,
+      "undo": 0,
+      "error_logs": 1
+    },
+    {
+      "check": "liveness_after_all_old_completions_lost",
+      "initial_submitted_requests_without_terminal_reply": 4,
+      "successful_firmware_operations": 16,
+      "host_timeouts": 16,
+      "subsequent_success_after_one_old_terminal_write": true,
+      "other_host_errors": 0,
+      "mock_pool_slots": 4,
+      "production_pool_slots": 1024,
+      "pass": false
+    },
+    {
+      "check": "four_concurrent_owners_128_rounds",
+      "pass": true,
+      "extra_delay_us": 0,
+      "commits": 0,
+      "undo": 0,
+      "error_logs": 0
+    },
+    {
+      "check": "other_gfx_and_allocation_failures",
+      "pass": true
+    },
+    {
+      "check": "liveness_after_all_old_completions_lost",
+      "initial_submitted_requests_without_terminal_reply": 1024,
+      "successful_firmware_operations": 16,
+      "host_timeouts": 16,
+      "subsequent_success_after_one_old_terminal_write": true,
+      "other_host_errors": 0,
+      "mock_pool_slots": 1024,
+      "production_pool_slots": 1024,
+      "pass": false
+    }
+  ],
+  "failed_candidate_cases": [
+    "liveness_after_all_old_completions_lost (4 slots)",
+    "liveness_after_all_old_completions_lost (1024 slots)"
+  ],
+  "exit_code": 1
+}

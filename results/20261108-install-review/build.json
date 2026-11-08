@@ -1,0 +1,31 @@
+{
+  "target_kernel": "6.8.0-147-generic",
+  "target_package": "1:7.1.9.31600000-2407772.24.04",
+  "patch_sha256": "b6a0336a2314060d85d7fff4ee1554a358aa17c4cb9c99876ba7c30880d18f1c",
+  "final_local_artifacts_sha256": {
+    "amd/amdgpu/mes_v12_0.c": "bef5f84483c90c31b815bb8ab1795895874c0434e3f1f0e3a740ac08ab83ce83",
+    "amd/amdgpu/amdgpu_mes.h": "fc7129a5404b63def5afdae7e5ba25aff86c13e516ed3ab05c50f92674dc04a2",
+    "amd/amdgpu/amdgpu.ko": "c4614e5499e124b67810a4e20ac6e98f5b64f3dff617c5b00abddbe11f0b450d"
+  },
+  "final_kbuild": {
+    "command": [
+      "make",
+      "-C",
+      "/tmp/cks4u-mes-build-v3-p46qat2v/headers/linux-headers-6.8.0-147-generic",
+      "M=/tmp/cks4u-mes-build-v3-p46qat2v/package/usr/src/amdgpu-7.1.9-2407772.24.04",
+      "-j8",
+      "CC=gcc-13",
+      "TTM_NAME=amdttm",
+      "SCHED_NAME=amd-sched",
+      "modules"
+    ],
+    "cwd": "/tmp/cks4u-mes-build-v3-p46qat2v/package/usr/src/amdgpu-7.1.9-2407772.24.04",
+    "returncode": 0,
+    "elapsed_seconds": 8.556,
+    "log": "/tmp/cks4u-mes-build-v3-p46qat2v/candidate-build.log"
+  },
+  "exported_symbol_crc_equal": 180,
+  "checkpatch": "total: 0 errors, 0 warnings, 263 lines checked",
+  "production_installed": false,
+  "gpu_ran_with_candidate": false
+}

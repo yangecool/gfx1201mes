@@ -1,0 +1,24 @@
+{
+  "kernel": "6.8.0-147-generic",
+  "boot_id": "cab431ab-f956-4ad5-96aa-43704c67141c",
+  "numa_balancing": "0",
+  "loaded_amdgpu_version": "7.1.9.31600000",
+  "file_sha256": {
+    "/usr/src/amdgpu-7.1.9-2407772.24.04/amd/amdgpu/mes_v12_0.c": "c32c4ebcdbb9cca62c3464d4043f15c935d986fcc30e6a4600e9cbbfb119ac7b",
+    "/usr/src/amdgpu-7.1.9-2407772.24.04/dkms.conf": "ff4c8d11c37258d68a1923abaf098de7c8c8de51157e1cddadda977156aa2d89",
+    "/usr/src/amdgpu-7.1.9-2407772.24.04/amd/dkms/pre-build.sh": "6c3d99d25a4990ec0a1cc30d52af5149fcaed3a2e6ac202c1fafd05d6874ac20",
+    "/usr/src/amdgpu-7.1.9-2407772.24.04/amd/dkms/dkms-config.sh": "48b600087eb974496c5aaf93e463da7597de432b9aec73278352f433773432d8",
+    "/usr/src/amdgpu-7.1.9-2407772.24.04/Makefile": "6faec91806dddca35895207991703545fe28fd1dbf5928f686a67e0cf9656431",
+    "/lib/modules/6.8.0-147-generic/updates/dkms/amd-sched.ko.zst": "0117f31902d48c619937efd1c9362534b30793f637cd33aaf6f0427a38a0ba87",
+    "/lib/modules/6.8.0-147-generic/updates/dkms/amddrm_buddy.ko.zst": "01559be36fb83bf1c9a8599a44d7faf29a1b99f99686fcc44397cd02c55bb03c",
+    "/lib/modules/6.8.0-147-generic/updates/dkms/amddrm_exec.ko.zst": "3974a1ac1df236e5024556c5598ffc449b3536eef987c93a1d7f639498f39cc0",
+    "/lib/modules/6.8.0-147-generic/updates/dkms/amddrm_suballoc_helper.ko.zst": "4a9735cdb3c751869ee39b64a284995c794cf17240470475339f150f61662ee5",
+    "/lib/modules/6.8.0-147-generic/updates/dkms/amddrm_ttm_helper.ko.zst": "6fbf6c466061b1e0519e26c5b35bf427ead11e757c9aa41be1be523a1b8ba90b",
+    "/lib/modules/6.8.0-147-generic/updates/dkms/amdgpu.ko.zst": "229267a6acce562869e9da3f2c46b593c5a0724f96d368c0313f9be7160c74c4",
+    "/lib/modules/6.8.0-147-generic/updates/dkms/amdkcl.ko.zst": "9957b62dbbfd91dbf8c16d1c506fcbb051f08f4a111df4dc3a8b68718f8089a0",
+    "/lib/modules/6.8.0-147-generic/updates/dkms/amdttm.ko.zst": "008035fe835c61fc987e4700ca553e79c20128bf86f91a5ee6c66b8d0e053d13",
+    "/lib/modules/6.8.0-147-generic/updates/dkms/amdxcp.ko.zst": "3df4d2186e69ab1e83a577680d196a7fd9a97d35c6dc12f17166109e97c86757"
+  },
+  "dkms_status": "amdgpu/7.1.9-2407772.24.04, 6.8.0-100-generic, x86_64: installed\namdgpu/7.1.9-2407772.24.04, 6.8.0-147-generic, x86_64: installed\n",
+  "packages": "amdgpu-dkms\t1:7.1.9.31600000-2407772.24.04\namdgpu-dkms-firmware\t1:31.60.0.0.31600000-2407772.24.04\namdgpu-install\t31.60.0.0.31600000-2407772.24.04\n"
+}

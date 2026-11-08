@@ -1,0 +1,290 @@
+Subject: [RFC v3] drm/amdgpu: isolate gfx1201 INV_TLBS writeback ownership
+
+Give each pending invalidation an exclusive writeback address and retire
+ambiguous addresses until firmware writes a terminal result. Bound the
+extra wait to 100 us. Always submit on pool exhaustion and report the
+missing ownership. Other message types retain stock completion semantics.
+
+---
+
+diff --git a/amd/amdgpu/amdgpu_mes.h b/amd/amdgpu/amdgpu_mes.h
+--- a/amd/amdgpu/amdgpu_mes.h
++++ b/amd/amdgpu/amdgpu_mes.h
+@@ -188,6 +188,7 @@
+ 	uint32_t			gang_ctx_array_size;
+ 	uint32_t			gang_ctx_array_index;
+ 	unsigned long			*gang_ctx_bitmap;
++	struct mes_v12_inv_wb		*inv_wb;
+ };
+ 
+ struct amdgpu_mes_hung_queue_hqd_info {
+diff --git a/amd/amdgpu/mes_v12_0.c b/amd/amdgpu/mes_v12_0.c
+--- a/amd/amdgpu/mes_v12_0.c
++++ b/amd/amdgpu/mes_v12_0.c
+@@ -22,6 +22,7 @@
+  */
+ 
+ #include <linux/firmware.h>
++#include <linux/iopoll.h>
+ #include <linux/module.h>
+ #include "amdgpu.h"
+ #include "gfx_v12_0.h"
+@@ -149,6 +150,67 @@
+ 	return op_str;
+ }
+ 
++/*
++ * INV_TLBS returns the same success value for every packet. Keep unresolved
++ * writes out of subsequent requests and out of the general-purpose WB pool.
++ */
++#define MES_INV_WB_STRIDE 32
++
++struct mes_v12_inv_wb {
++	struct amdgpu_bo *bo;
++	u64 gpu;
++	void *cpu;
++	spinlock_t lock;
++	DECLARE_BITMAP(used, AMDGPU_MAX_WB);
++	DECLARE_BITMAP(pending, AMDGPU_MAX_WB);
++};
++
++static bool mes_v12_inv_wb_terminal(u64 status)
++{
++	return status == 1 || (!lower_32_bits(status) && (status & BIT_ULL(63)));
++}
++
++static u64 *mes_v12_inv_wb_ptr(struct mes_v12_inv_wb *wb, unsigned int slot)
++{
++	return (u64 *)((u8 *)wb->cpu + slot * MES_INV_WB_STRIDE);
++}
++
++static unsigned int mes_v12_inv_wb_get(struct mes_v12_inv_wb *wb)
++{
++	unsigned long flags;
++	unsigned int slot;
++
++	spin_lock_irqsave(&wb->lock, flags);
++	slot = find_first_zero_bit(wb->used, AMDGPU_MAX_WB);
++	if (slot == AMDGPU_MAX_WB) {
++		for_each_set_bit(slot, wb->pending, AMDGPU_MAX_WB) {
++			if (mes_v12_inv_wb_terminal(READ_ONCE(*mes_v12_inv_wb_ptr(wb, slot)))) {
++				__clear_bit(slot, wb->pending);
++				break;
++			}
++		}
++	}
++	if (slot < AMDGPU_MAX_WB)
++		__set_bit(slot, wb->used);
++	spin_unlock_irqrestore(&wb->lock, flags);
++	return slot;
++}
++
++static void mes_v12_inv_wb_put(struct mes_v12_inv_wb *wb, unsigned int slot,
++			       bool unresolved)
++{
++	unsigned long flags;
++
++	if (slot == AMDGPU_MAX_WB)
++		return;
++	spin_lock_irqsave(&wb->lock, flags);
++	if (unresolved)
++		__set_bit(slot, wb->pending);
++	else
++		__clear_bit(slot, wb->used);
++	spin_unlock_irqrestore(&wb->lock, flags);
++}
++
+ static int mes_v12_0_submit_pkt_and_poll_completion(struct amdgpu_mes *mes,
+ 					    int pipe, void *pkt, int size,
+ 					    int api_status_off)
+@@ -163,8 +225,10 @@
+ 	const char *op_str, *misc_op_str;
+ 	unsigned long flags;
+ 	u64 status_gpu_addr;
+-	u32 seq, status_offset;
+-	u64 *status_ptr;
++	u32 seq, status_offset = 0;
++	struct mes_v12_inv_wb *inv_wb = NULL;
++	u64 *status_ptr, status = 0;
++	bool unresolved = false, failed;
+ 	signed long r;
+ 	int ret;
+ 
+@@ -178,13 +242,23 @@
+ 		timeout = 15 * 600 * 1000;
+ 	}
+ 
+-	ret = amdgpu_wb_get(adev, &status_offset);
+-	if (ret)
+-		return ret;
+-
+-	status_gpu_addr = adev->wb.gpu_addr + (status_offset * 4);
+-	status_ptr = (u64 *)&adev->wb.wb[status_offset];
+-	*status_ptr = 0;
++	if (x_pkt->header.opcode == MES_SCH_API_INV_TLBS)
++		inv_wb = mes->inv_wb;
++	if (inv_wb) {
++		status_offset = mes_v12_inv_wb_get(inv_wb);
++		status_gpu_addr = inv_wb->gpu + status_offset * MES_INV_WB_STRIDE;
++		status_ptr = mes_v12_inv_wb_ptr(inv_wb, status_offset);
++		/* The last slot is a write-only destination under exhaustion. */
++		if (status_offset < AMDGPU_MAX_WB)
++			WRITE_ONCE(*status_ptr, 0);
++	} else {
++		ret = amdgpu_wb_get(adev, &status_offset);
++		if (ret)
++			return ret;
++		status_gpu_addr = adev->wb.gpu_addr + (status_offset * 4);
++		status_ptr = (u64 *)&adev->wb.wb[status_offset];
++		*status_ptr = 0;
++	}
+ 
+ 	spin_lock_irqsave(ring_lock, flags);
+ 	r = amdgpu_ring_alloc(ring, (size + sizeof(mes_status_pkt)) / 4);
+@@ -195,8 +269,11 @@
+ 	r = amdgpu_fence_wait_polling(ring,
+ 				      seq - ring->fence_drv.num_fences_mask,
+ 				      timeout);
+-	if (r < 1)
++	if (r < 1) {
++		if (inv_wb)
++			r = -ETIMEDOUT;
+ 		goto error_undo;
++	}
+ 
+ 	api_status = (struct MES_API_STATUS *)((char *)pkt + api_status_off);
+ 	api_status->api_completion_fence_addr = status_gpu_addr;
+@@ -233,13 +310,34 @@
+ 
+ 	r = amdgpu_fence_wait_polling(ring, seq, timeout);
+ 
+-	/*
+-	 * status_ptr[31:0] == 0 (fail) or status_ptr[63:0] == 1 (success).
+-	 * If status_ptr[31:0] == 0 then status_ptr[63:32] will have debug error information.
+-	 */
+-	if (r < 1 || !(lower_32_bits(*status_ptr))) {
+-
+-		if (misc_op_str)
++	if (inv_wb) {
++		/*
++		 * Still submit the invalidation if all owned slots are pending.
++		 * No result read from the shared overflow address can certify it.
++		 */
++		if (status_offset == AMDGPU_MAX_WB) {
++			failed = true;
++		} else {
++			status = READ_ONCE(*status_ptr);
++			if (r > 0 && !status)
++				read_poll_timeout_atomic(READ_ONCE, status, status, 1,
++							 min_t(signed long, r, 100), false,
++							 *status_ptr);
++			unresolved = !mes_v12_inv_wb_terminal(status);
++			failed = r < 1 || status != 1;
++		}
++	} else {
++		failed = r < 1 || !lower_32_bits(*status_ptr);
++	}
++	if (failed) {
++
++		if (inv_wb && status_offset == AMDGPU_MAX_WB)
++			dev_err_ratelimited(adev->dev, "MES(%d) INV_TLBS completion slots exhausted, fence_wait_ret=%ld\n",
++					    pipe, r);
++		else if (inv_wb)
++			dev_err(adev->dev, "MES(%d) failed to respond to msg=INVALIDATE_TLBS fence_wait_ret=%ld status=0x%08x_%08x\n",
++				pipe, r, upper_32_bits(status), lower_32_bits(status));
++		else if (misc_op_str)
+ 			dev_err(adev->dev, "MES(%d) failed to respond to msg=%s (%s)\n",
+ 				pipe, op_str, misc_op_str);
+ 		else if (op_str)
+@@ -253,11 +351,10 @@
+ 			schedule();
+ 
+ 		r = -ETIMEDOUT;
+-		goto error_wb_free;
+-	}
+-
+-	amdgpu_wb_free(adev, status_offset);
+-	return 0;
++	} else {
++		r = 0;
++	}
++	goto release_status;
+ 
+ error_undo:
+ 	dev_err(adev->dev, "MES ring buffer is full.\n");
+@@ -266,8 +363,11 @@
+ error_unlock_free:
+ 	spin_unlock_irqrestore(ring_lock, flags);
+ 
+-error_wb_free:
+-	amdgpu_wb_free(adev, status_offset);
++release_status:
++	if (inv_wb)
++		mes_v12_inv_wb_put(inv_wb, status_offset, unresolved);
++	else
++		amdgpu_wb_free(adev, status_offset);
+ 	return r;
+ }
+ 
+@@ -1816,6 +1916,45 @@
+ 	return 0;
+ }
+ 
++static void mes_v12_inv_wb_init(struct amdgpu_device *adev)
++{
++	struct mes_v12_inv_wb *wb;
++	int r;
++
++	if (amdgpu_ip_version(adev, GC_HWIP, 0) != IP_VERSION(12, 0, 1))
++		return;
++	wb = kzalloc(sizeof(*wb), GFP_KERNEL);
++	if (!wb) {
++		r = -ENOMEM;
++		goto unavailable;
++	}
++	r = amdgpu_bo_create_kernel(adev, (AMDGPU_MAX_WB + 1) * MES_INV_WB_STRIDE,
++				    PAGE_SIZE, AMDGPU_GEM_DOMAIN_GTT,
++				    &wb->bo, &wb->gpu, &wb->cpu);
++	if (r) {
++		kfree(wb);
++		goto unavailable;
++	}
++	spin_lock_init(&wb->lock);
++	adev->mes.inv_wb = wb;
++	return;
++
++unavailable:
++	dev_warn(adev->dev,
++		 "INV_TLBS private writeback unavailable (%d), using stock checks\n", r);
++}
++
++static void mes_v12_inv_wb_fini(struct amdgpu_device *adev)
++{
++	struct mes_v12_inv_wb *wb = adev->mes.inv_wb;
++
++	if (!wb)
++		return;
++	amdgpu_bo_free_kernel(&wb->bo, &wb->gpu, &wb->cpu);
++	kfree(wb);
++	adev->mes.inv_wb = NULL;
++}
++
+ static int mes_v12_0_sw_init(struct amdgpu_ip_block *ip_block)
+ {
+ 	struct amdgpu_device *adev = ip_block->adev;
+@@ -1861,6 +2000,7 @@
+ 		}
+ 	}
+ 
++	mes_v12_inv_wb_init(adev);
+ 	return 0;
+ }
+ 
+@@ -1901,6 +2041,7 @@
+ 		mes_v12_0_free_ucode_buffers(adev, AMDGPU_MES_SCHED_PIPE);
+ 	}
+ 
++	mes_v12_inv_wb_fini(adev);
+ 	amdgpu_mes_fini(adev);
+ 	return 0;
+ }

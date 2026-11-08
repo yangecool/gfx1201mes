@@ -1,0 +1,71 @@
+{
+  "stage": "/var/tmp/mes-v3-dkms-5lmexbz_",
+  "kernel": "6.8.0-147-generic",
+  "patch_sha256": "b6a0336a2314060d85d7fff4ee1554a358aa17c4cb9c99876ba7c30880d18f1c",
+  "modules": {
+    "amd-sched.ko.zst": {
+      "sha256": "3470ec19a0cfaf9ae3386641308fe0646f6bca8c4e2ba76962f7adda905abb53",
+      "signer": "cks4u Secure Boot Module Signature key",
+      "sig_key": "0A:7A:FD:F2:DC:FE:BE:3C:4B:13:78:C4:3B:FC:E0:38:EC:5A:AB:95",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "srcversion": "827816FC9F9AE90F6A255CE"
+    },
+    "amddrm_buddy.ko.zst": {
+      "sha256": "3938db5dd1d51398552d404d59598456b69b64b640fe0ceead26daea3b792432",
+      "signer": "cks4u Secure Boot Module Signature key",
+      "sig_key": "0A:7A:FD:F2:DC:FE:BE:3C:4B:13:78:C4:3B:FC:E0:38:EC:5A:AB:95",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "srcversion": "E26E415E0A5D77465DDA8B5"
+    },
+    "amddrm_exec.ko.zst": {
+      "sha256": "56b5cda78310105a48ca4ef875f4fdcddf10ab6dbfc9ddd482e2c00d4ec475cb",
+      "signer": "cks4u Secure Boot Module Signature key",
+      "sig_key": "0A:7A:FD:F2:DC:FE:BE:3C:4B:13:78:C4:3B:FC:E0:38:EC:5A:AB:95",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "srcversion": "50F54453F59B120F0DB7384"
+    },
+    "amddrm_suballoc_helper.ko.zst": {
+      "sha256": "1cf33f036577503074590bd6f2185bb160e30cbdf8793127b9b2b10ed084a3ee",
+      "signer": "cks4u Secure Boot Module Signature key",
+      "sig_key": "0A:7A:FD:F2:DC:FE:BE:3C:4B:13:78:C4:3B:FC:E0:38:EC:5A:AB:95",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "srcversion": "FED333B003533764363C4E5"
+    },
+    "amddrm_ttm_helper.ko.zst": {
+      "sha256": "880dc6995c60c996a08c8ccd6b03622a2f290d7e1f50748a9434377dff5d6c60",
+      "signer": "cks4u Secure Boot Module Signature key",
+      "sig_key": "0A:7A:FD:F2:DC:FE:BE:3C:4B:13:78:C4:3B:FC:E0:38:EC:5A:AB:95",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "srcversion": "A7AE1056EE8DC96324AC70D"
+    },
+    "amdgpu.ko.zst": {
+      "sha256": "60e9902982e6d404c4e2ca4fe5d5bbdc0a6aef76e11be616cd74fbe62f488c54",
+      "signer": "cks4u Secure Boot Module Signature key",
+      "sig_key": "0A:7A:FD:F2:DC:FE:BE:3C:4B:13:78:C4:3B:FC:E0:38:EC:5A:AB:95",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "srcversion": "2A34331CFB220F1DE31A2C3"
+    },
+    "amdkcl.ko.zst": {
+      "sha256": "a2edf1af13e66d2e22f9d78cb47e286b3209ade71b74649b459aea3ac84d0d7b",
+      "signer": "cks4u Secure Boot Module Signature key",
+      "sig_key": "0A:7A:FD:F2:DC:FE:BE:3C:4B:13:78:C4:3B:FC:E0:38:EC:5A:AB:95",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "srcversion": "E609454046A274BA455A763"
+    },
+    "amdttm.ko.zst": {
+      "sha256": "591e5e896e730364b407b02d87df3d6d4191bac8c77f58ad71a41b8e112371f0",
+      "signer": "cks4u Secure Boot Module Signature key",
+      "sig_key": "0A:7A:FD:F2:DC:FE:BE:3C:4B:13:78:C4:3B:FC:E0:38:EC:5A:AB:95",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "srcversion": "FAC3936995BDDE45D5F88FC"
+    },
+    "amdxcp.ko.zst": {
+      "sha256": "3f1c2b08666f8518a38b90cd245ce118124ecbc022be23c3ae8e4eacfc547b17",
+      "signer": "cks4u Secure Boot Module Signature key",
+      "sig_key": "0A:7A:FD:F2:DC:FE:BE:3C:4B:13:78:C4:3B:FC:E0:38:EC:5A:AB:95",
+      "vermagic": "6.8.0-147-generic SMP preempt mod_unload modversions",
+      "srcversion": "49A2B3B6DCCEBB457F3BD1D"
+    }
+  },
+  "installed": false
+}

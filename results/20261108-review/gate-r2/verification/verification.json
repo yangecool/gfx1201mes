@@ -1,0 +1,116 @@
+{
+  "passed": 11,
+  "failed": 0,
+  "runs": [
+    {
+      "name": "v1",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\"direct_case_failures\": 7, \"direct_gate_passed\": false, \"ownership_counterexamples_unresolved\": 1, \"process_exit_code\": 1, \"results\": \"/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/v1/results.json\"}\n",
+      "stderr": "",
+      "required_failed_check": "remaining_and_100us_budget",
+      "pass": true
+    },
+    {
+      "name": "v2",
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "{\"direct_case_failures\": 0, \"direct_gate_passed\": true, \"ownership_counterexamples_unresolved\": 1, \"process_exit_code\": 0, \"results\": \"/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/v2/results.json\"}\n",
+      "stderr": "",
+      "required_failed_check": null,
+      "pass": true
+    },
+    {
+      "name": "nonzero_is_success",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\"direct_case_failures\": 5, \"direct_gate_passed\": false, \"ownership_counterexamples_unresolved\": 1, \"process_exit_code\": 1, \"results\": \"/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/nonzero_is_success/results.json\"}\n",
+      "stderr": "",
+      "required_failed_check": "return_code",
+      "pass": true
+    },
+    {
+      "name": "remove_100us_limit",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\"direct_case_failures\": 2, \"direct_gate_passed\": false, \"ownership_counterexamples_unresolved\": 1, \"process_exit_code\": 1, \"results\": \"/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/remove_100us_limit/results.json\"}\n",
+      "stderr": "",
+      "required_failed_check": "remaining_and_100us_budget",
+      "pass": true
+    },
+    {
+      "name": "delay_immediate_path",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\"direct_case_failures\": 15, \"direct_gate_passed\": false, \"ownership_counterexamples_unresolved\": 1, \"process_exit_code\": 1, \"results\": \"/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/delay_immediate_path/results.json\"}\n",
+      "stderr": "",
+      "required_failed_check": "immediate_path_has_one_read_and_no_delay",
+      "pass": true
+    },
+    {
+      "name": "extra_status_read",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\"direct_case_failures\": 12, \"direct_gate_passed\": false, \"ownership_counterexamples_unresolved\": 1, \"process_exit_code\": 1, \"results\": \"/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/extra_status_read/results.json\"}\n",
+      "stderr": "",
+      "required_failed_check": "status_read_limit",
+      "pass": true
+    },
+    {
+      "name": "wrong_snapshot_in_log",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\"direct_case_failures\": 8, \"direct_gate_passed\": false, \"ownership_counterexamples_unresolved\": 1, \"process_exit_code\": 1, \"results\": \"/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/wrong_snapshot_in_log/results.json\"}\n",
+      "stderr": "",
+      "required_failed_check": "error_log_matches_expected_snapshot_and_fence",
+      "pass": true
+    },
+    {
+      "name": "wrong_fence_in_log",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\"direct_case_failures\": 9, \"direct_gate_passed\": false, \"ownership_counterexamples_unresolved\": 1, \"process_exit_code\": 1, \"results\": \"/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/wrong_fence_in_log/results.json\"}\n",
+      "stderr": "",
+      "required_failed_check": "error_log_matches_expected_snapshot_and_fence",
+      "pass": true
+    },
+    {
+      "name": "duplicate_free",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\"direct_case_failures\": 15, \"direct_gate_passed\": false, \"ownership_counterexamples_unresolved\": 1, \"process_exit_code\": 1, \"results\": \"/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/duplicate_free/results.json\"}\n",
+      "stderr": "",
+      "required_failed_check": "exactly_one_wb_free_call",
+      "pass": true
+    },
+    {
+      "name": "poll_without_fence_budget",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\"direct_case_failures\": 1, \"direct_gate_passed\": false, \"ownership_counterexamples_unresolved\": 1, \"process_exit_code\": 1, \"results\": \"/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/poll_without_fence_budget/results.json\"}\n",
+      "stderr": "",
+      "required_failed_check": "immediate_path_has_one_read_and_no_delay",
+      "pass": true
+    },
+    {
+      "name": "compile_failure",
+      "exit": 2,
+      "expected_exit": 2,
+      "stdout": "{\"schema_version\": 2, \"direct_gate_passed\": false, \"infrastructure_error\": {\"stage\": \"compile\", \"message\": \"/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/compile_failure/review_mock.c: In function \\u2018reviewed_decision\\u2019:\\n/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/compile_failure/review_mock.c:153:32: error: expected expression before \\u2018)\\u2019 token\\n  153 |         if (r < 1 || status != )) {\\n      |                                ^\\n/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/compile_failure/review_mock.c:153:9: error: this \\u2018if\\u2019 clause does not guard... [-Werror=misleading-indentation]\\n  153 |         if (r < 1 || status != )) {\\n      |         ^~\\n/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/compile_failure/review_mock.c:153:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the \\u2018if\\u2019\\n  153 |         if (r < 1 || status != )) {\\n      |                                   ^\\ncc1: all warnings being treated as errors\\n\"}, \"compiler_command\": [\"gcc-13\", \"-std=gnu11\", \"-O2\", \"-Wall\", \"-Wextra\", \"-Werror\", \"-fsanitize=address,undefined\", \"-fno-omit-frame-pointer\", \"/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/compile_failure/review_mock.c\", \"-o\", \"/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/gate-r2/verification/compile_failure/review_mock\"], \"process_exit_code\": 2, \"production_deployment_allowed\": false, \"hardware_access\": false}\n",
+      "stderr": "",
+      "required_failed_check": null,
+      "pass": true
+    }
+  ],
+  "source_sha256": {
+    "/tmp/cks4u-mes-build-mpszxy8i/mes_v12_0.c.v1-reviewed": "4a619daa5ffb8f644e1702eb9e908d2cd95ddefd6e32c8dc71f0d61c3f4276ba",
+    "/tmp/cks4u-mes-build-mpszxy8i/mes_v12_0.c.v2-reviewed": "de928bee9432b09576bcfcbad49fd15092feb56a9984bc3427bf846262522093"
+  },
+  "harness_sha256": "3b317fa226f4f197a018830289f703aab0c7883b043559aeb813fc76b047940e",
+  "verifier_sha256": "657d7c593d0e767e00cba6f6b293e799c1721202822a371a349b025dbbc37195",
+  "kernel_iopoll_sha256": "ae14ea5396f486ab5be2c364fe9ce10226c7088dbc1d798c6a6d8b88854b1558",
+  "driver_patch_changed": false,
+  "hardware_access": false,
+  "wb_lifecycle_exercised": false,
+  "production_deployment_allowed": false
+}

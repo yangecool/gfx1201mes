@@ -1,0 +1,53 @@
+{
+  "deployment_allowed": false,
+  "driver_installed": false,
+  "driver_loaded": false,
+  "scope": [
+    "amd/amdgpu/mes_v12_0.c"
+  ],
+  "v2_build_returncode": 0,
+  "v2_checkpatch_errors": 0,
+  "v2_checkpatch_warnings": 0,
+  "module_symvers_unchanged": true,
+  "v2_amdgpu_module_sha256": "87ffbbbbb83840d2cc312d0c49b4efc29ce0b6e8f7a345110018ca04a4df37ae",
+  "v2_source_sha256": "de928bee9432b09576bcfcbad49fd15092feb56a9984bc3427bf846262522093",
+  "v1_added_busywait_nominal_us": 2097903,
+  "v2_added_busywait_nominal_us": 100,
+  "hardware_validation_of_patch": false,
+  "blocker": "WB slots are freed after timeout and reused without a per-request completion identity. If an old completion arrives in the reused slot, it is indistinguishable from current-request success. This conditional interleaving is not observed on 4U; it is not ruled out by the available protocol evidence.",
+  "decision": "No production installation while ownership is unresolved. Controlled experiments do not require rewriting all KFD/WB; they are separate from production approval. This revision changes only tests/reporting; no driver patch or host change.",
+  "historical_return_only_mock_summary": {
+    "v1_stricter_policy_mismatches": 6,
+    "v2_stricter_policy_mismatches": 0,
+    "v2_conditional_ownership_counterexamples": 1,
+    "test_count": 16,
+    "v2_passed_cases": 15
+  },
+  "gate_revision": "r2",
+  "direct_gate": {
+    "scope": "15 direct return/behavior cases; excludes the ownership value-sequence example",
+    "v1_case_failures": 7,
+    "v1_return_policy_case_failures": 6,
+    "v1_program_and_python_exit": 1,
+    "v2_cases_passed": 15,
+    "v2_assertions_checked": 139,
+    "v2_assertion_failures": 0,
+    "v2_program_and_python_exit": 0,
+    "v2_direct_gate_passed": true,
+    "verification_runs_passed": 11,
+    "mutations_rejected": 8
+  },
+  "request_ownership": {
+    "evidence_kind": "value_sequence_only",
+    "counterexample_count": 1,
+    "wb_lifecycle_exercised": false,
+    "status": "unresolved",
+    "not_counted_as_direct_case": true,
+    "v2_may_widen_acceptance_window_for_old_completions": true
+  },
+  "current_validation": {
+    "v1": "gate-r2/verification/v1/results.json",
+    "v2": "gate-r2/verification/v2/results.json",
+    "gate_self_check": "gate-r2/verification/verification.json"
+  }
+}

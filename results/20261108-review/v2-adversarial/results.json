@@ -1,0 +1,165 @@
+{
+  "cases": [
+    {
+      "name": "normal_success",
+      "expected": 0,
+      "actual": 0,
+      "reads": 1,
+      "nominal_delay_us": 0,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "observed_late_success",
+      "expected": 0,
+      "actual": 0,
+      "reads": 3,
+      "nominal_delay_us": 1,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "firmware_error_latched",
+      "expected": -110,
+      "actual": -110,
+      "reads": 1,
+      "nominal_delay_us": 0,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "late_firmware_error_latched",
+      "expected": -110,
+      "actual": -110,
+      "reads": 3,
+      "nominal_delay_us": 1,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "error_bit_with_low_one",
+      "expected": -110,
+      "actual": -110,
+      "reads": 1,
+      "nominal_delay_us": 0,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "late_error_bit_with_low_one",
+      "expected": -110,
+      "actual": -110,
+      "reads": 2,
+      "nominal_delay_us": 0,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "unexpected_low_two",
+      "expected": -110,
+      "actual": -110,
+      "reads": 1,
+      "nominal_delay_us": 0,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "late_unexpected_low_two",
+      "expected": -110,
+      "actual": -110,
+      "reads": 2,
+      "nominal_delay_us": 0,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "unexpected_high_bits_with_low_one",
+      "expected": -110,
+      "actual": -110,
+      "reads": 1,
+      "nominal_delay_us": 0,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "permanently_zero_full_budget",
+      "expected": -110,
+      "actual": -110,
+      "reads": 103,
+      "nominal_delay_us": 100,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "permanently_zero_short_budget",
+      "expected": -110,
+      "actual": -110,
+      "reads": 6,
+      "nominal_delay_us": 3,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "zero_fence_budget",
+      "expected": -110,
+      "actual": -110,
+      "reads": 1,
+      "nominal_delay_us": 0,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "negative_fence_budget",
+      "expected": -110,
+      "actual": -110,
+      "reads": 1,
+      "nominal_delay_us": 0,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "one_us_remaining",
+      "expected": 0,
+      "actual": 0,
+      "reads": 3,
+      "nominal_delay_us": 1,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "completion_beyond_100us_grace",
+      "expected": -110,
+      "actual": -110,
+      "reads": 103,
+      "nominal_delay_us": 100,
+      "pass": true,
+      "conditional_owner_model": false
+    },
+    {
+      "name": "conditional_stale_success_from_old_request",
+      "expected": -110,
+      "actual": 0,
+      "reads": 3,
+      "nominal_delay_us": 1,
+      "pass": false,
+      "conditional_owner_model": true
+    }
+  ],
+  "direct_case_failures": 0,
+  "conditional_owner_failures": 1,
+  "hardware_access": false,
+  "source_sha256": "de928bee9432b09576bcfcbad49fd15092feb56a9984bc3427bf846262522093",
+  "compiler_command": [
+    "gcc-13",
+    "-std=gnu11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/v2-adversarial/review_mock.c",
+    "-o",
+    "/disk/ssd1/codecache/non-git-workspaces/gpu-optimization/vLLM-v4-Craft/analysis/mesmock/results/20261108-review/v2-adversarial/review_mock"
+  ]
+}

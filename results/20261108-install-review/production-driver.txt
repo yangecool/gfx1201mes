@@ -1,0 +1,10 @@
+cks4u
+6.8.0-147-generic
+7.1.9.31600000
+8CF47837F896F00244D880B
+cab431ab-f956-4ad5-96aa-43704c67141c
+0
+229267a6acce562869e9da3f2c46b593c5a0724f96d368c0313f9be7160c74c4  /lib/modules/6.8.0-147-generic/updates/dkms/amdgpu.ko.zst
+6e5ef1eba2e0d66b9eeb5f5b83eacba2d87ae25071b944c5c7f4d68559aa41c9  /sys/module/amdgpu/notes/.note.gnu.build-id
+amdgpu/7.1.9-2407772.24.04, 6.8.0-100-generic, x86_64: installed
+amdgpu/7.1.9-2407772.24.04, 6.8.0-147-generic, x86_64: installed

@@ -1,0 +1,12 @@
+make: Entering directory '/tmp/cks4u-mes-build-mpszxy8i/headers/linux-headers-6.8.0-147-generic'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+  You are using:           gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+  CC [M]  /tmp/cks4u-mes-build-mpszxy8i/package/usr/src/amdgpu-7.1.9-2407772.24.04/amd/amdgpu/mes_v12_0.o
+  LD [M]  /tmp/cks4u-mes-build-mpszxy8i/package/usr/src/amdgpu-7.1.9-2407772.24.04/amd/amdgpu/amdgpu.o
+  MODPOST /tmp/cks4u-mes-build-mpszxy8i/package/usr/src/amdgpu-7.1.9-2407772.24.04/Module.symvers
+  CC [M]  /tmp/cks4u-mes-build-mpszxy8i/package/usr/src/amdgpu-7.1.9-2407772.24.04/amd/amdgpu/amdgpu.mod.o
+  LD [M]  /tmp/cks4u-mes-build-mpszxy8i/package/usr/src/amdgpu-7.1.9-2407772.24.04/amd/amdgpu/amdgpu.ko
+  BTF [M] /tmp/cks4u-mes-build-mpszxy8i/package/usr/src/amdgpu-7.1.9-2407772.24.04/amd/amdgpu/amdgpu.ko
+Skipping BTF generation for /tmp/cks4u-mes-build-mpszxy8i/package/usr/src/amdgpu-7.1.9-2407772.24.04/amd/amdgpu/amdgpu.ko due to unavailability of vmlinux
+make: Leaving directory '/tmp/cks4u-mes-build-mpszxy8i/headers/linux-headers-6.8.0-147-generic'

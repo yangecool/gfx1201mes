@@ -6,5 +6,6 @@ __pycache__/
 *.deb
 *.tar*
 mes_status_mock
+review_mock
 rendered_remote_program.py
 orchestration.stdout
