@@ -1,0 +1,1251 @@
+2026-11-08T00:52:02.201255+00:00 cks4u kernel: amdgpu 0000:f3:00.0: VM memory stats for proc (0) task (0) is non-zero when fini
+2026-11-08T00:52:02.201461+00:00 cks4u kernel: amdgpu 0000:f3:00.0: finishing device.
+2026-11-08T00:52:02.330252+00:00 cks4u kernel: amdgpu 0000:f3:00.0:  ttm finalized
+2026-11-08T00:52:02.330352+00:00 cks4u kernel: amdgpu 0000:e3:00.0: VM memory stats for proc (0) task (0) is non-zero when fini
+2026-11-08T00:52:02.331254+00:00 cks4u kernel: amdgpu 0000:e3:00.0: finishing device.
+2026-11-08T00:52:02.458253+00:00 cks4u kernel: amdgpu 0000:e3:00.0:  ttm finalized
+2026-11-08T00:52:02.459250+00:00 cks4u kernel: amdgpu 0000:93:00.0: VM memory stats for proc (0) task (0) is non-zero when fini
+2026-11-08T00:52:02.459337+00:00 cks4u kernel: amdgpu 0000:93:00.0: finishing device.
+2026-11-08T00:52:02.581250+00:00 cks4u kernel: amdgpu 0000:93:00.0:  ttm finalized
+2026-11-08T00:52:02.582254+00:00 cks4u kernel: amdgpu 0000:83:00.0: VM memory stats for proc (0) task (0) is non-zero when fini
+2026-11-08T00:52:02.582337+00:00 cks4u kernel: amdgpu 0000:83:00.0: finishing device.
+2026-11-08T00:52:02.709250+00:00 cks4u kernel: amdgpu 0000:83:00.0:  ttm finalized
+2026-11-08T00:52:02.710387+00:00 cks4u kernel: amdgpu 0000:73:00.0: VM memory stats for proc (0) task (0) is non-zero when fini
+2026-11-08T00:52:02.711251+00:00 cks4u kernel: amdgpu 0000:73:00.0: finishing device.
+2026-11-08T00:52:02.838256+00:00 cks4u kernel: amdgpu 0000:73:00.0:  ttm finalized
+2026-11-08T00:52:02.838634+00:00 cks4u kernel: amdgpu 0000:63:00.0: VM memory stats for proc (0) task (0) is non-zero when fini
+2026-11-08T00:52:02.839254+00:00 cks4u kernel: amdgpu 0000:63:00.0: finishing device.
+2026-11-08T00:52:02.966254+00:00 cks4u kernel: amdgpu 0000:63:00.0:  ttm finalized
+2026-11-08T00:52:02.966407+00:00 cks4u kernel: amdgpu 0000:13:00.0: VM memory stats for proc (0) task (0) is non-zero when fini
+2026-11-08T00:52:02.967253+00:00 cks4u kernel: amdgpu 0000:13:00.0: finishing device.
+2026-11-08T00:52:03.096253+00:00 cks4u kernel: amdgpu 0000:13:00.0:  ttm finalized
+2026-11-08T00:52:03.096429+00:00 cks4u kernel: amdgpu 0000:03:00.0: VM memory stats for proc (0) task (0) is non-zero when fini
+2026-11-08T00:52:03.097254+00:00 cks4u kernel: amdgpu 0000:03:00.0: finishing device.
+2026-11-08T00:52:03.220253+00:00 cks4u kernel: amdgpu 0000:03:00.0:  ttm finalized
+2026-11-08T00:52:05.176259+00:00 cks4u kernel: [drm] amdgpu version: 7.1.9.31600000
+2026-11-08T00:52:05.176343+00:00 cks4u kernel: [drm] OS DRM version: 6.8.0
+2026-11-08T00:52:05.176359+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for CPU
+2026-11-08T00:52:05.176373+00:00 cks4u kernel: amdgpu: Topology: Add CPU node
+2026-11-08T00:52:05.185370+00:00 cks4u kernel: amdgpu 0000:03:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:05.185591+00:00 cks4u kernel: amdgpu 0000:03:00.0: register mmio base: 0xF8000000
+2026-11-08T00:52:05.185740+00:00 cks4u kernel: amdgpu 0000:03:00.0: register mmio size: 524288
+2026-11-08T00:52:05.186257+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:05.186435+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:05.186582+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:05.186716+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:05.186838+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:05.186972+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:05.187095+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:05.187213+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:05.187389+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:05.187528+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:05.187672+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:05.205255+00:00 cks4u kernel: amdgpu 0000:03:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:05.205357+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:05.222255+00:00 cks4u kernel: amdgpu 0000:03:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:05.222334+00:00 cks4u kernel: amdgpu 0000:03:00.0: MODE1 reset
+2026-11-08T00:52:05.222412+00:00 cks4u kernel: amdgpu 0000:03:00.0: GPU mode1 reset
+2026-11-08T00:52:05.222491+00:00 cks4u kernel: amdgpu 0000:03:00.0: GPU smu mode1 reset
+2026-11-08T00:52:06.253257+00:00 cks4u kernel: amdgpu 0000:03:00.0: MEM ECC is active.
+2026-11-08T00:52:06.253365+00:00 cks4u kernel: amdgpu 0000:03:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:06.253451+00:00 cks4u kernel: amdgpu 0000:03:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:06.253528+00:00 cks4u kernel: amdgpu 0000:03:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:06.253607+00:00 cks4u kernel: amdgpu 0000:03:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:06.253681+00:00 cks4u kernel: amdgpu 0000:03:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:06.253754+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:06.253826+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:06.253899+00:00 cks4u kernel: amdgpu 0000:03:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:06.253972+00:00 cks4u kernel: amdgpu 0000:03:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:06.254042+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:06.254114+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:06.254189+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:06.322253+00:00 cks4u kernel: amdgpu 0000:03:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:06.322306+00:00 cks4u kernel: amdgpu 0000:03:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:06.322346+00:00 cks4u kernel: amdgpu 0000:03:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:06.543255+00:00 cks4u kernel: amdgpu 0000:03:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:06.548252+00:00 cks4u kernel: amdgpu 0000:03:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:06.548334+00:00 cks4u kernel: amdgpu 0000:03:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:06.548408+00:00 cks4u kernel: amdgpu 0000:03:00.0: smu driver if version = 0x0000002e, smu fw if version = 0x00000033, smu fw program = 0, smu fw version = 0x00685000 (104.80.0)
+2026-11-08T00:52:06.574252+00:00 cks4u kernel: amdgpu 0000:03:00.0: SMU is initialized successfully!
+2026-11-08T00:52:06.575252+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:06.575329+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:06.580251+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:06.589266+00:00 cks4u kernel: snd_hda_intel 0000:03:00.1: bound 0000:03:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:06.589365+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] DP-1: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:06.590254+00:00 cks4u kernel: amdgpu 0000:03:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:06.590348+00:00 cks4u kernel: amdgpu 0000:03:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:06.602255+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:06.602368+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:06.602427+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:06.602435+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:06.658254+00:00 cks4u kernel: amdgpu 0000:03:00.0: added peer-to-peer DMA memory 0x58800000000-0x58ff6ffffff
+2026-11-08T00:52:06.658306+00:00 cks4u kernel: amdgpu 0000:03:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:06.658346+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:06.658379+00:00 cks4u kernel: amdgpu 0000:03:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:06.658419+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:06.658459+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:06.658497+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:06.658535+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:06.658574+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:06.658613+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:06.658651+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:06.658689+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:06.658730+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:06.658768+00:00 cks4u kernel: amdgpu 0000:03:00.0: MES_TAG_PROBE n=0 pasid=1 sent=0x1 first=0x1 last=0x1 fence=2099978 posted=1 rc=0
+2026-11-08T00:52:06.658807+00:00 cks4u kernel: amdgpu 0000:03:00.0: MES_TAG_PROBE n=1 pasid=1 sent=0x2 first=0x2 last=0x2 fence=2099936 posted=1 rc=0
+2026-11-08T00:52:06.658847+00:00 cks4u kernel: amdgpu 0000:03:00.0: MES_TAG_PROBE n=2 pasid=1 sent=0x5a39c7 first=0x5a39c7 last=0x5a39c7 fence=2099936 posted=1 rc=0
+2026-11-08T00:52:06.658886+00:00 cks4u kernel: amdgpu 0000:03:00.0: MES_TAG_PROBE n=3 pasid=1 sent=0x6a95310d first=0x6a95310d last=0x6a95310d fence=2099938 posted=1 rc=0
+2026-11-08T00:52:06.658925+00:00 cks4u kernel: amdgpu 0000:03:00.0: MES_TAG_PROBE n=4 pasid=1 sent=0x1 first=0x1 last=0x1 fence=2099936 posted=1 rc=0
+2026-11-08T00:52:06.718255+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:06.720252+00:00 cks4u kernel: amdgpu 0000:03:00.0: Using BACO for runtime pm
+2026-11-08T00:52:06.720370+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:03:00.0 on minor 1
+2026-11-08T00:52:06.723254+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:06.723332+00:00 cks4u kernel: [drm] pre_validate_dsc:2091 MST_DSC dsc precompute is not needed
+2026-11-08T00:52:06.743498+00:00 cks4u kernel: amdgpu 0000:13:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:06.743591+00:00 cks4u kernel: amdgpu 0000:13:00.0: register mmio base: 0xAE000000
+2026-11-08T00:52:06.743680+00:00 cks4u kernel: amdgpu 0000:13:00.0: register mmio size: 524288
+2026-11-08T00:52:06.744255+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:06.744390+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:06.744541+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:06.744744+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:06.745002+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:06.745242+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:06.745483+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:06.745707+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:06.745910+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:06.746113+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:06.746267+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:06.763255+00:00 cks4u kernel: amdgpu 0000:13:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:06.763300+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:06.765253+00:00 cks4u kernel: amdgpu 0000:13:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:06.765297+00:00 cks4u kernel: amdgpu 0000:13:00.0: MODE1 reset
+2026-11-08T00:52:06.765338+00:00 cks4u kernel: amdgpu 0000:13:00.0: GPU mode1 reset
+2026-11-08T00:52:06.765379+00:00 cks4u kernel: amdgpu 0000:13:00.0: GPU smu mode1 reset
+2026-11-08T00:52:07.789257+00:00 cks4u kernel: amdgpu 0000:13:00.0: MEM ECC is active.
+2026-11-08T00:52:07.789522+00:00 cks4u kernel: amdgpu 0000:13:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:07.789639+00:00 cks4u kernel: amdgpu 0000:13:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:07.789748+00:00 cks4u kernel: amdgpu 0000:13:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:07.789854+00:00 cks4u kernel: amdgpu 0000:13:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:07.789963+00:00 cks4u kernel: amdgpu 0000:13:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:07.790060+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:07.790157+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:07.790242+00:00 cks4u kernel: amdgpu 0000:13:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:07.790371+00:00 cks4u kernel: amdgpu 0000:13:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:07.790472+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:07.790582+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:07.790696+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:07.854255+00:00 cks4u kernel: amdgpu 0000:13:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:07.854697+00:00 cks4u kernel: amdgpu 0000:13:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:07.854771+00:00 cks4u kernel: amdgpu 0000:13:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:08.076254+00:00 cks4u kernel: amdgpu 0000:13:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:08.081253+00:00 cks4u kernel: amdgpu 0000:13:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:08.081332+00:00 cks4u kernel: amdgpu 0000:13:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:08.107255+00:00 cks4u kernel: amdgpu 0000:13:00.0: SMU is initialized successfully!
+2026-11-08T00:52:08.108253+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:08.108331+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:08.112253+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:08.125275+00:00 cks4u kernel: snd_hda_intel 0000:13:00.1: bound 0000:13:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:08.125387+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] DP-2: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:08.126253+00:00 cks4u kernel: amdgpu 0000:13:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:08.126343+00:00 cks4u kernel: amdgpu 0000:13:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:08.140255+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:08.140322+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:08.140359+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:08.140366+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:08.194254+00:00 cks4u kernel: amdgpu 0000:13:00.0: added peer-to-peer DMA memory 0x76800000000-0x76ff6ffffff
+2026-11-08T00:52:08.194308+00:00 cks4u kernel: amdgpu 0000:13:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:08.194347+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:08.194379+00:00 cks4u kernel: amdgpu 0000:13:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:08.194417+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:08.194456+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:08.194495+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:08.194536+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:08.194576+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:08.194614+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:08.194651+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:08.194691+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:08.194729+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:08.249252+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:08.252254+00:00 cks4u kernel: amdgpu 0000:13:00.0: Using BACO for runtime pm
+2026-11-08T00:52:08.252324+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:13:00.0 on minor 2
+2026-11-08T00:52:08.256252+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:08.276373+00:00 cks4u kernel: amdgpu 0000:63:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:08.276457+00:00 cks4u kernel: amdgpu 0000:63:00.0: register mmio base: 0xB8000000
+2026-11-08T00:52:08.276536+00:00 cks4u kernel: amdgpu 0000:63:00.0: register mmio size: 524288
+2026-11-08T00:52:08.277253+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:08.277440+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:08.277678+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:08.277902+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:08.278160+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:08.278414+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:08.278683+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:08.278908+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:08.279067+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:08.279205+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:08.279305+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:08.296253+00:00 cks4u kernel: amdgpu 0000:63:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:08.296299+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:08.298253+00:00 cks4u kernel: amdgpu 0000:63:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:08.298296+00:00 cks4u kernel: amdgpu 0000:63:00.0: MODE1 reset
+2026-11-08T00:52:08.298341+00:00 cks4u kernel: amdgpu 0000:63:00.0: GPU mode1 reset
+2026-11-08T00:52:08.298380+00:00 cks4u kernel: amdgpu 0000:63:00.0: GPU smu mode1 reset
+2026-11-08T00:52:09.325256+00:00 cks4u kernel: amdgpu 0000:63:00.0: MEM ECC is active.
+2026-11-08T00:52:09.325313+00:00 cks4u kernel: amdgpu 0000:63:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:09.325353+00:00 cks4u kernel: amdgpu 0000:63:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:09.325392+00:00 cks4u kernel: amdgpu 0000:63:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:09.325429+00:00 cks4u kernel: amdgpu 0000:63:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:09.325468+00:00 cks4u kernel: amdgpu 0000:63:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:09.325541+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:09.325581+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:09.325649+00:00 cks4u kernel: amdgpu 0000:63:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:09.325702+00:00 cks4u kernel: amdgpu 0000:63:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:09.325743+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:09.325790+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:09.325833+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:09.391253+00:00 cks4u kernel: amdgpu 0000:63:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:09.391307+00:00 cks4u kernel: amdgpu 0000:63:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:09.391345+00:00 cks4u kernel: amdgpu 0000:63:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:09.614254+00:00 cks4u kernel: amdgpu 0000:63:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:09.618253+00:00 cks4u kernel: amdgpu 0000:63:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:09.618297+00:00 cks4u kernel: amdgpu 0000:63:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:09.647253+00:00 cks4u kernel: amdgpu 0000:63:00.0: SMU is initialized successfully!
+2026-11-08T00:52:09.648255+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:09.648297+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:09.653255+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:09.665253+00:00 cks4u kernel: snd_hda_intel 0000:63:00.1: bound 0000:63:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:09.665318+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] DP-3: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:09.665374+00:00 cks4u kernel: amdgpu 0000:63:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:09.665417+00:00 cks4u kernel: amdgpu 0000:63:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:09.677254+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:09.677308+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:09.677341+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:09.677346+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:09.742255+00:00 cks4u kernel: amdgpu 0000:63:00.0: added peer-to-peer DMA memory 0x2f800000000-0x2fff6ffffff
+2026-11-08T00:52:09.742310+00:00 cks4u kernel: amdgpu 0000:63:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:09.742350+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:09.742382+00:00 cks4u kernel: amdgpu 0000:63:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:09.742421+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:09.742459+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:09.742498+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:09.742536+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:09.742574+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:09.742612+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:09.742652+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:09.742689+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:09.742728+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:09.798255+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:09.801253+00:00 cks4u kernel: amdgpu 0000:63:00.0: Using BACO for runtime pm
+2026-11-08T00:52:09.801319+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:63:00.0 on minor 3
+2026-11-08T00:52:09.805252+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:09.825196+00:00 cks4u kernel: amdgpu 0000:73:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:09.825293+00:00 cks4u kernel: amdgpu 0000:73:00.0: register mmio base: 0xBE000000
+2026-11-08T00:52:09.825365+00:00 cks4u kernel: amdgpu 0000:73:00.0: register mmio size: 524288
+2026-11-08T00:52:09.826258+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:09.826490+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:09.826745+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:09.827016+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:09.827287+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:09.827522+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:09.827752+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:09.827939+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:09.828056+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:09.828141+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:09.828221+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:09.844253+00:00 cks4u kernel: amdgpu 0000:73:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:09.844296+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:09.846253+00:00 cks4u kernel: amdgpu 0000:73:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:09.846295+00:00 cks4u kernel: amdgpu 0000:73:00.0: MODE1 reset
+2026-11-08T00:52:09.846338+00:00 cks4u kernel: amdgpu 0000:73:00.0: GPU mode1 reset
+2026-11-08T00:52:09.846379+00:00 cks4u kernel: amdgpu 0000:73:00.0: GPU smu mode1 reset
+2026-11-08T00:52:10.861260+00:00 cks4u kernel: amdgpu 0000:73:00.0: MEM ECC is active.
+2026-11-08T00:52:10.861370+00:00 cks4u kernel: amdgpu 0000:73:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:10.861409+00:00 cks4u kernel: amdgpu 0000:73:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:10.861449+00:00 cks4u kernel: amdgpu 0000:73:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:10.861488+00:00 cks4u kernel: amdgpu 0000:73:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:10.861528+00:00 cks4u kernel: amdgpu 0000:73:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:10.861586+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:10.861636+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:10.861694+00:00 cks4u kernel: amdgpu 0000:73:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:10.861749+00:00 cks4u kernel: amdgpu 0000:73:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:10.861800+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:10.861849+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:10.861894+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:10.930253+00:00 cks4u kernel: amdgpu 0000:73:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:10.930305+00:00 cks4u kernel: amdgpu 0000:73:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:10.930348+00:00 cks4u kernel: amdgpu 0000:73:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:11.152255+00:00 cks4u kernel: amdgpu 0000:73:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:11.157252+00:00 cks4u kernel: amdgpu 0000:73:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:11.157296+00:00 cks4u kernel: amdgpu 0000:73:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:11.184257+00:00 cks4u kernel: amdgpu 0000:73:00.0: SMU is initialized successfully!
+2026-11-08T00:52:11.185253+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:11.185297+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:11.189252+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:11.200252+00:00 cks4u kernel: snd_hda_intel 0000:73:00.1: bound 0000:73:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:11.201252+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] DP-4: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:11.201313+00:00 cks4u kernel: amdgpu 0000:73:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:11.201374+00:00 cks4u kernel: amdgpu 0000:73:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:11.212254+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:11.212340+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:11.212392+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:11.213252+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:11.281253+00:00 cks4u kernel: amdgpu 0000:73:00.0: added peer-to-peer DMA memory 0x1f800000000-0x1fff6ffffff
+2026-11-08T00:52:11.281307+00:00 cks4u kernel: amdgpu 0000:73:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:11.281347+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:11.281381+00:00 cks4u kernel: amdgpu 0000:73:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:11.281420+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:11.281460+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:11.281505+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:11.281545+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:11.281584+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:11.281621+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:11.281660+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:11.281700+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:11.281739+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:11.337254+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:11.340253+00:00 cks4u kernel: amdgpu 0000:73:00.0: Using BACO for runtime pm
+2026-11-08T00:52:11.340338+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:73:00.0 on minor 4
+2026-11-08T00:52:11.344251+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:11.364414+00:00 cks4u kernel: amdgpu 0000:83:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:11.364498+00:00 cks4u kernel: amdgpu 0000:83:00.0: register mmio base: 0x96000000
+2026-11-08T00:52:11.364568+00:00 cks4u kernel: amdgpu 0000:83:00.0: register mmio size: 524288
+2026-11-08T00:52:11.365250+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:11.365346+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:11.365505+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:11.365664+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:11.365812+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:11.366079+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:11.366370+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:11.366667+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:11.366971+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:11.367255+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:11.367514+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:11.383252+00:00 cks4u kernel: amdgpu 0000:83:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:11.383300+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:11.385252+00:00 cks4u kernel: amdgpu 0000:83:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:11.385298+00:00 cks4u kernel: amdgpu 0000:83:00.0: MODE1 reset
+2026-11-08T00:52:11.385339+00:00 cks4u kernel: amdgpu 0000:83:00.0: GPU mode1 reset
+2026-11-08T00:52:11.385381+00:00 cks4u kernel: amdgpu 0000:83:00.0: GPU smu mode1 reset
+2026-11-08T00:52:12.397254+00:00 cks4u kernel: amdgpu 0000:83:00.0: MEM ECC is active.
+2026-11-08T00:52:12.397352+00:00 cks4u kernel: amdgpu 0000:83:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:12.397428+00:00 cks4u kernel: amdgpu 0000:83:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:12.397506+00:00 cks4u kernel: amdgpu 0000:83:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:12.397581+00:00 cks4u kernel: amdgpu 0000:83:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:12.397656+00:00 cks4u kernel: amdgpu 0000:83:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:12.397729+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:12.397802+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:12.397875+00:00 cks4u kernel: amdgpu 0000:83:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:12.397948+00:00 cks4u kernel: amdgpu 0000:83:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:12.398019+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:12.398091+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:12.398174+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:12.461258+00:00 cks4u kernel: amdgpu 0000:83:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:12.461384+00:00 cks4u kernel: amdgpu 0000:83:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:12.461494+00:00 cks4u kernel: amdgpu 0000:83:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:12.683256+00:00 cks4u kernel: amdgpu 0000:83:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:12.687252+00:00 cks4u kernel: amdgpu 0000:83:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:12.687372+00:00 cks4u kernel: amdgpu 0000:83:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:12.716253+00:00 cks4u kernel: amdgpu 0000:83:00.0: SMU is initialized successfully!
+2026-11-08T00:52:12.717254+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:12.717368+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:12.721253+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:12.739255+00:00 cks4u kernel: snd_hda_intel 0000:83:00.1: bound 0000:83:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:12.739421+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] DP-5: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:12.739550+00:00 cks4u kernel: amdgpu 0000:83:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:12.739658+00:00 cks4u kernel: amdgpu 0000:83:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:12.750258+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:12.750342+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:12.750417+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:12.751253+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:12.808258+00:00 cks4u kernel: amdgpu 0000:83:00.0: added peer-to-peer DMA memory 0xdf800000000-0xdfff6ffffff
+2026-11-08T00:52:12.808313+00:00 cks4u kernel: amdgpu 0000:83:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:12.808355+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:12.808385+00:00 cks4u kernel: amdgpu 0000:83:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:12.808424+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:12.808463+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:12.808502+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:12.808541+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:12.808579+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:12.808616+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:12.808654+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:12.808691+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:12.808730+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:12.865254+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:12.868252+00:00 cks4u kernel: amdgpu 0000:83:00.0: Using BACO for runtime pm
+2026-11-08T00:52:12.868306+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:83:00.0 on minor 5
+2026-11-08T00:52:12.872260+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:12.892459+00:00 cks4u kernel: amdgpu 0000:93:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:12.892576+00:00 cks4u kernel: amdgpu 0000:93:00.0: register mmio base: 0x90000000
+2026-11-08T00:52:12.892644+00:00 cks4u kernel: amdgpu 0000:93:00.0: register mmio size: 524288
+2026-11-08T00:52:12.893253+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:12.893429+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:12.893612+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:12.893874+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:12.894143+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:12.894495+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:12.894788+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:12.895128+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:12.895432+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:12.895684+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:12.895901+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:12.898256+00:00 cks4u kernel: workqueue: work_for_cpu_fn hogged CPU for >10000us 16 times, consider switching to WQ_UNBOUND
+2026-11-08T00:52:12.912256+00:00 cks4u kernel: amdgpu 0000:93:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:12.912305+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:12.915254+00:00 cks4u kernel: amdgpu 0000:93:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:12.915298+00:00 cks4u kernel: amdgpu 0000:93:00.0: MODE1 reset
+2026-11-08T00:52:12.915337+00:00 cks4u kernel: amdgpu 0000:93:00.0: GPU mode1 reset
+2026-11-08T00:52:12.915376+00:00 cks4u kernel: amdgpu 0000:93:00.0: GPU smu mode1 reset
+2026-11-08T00:52:13.933254+00:00 cks4u kernel: amdgpu 0000:93:00.0: MEM ECC is active.
+2026-11-08T00:52:13.933456+00:00 cks4u kernel: amdgpu 0000:93:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:13.933530+00:00 cks4u kernel: amdgpu 0000:93:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:13.933604+00:00 cks4u kernel: amdgpu 0000:93:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:13.933670+00:00 cks4u kernel: amdgpu 0000:93:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:13.933733+00:00 cks4u kernel: amdgpu 0000:93:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:13.933780+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:13.933830+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:13.933889+00:00 cks4u kernel: amdgpu 0000:93:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:13.933957+00:00 cks4u kernel: amdgpu 0000:93:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:13.934026+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:13.934103+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:13.934156+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:13.997257+00:00 cks4u kernel: amdgpu 0000:93:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:13.997309+00:00 cks4u kernel: amdgpu 0000:93:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:13.997352+00:00 cks4u kernel: amdgpu 0000:93:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:14.218252+00:00 cks4u kernel: amdgpu 0000:93:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:14.223252+00:00 cks4u kernel: amdgpu 0000:93:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:14.223294+00:00 cks4u kernel: amdgpu 0000:93:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:14.251252+00:00 cks4u kernel: amdgpu 0000:93:00.0: SMU is initialized successfully!
+2026-11-08T00:52:14.252251+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:14.252295+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:14.256251+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:14.268259+00:00 cks4u kernel: snd_hda_intel 0000:93:00.1: bound 0000:93:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:14.268337+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] DP-6: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:14.269253+00:00 cks4u kernel: amdgpu 0000:93:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:14.269304+00:00 cks4u kernel: amdgpu 0000:93:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:14.279256+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:14.279344+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:14.279402+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:14.280253+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:14.330255+00:00 cks4u kernel: amdgpu 0000:93:00.0: added peer-to-peer DMA memory 0xfd800000000-0xfdff6ffffff
+2026-11-08T00:52:14.330305+00:00 cks4u kernel: amdgpu 0000:93:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:14.330346+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:14.330378+00:00 cks4u kernel: amdgpu 0000:93:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:14.330418+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:14.330458+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:14.330500+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:14.330539+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:14.330580+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:14.330619+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:14.330662+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:14.330704+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:14.330742+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:14.381254+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:14.384254+00:00 cks4u kernel: amdgpu 0000:93:00.0: Using BACO for runtime pm
+2026-11-08T00:52:14.384322+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:93:00.0 on minor 6
+2026-11-08T00:52:14.388262+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:14.407426+00:00 cks4u kernel: amdgpu 0000:e3:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:14.407533+00:00 cks4u kernel: amdgpu 0000:e3:00.0: register mmio base: 0xA0000000
+2026-11-08T00:52:14.407604+00:00 cks4u kernel: amdgpu 0000:e3:00.0: register mmio size: 524288
+2026-11-08T00:52:14.407658+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:14.407713+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:14.407771+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:14.407827+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:14.407884+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:14.407938+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:14.407984+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:14.408029+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:14.408099+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:14.408272+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:14.408478+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:14.427255+00:00 cks4u kernel: amdgpu 0000:e3:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:14.427301+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:14.429253+00:00 cks4u kernel: amdgpu 0000:e3:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:14.429296+00:00 cks4u kernel: amdgpu 0000:e3:00.0: MODE1 reset
+2026-11-08T00:52:14.429336+00:00 cks4u kernel: amdgpu 0000:e3:00.0: GPU mode1 reset
+2026-11-08T00:52:14.429377+00:00 cks4u kernel: amdgpu 0000:e3:00.0: GPU smu mode1 reset
+2026-11-08T00:52:15.469255+00:00 cks4u kernel: amdgpu 0000:e3:00.0: MEM ECC is active.
+2026-11-08T00:52:15.469319+00:00 cks4u kernel: amdgpu 0000:e3:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:15.469360+00:00 cks4u kernel: amdgpu 0000:e3:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:15.469405+00:00 cks4u kernel: amdgpu 0000:e3:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:15.469444+00:00 cks4u kernel: amdgpu 0000:e3:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:15.469484+00:00 cks4u kernel: amdgpu 0000:e3:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:15.469524+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:15.469563+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:15.469603+00:00 cks4u kernel: amdgpu 0000:e3:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:15.469644+00:00 cks4u kernel: amdgpu 0000:e3:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:15.469682+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:15.469721+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:15.469760+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:15.533255+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:15.533304+00:00 cks4u kernel: amdgpu 0000:e3:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:15.533346+00:00 cks4u kernel: amdgpu 0000:e3:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:15.754254+00:00 cks4u kernel: amdgpu 0000:e3:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:15.759250+00:00 cks4u kernel: amdgpu 0000:e3:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:15.759294+00:00 cks4u kernel: amdgpu 0000:e3:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:15.786255+00:00 cks4u kernel: amdgpu 0000:e3:00.0: SMU is initialized successfully!
+2026-11-08T00:52:15.787251+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:15.787291+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:15.791250+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:15.801251+00:00 cks4u kernel: snd_hda_intel 0000:e3:00.1: bound 0000:e3:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:15.802252+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] DP-7: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:15.802301+00:00 cks4u kernel: amdgpu 0000:e3:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:15.802342+00:00 cks4u kernel: amdgpu 0000:e3:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:15.814250+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:15.814314+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:15.814370+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:15.815250+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:15.877254+00:00 cks4u kernel: amdgpu 0000:e3:00.0: added peer-to-peer DMA memory 0xaf800000000-0xafff6ffffff
+2026-11-08T00:52:15.877308+00:00 cks4u kernel: amdgpu 0000:e3:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:15.877348+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:15.877380+00:00 cks4u kernel: amdgpu 0000:e3:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:15.877422+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:15.877460+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:15.877500+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:15.877540+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:15.877579+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:15.877618+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:15.877656+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:15.877695+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:15.877734+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:15.933256+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:15.936254+00:00 cks4u kernel: amdgpu 0000:e3:00.0: Using BACO for runtime pm
+2026-11-08T00:52:15.936331+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:e3:00.0 on minor 7
+2026-11-08T00:52:15.941253+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:15.961340+00:00 cks4u kernel: amdgpu 0000:f3:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:15.961430+00:00 cks4u kernel: amdgpu 0000:f3:00.0: register mmio base: 0xA4000000
+2026-11-08T00:52:15.961496+00:00 cks4u kernel: amdgpu 0000:f3:00.0: register mmio size: 524288
+2026-11-08T00:52:15.962253+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:15.962460+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:15.962767+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:15.963030+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:15.963308+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:15.963588+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:15.963935+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:15.964218+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:15.964476+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:15.964702+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:15.964889+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:15.980257+00:00 cks4u kernel: amdgpu 0000:f3:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:15.980305+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:15.982254+00:00 cks4u kernel: amdgpu 0000:f3:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:15.982294+00:00 cks4u kernel: amdgpu 0000:f3:00.0: MODE1 reset
+2026-11-08T00:52:15.982336+00:00 cks4u kernel: amdgpu 0000:f3:00.0: GPU mode1 reset
+2026-11-08T00:52:15.982378+00:00 cks4u kernel: amdgpu 0000:f3:00.0: GPU smu mode1 reset
+2026-11-08T00:52:17.005256+00:00 cks4u kernel: amdgpu 0000:f3:00.0: MEM ECC is active.
+2026-11-08T00:52:17.005378+00:00 cks4u kernel: amdgpu 0000:f3:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:17.005432+00:00 cks4u kernel: amdgpu 0000:f3:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:17.005500+00:00 cks4u kernel: amdgpu 0000:f3:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:17.005560+00:00 cks4u kernel: amdgpu 0000:f3:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:17.005617+00:00 cks4u kernel: amdgpu 0000:f3:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:17.005688+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:17.005740+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:17.005805+00:00 cks4u kernel: amdgpu 0000:f3:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:17.005882+00:00 cks4u kernel: amdgpu 0000:f3:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:17.005949+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:17.006012+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:17.006069+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:17.068255+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:17.068306+00:00 cks4u kernel: amdgpu 0000:f3:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:17.068346+00:00 cks4u kernel: amdgpu 0000:f3:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:17.290254+00:00 cks4u kernel: amdgpu 0000:f3:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:17.294252+00:00 cks4u kernel: amdgpu 0000:f3:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:17.294297+00:00 cks4u kernel: amdgpu 0000:f3:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:17.317253+00:00 cks4u kernel: amdgpu 0000:f3:00.0: SMU is initialized successfully!
+2026-11-08T00:52:17.317295+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:17.317334+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:17.322251+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:17.330251+00:00 cks4u kernel: snd_hda_intel 0000:f3:00.1: bound 0000:f3:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:17.330314+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] DP-8: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:17.330385+00:00 cks4u kernel: amdgpu 0000:f3:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:17.330450+00:00 cks4u kernel: amdgpu 0000:f3:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:17.341255+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:17.341315+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:17.341370+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:17.343256+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:17.399678+00:00 cks4u kernel: amdgpu 0000:f3:00.0: added peer-to-peer DMA memory 0x9f800000000-0x9fff6ffffff
+2026-11-08T00:52:17.399737+00:00 cks4u kernel: amdgpu 0000:f3:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:17.399777+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:17.399809+00:00 cks4u kernel: amdgpu 0000:f3:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:17.399850+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:17.399889+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:17.399931+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:17.399970+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:17.400011+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:17.400050+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:17.400088+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:17.400127+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:17.400168+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:17.454253+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:17.457254+00:00 cks4u kernel: amdgpu 0000:f3:00.0: Using BACO for runtime pm
+2026-11-08T00:52:17.457309+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:f3:00.0 on minor 8
+2026-11-08T00:52:17.462263+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:17.780250+00:00 cks4u kernel: amdgpu 0000:f3:00.0: finishing device.
+2026-11-08T00:52:17.910258+00:00 cks4u kernel: amdgpu 0000:f3:00.0:  ttm finalized
+2026-11-08T00:52:17.911252+00:00 cks4u kernel: amdgpu 0000:e3:00.0: finishing device.
+2026-11-08T00:52:18.037261+00:00 cks4u kernel: amdgpu 0000:e3:00.0:  ttm finalized
+2026-11-08T00:52:18.038252+00:00 cks4u kernel: amdgpu 0000:93:00.0: finishing device.
+2026-11-08T00:52:18.179258+00:00 cks4u kernel: amdgpu 0000:93:00.0:  ttm finalized
+2026-11-08T00:52:18.310247+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:18.310341+00:00 cks4u kernel: amdgpu 0000:83:00.0: PSP is resuming...
+2026-11-08T00:52:18.513254+00:00 cks4u kernel: amdgpu 0000:83:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:18.518255+00:00 cks4u kernel: amdgpu 0000:83:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:18.518388+00:00 cks4u kernel: amdgpu 0000:83:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:18.518512+00:00 cks4u kernel: amdgpu 0000:83:00.0: SMU is resuming...
+2026-11-08T00:52:18.544255+00:00 cks4u kernel: amdgpu 0000:83:00.0: SMU is resumed successfully!
+2026-11-08T00:52:18.544381+00:00 cks4u kernel: amdgpu 0000:83:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:18.544507+00:00 cks4u kernel: amdgpu 0000:83:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:18.558255+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:18.565252+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:18.565393+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:18.565520+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:18.565642+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:18.565762+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:18.565882+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:18.566003+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:18.566124+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:18.566265+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:18.566387+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:18.569253+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:18.570611+00:00 cks4u kernel: amdgpu 0000:83:00.0: finishing device.
+2026-11-08T00:52:18.696258+00:00 cks4u kernel: amdgpu 0000:83:00.0:  ttm finalized
+2026-11-08T00:52:18.826252+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:18.826335+00:00 cks4u kernel: amdgpu 0000:73:00.0: PSP is resuming...
+2026-11-08T00:52:19.027251+00:00 cks4u kernel: amdgpu 0000:73:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:19.032247+00:00 cks4u kernel: amdgpu 0000:73:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:19.032295+00:00 cks4u kernel: amdgpu 0000:73:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:19.032346+00:00 cks4u kernel: amdgpu 0000:73:00.0: SMU is resuming...
+2026-11-08T00:52:19.056249+00:00 cks4u kernel: amdgpu 0000:73:00.0: SMU is resumed successfully!
+2026-11-08T00:52:19.056294+00:00 cks4u kernel: amdgpu 0000:73:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:19.056341+00:00 cks4u kernel: amdgpu 0000:73:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:19.068249+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:19.076247+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:19.076295+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:19.076340+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:19.076385+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:19.076428+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:19.076470+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:19.076513+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:19.076555+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:19.076598+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:19.076641+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:19.080251+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:19.080325+00:00 cks4u kernel: amdgpu 0000:73:00.0: finishing device.
+2026-11-08T00:52:19.209254+00:00 cks4u kernel: amdgpu 0000:73:00.0:  ttm finalized
+2026-11-08T00:52:19.340250+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:19.340325+00:00 cks4u kernel: amdgpu 0000:63:00.0: PSP is resuming...
+2026-11-08T00:52:19.540250+00:00 cks4u kernel: amdgpu 0000:63:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:19.544247+00:00 cks4u kernel: amdgpu 0000:63:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:19.544290+00:00 cks4u kernel: amdgpu 0000:63:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:19.544335+00:00 cks4u kernel: amdgpu 0000:63:00.0: SMU is resuming...
+2026-11-08T00:52:19.569248+00:00 cks4u kernel: amdgpu 0000:63:00.0: SMU is resumed successfully!
+2026-11-08T00:52:19.569293+00:00 cks4u kernel: amdgpu 0000:63:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:19.569335+00:00 cks4u kernel: amdgpu 0000:63:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:19.581250+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:19.589252+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:19.589299+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:19.589345+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:19.589387+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:19.589429+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:19.589474+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:19.589515+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:19.589562+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:19.589604+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:19.589646+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:19.593591+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:19.593672+00:00 cks4u kernel: amdgpu 0000:63:00.0: finishing device.
+2026-11-08T00:52:19.726253+00:00 cks4u kernel: amdgpu 0000:63:00.0:  ttm finalized
+2026-11-08T00:52:19.855249+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:19.855320+00:00 cks4u kernel: amdgpu 0000:13:00.0: PSP is resuming...
+2026-11-08T00:52:20.055248+00:00 cks4u kernel: amdgpu 0000:13:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:20.060248+00:00 cks4u kernel: amdgpu 0000:13:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:20.060294+00:00 cks4u kernel: amdgpu 0000:13:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:20.060337+00:00 cks4u kernel: amdgpu 0000:13:00.0: SMU is resuming...
+2026-11-08T00:52:20.081247+00:00 cks4u kernel: amdgpu 0000:13:00.0: SMU is resumed successfully!
+2026-11-08T00:52:20.081296+00:00 cks4u kernel: amdgpu 0000:13:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:20.081341+00:00 cks4u kernel: amdgpu 0000:13:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:20.093249+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:20.101283+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:20.101330+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:20.101378+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:20.101421+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:20.101465+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:20.101511+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:20.101551+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:20.101593+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:20.101635+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:20.101677+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:20.105248+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:20.106250+00:00 cks4u kernel: amdgpu 0000:13:00.0: finishing device.
+2026-11-08T00:52:20.226255+00:00 cks4u kernel: amdgpu 0000:13:00.0:  ttm finalized
+2026-11-08T00:52:20.355251+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:20.355334+00:00 cks4u kernel: amdgpu 0000:03:00.0: PSP is resuming...
+2026-11-08T00:52:20.556254+00:00 cks4u kernel: amdgpu 0000:03:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:20.560250+00:00 cks4u kernel: amdgpu 0000:03:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:20.560381+00:00 cks4u kernel: amdgpu 0000:03:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:20.560508+00:00 cks4u kernel: amdgpu 0000:03:00.0: SMU is resuming...
+2026-11-08T00:52:20.582253+00:00 cks4u kernel: amdgpu 0000:03:00.0: SMU is resumed successfully!
+2026-11-08T00:52:20.582380+00:00 cks4u kernel: amdgpu 0000:03:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:20.582503+00:00 cks4u kernel: amdgpu 0000:03:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:20.594256+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:20.604253+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:20.604384+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:20.604509+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:20.604627+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:20.604748+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:20.604872+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:20.604989+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:20.605111+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:20.605230+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:20.605371+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:20.609254+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:20.610262+00:00 cks4u kernel: amdgpu 0000:03:00.0: finishing device.
+2026-11-08T00:52:20.735259+00:00 cks4u kernel: amdgpu 0000:03:00.0:  ttm finalized
+2026-11-08T00:52:22.672259+00:00 cks4u kernel: [drm] amdgpu version: 7.1.9.31600000
+2026-11-08T00:52:22.672352+00:00 cks4u kernel: [drm] OS DRM version: 6.8.0
+2026-11-08T00:52:22.672367+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for CPU
+2026-11-08T00:52:22.672382+00:00 cks4u kernel: amdgpu: Topology: Add CPU node
+2026-11-08T00:52:22.682545+00:00 cks4u kernel: amdgpu 0000:03:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:22.682751+00:00 cks4u kernel: amdgpu 0000:03:00.0: register mmio base: 0xF8000000
+2026-11-08T00:52:22.682863+00:00 cks4u kernel: amdgpu 0000:03:00.0: register mmio size: 524288
+2026-11-08T00:52:22.682947+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:22.683040+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:22.683124+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:22.683220+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:22.683343+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:22.683437+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:22.683529+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:22.683620+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:22.683715+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:22.683826+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:22.683929+00:00 cks4u kernel: amdgpu 0000:03:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:22.702258+00:00 cks4u kernel: amdgpu 0000:03:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:22.702427+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:22.709255+00:00 cks4u kernel: amdgpu 0000:03:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:22.709347+00:00 cks4u kernel: amdgpu 0000:03:00.0: MODE1 reset
+2026-11-08T00:52:22.709433+00:00 cks4u kernel: amdgpu 0000:03:00.0: GPU mode1 reset
+2026-11-08T00:52:22.709514+00:00 cks4u kernel: amdgpu 0000:03:00.0: GPU smu mode1 reset
+2026-11-08T00:52:23.725252+00:00 cks4u kernel: amdgpu 0000:03:00.0: MEM ECC is active.
+2026-11-08T00:52:23.725315+00:00 cks4u kernel: amdgpu 0000:03:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:23.725368+00:00 cks4u kernel: amdgpu 0000:03:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:23.725420+00:00 cks4u kernel: amdgpu 0000:03:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:23.725476+00:00 cks4u kernel: amdgpu 0000:03:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:23.725539+00:00 cks4u kernel: amdgpu 0000:03:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:23.725605+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:23.725662+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:23.725723+00:00 cks4u kernel: amdgpu 0000:03:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:23.725769+00:00 cks4u kernel: amdgpu 0000:03:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:23.725821+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:23.725872+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:23.725936+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:23.791251+00:00 cks4u kernel: amdgpu 0000:03:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:23.791300+00:00 cks4u kernel: amdgpu 0000:03:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:23.791339+00:00 cks4u kernel: amdgpu 0000:03:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:24.014257+00:00 cks4u kernel: amdgpu 0000:03:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:24.018255+00:00 cks4u kernel: amdgpu 0000:03:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:24.018375+00:00 cks4u kernel: amdgpu 0000:03:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:24.018486+00:00 cks4u kernel: amdgpu 0000:03:00.0: smu driver if version = 0x0000002e, smu fw if version = 0x00000033, smu fw program = 0, smu fw version = 0x00685000 (104.80.0)
+2026-11-08T00:52:24.044255+00:00 cks4u kernel: amdgpu 0000:03:00.0: SMU is initialized successfully!
+2026-11-08T00:52:24.045255+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:24.045373+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:24.050255+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:24.064254+00:00 cks4u kernel: snd_hda_intel 0000:03:00.1: bound 0000:03:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:24.065253+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] DP-1: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:24.065355+00:00 cks4u kernel: amdgpu 0000:03:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:24.065448+00:00 cks4u kernel: amdgpu 0000:03:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:24.076257+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:24.076371+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:24.076430+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:24.076440+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:24.150254+00:00 cks4u kernel: amdgpu 0000:03:00.0: added peer-to-peer DMA memory 0x58800000000-0x58ff6ffffff
+2026-11-08T00:52:24.150314+00:00 cks4u kernel: amdgpu 0000:03:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:24.150356+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:24.150388+00:00 cks4u kernel: amdgpu 0000:03:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:24.150428+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:24.150468+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:24.150506+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:24.150544+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:24.150584+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:24.150622+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:24.150660+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:24.150697+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:24.150738+00:00 cks4u kernel: amdgpu 0000:03:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:24.205253+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:24.207251+00:00 cks4u kernel: amdgpu 0000:03:00.0: Using BACO for runtime pm
+2026-11-08T00:52:24.208253+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:03:00.0 on minor 1
+2026-11-08T00:52:24.212250+00:00 cks4u kernel: amdgpu 0000:03:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:24.212303+00:00 cks4u kernel: [drm] pre_validate_dsc:2091 MST_DSC dsc precompute is not needed
+2026-11-08T00:52:24.232513+00:00 cks4u kernel: amdgpu 0000:13:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:24.232574+00:00 cks4u kernel: amdgpu 0000:13:00.0: register mmio base: 0xAE000000
+2026-11-08T00:52:24.232631+00:00 cks4u kernel: amdgpu 0000:13:00.0: register mmio size: 524288
+2026-11-08T00:52:24.233261+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:24.233436+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:24.233586+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:24.233772+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:24.233968+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:24.234190+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:24.234412+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:24.234628+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:24.234818+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:24.234953+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:24.235079+00:00 cks4u kernel: amdgpu 0000:13:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:24.252253+00:00 cks4u kernel: amdgpu 0000:13:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:24.252305+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:24.254252+00:00 cks4u kernel: amdgpu 0000:13:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:24.254295+00:00 cks4u kernel: amdgpu 0000:13:00.0: MODE1 reset
+2026-11-08T00:52:24.254334+00:00 cks4u kernel: amdgpu 0000:13:00.0: GPU mode1 reset
+2026-11-08T00:52:24.254374+00:00 cks4u kernel: amdgpu 0000:13:00.0: GPU smu mode1 reset
+2026-11-08T00:52:25.261259+00:00 cks4u kernel: amdgpu 0000:13:00.0: MEM ECC is active.
+2026-11-08T00:52:25.261410+00:00 cks4u kernel: amdgpu 0000:13:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:25.261525+00:00 cks4u kernel: amdgpu 0000:13:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:25.261636+00:00 cks4u kernel: amdgpu 0000:13:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:25.261764+00:00 cks4u kernel: amdgpu 0000:13:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:25.261884+00:00 cks4u kernel: amdgpu 0000:13:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:25.261992+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:25.262115+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:25.262239+00:00 cks4u kernel: amdgpu 0000:13:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:25.262387+00:00 cks4u kernel: amdgpu 0000:13:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:25.262518+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:25.262644+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:25.262770+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:25.327251+00:00 cks4u kernel: amdgpu 0000:13:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:25.327303+00:00 cks4u kernel: amdgpu 0000:13:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:25.327342+00:00 cks4u kernel: amdgpu 0000:13:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:25.549259+00:00 cks4u kernel: amdgpu 0000:13:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:25.554257+00:00 cks4u kernel: amdgpu 0000:13:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:25.554382+00:00 cks4u kernel: amdgpu 0000:13:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:25.581258+00:00 cks4u kernel: amdgpu 0000:13:00.0: SMU is initialized successfully!
+2026-11-08T00:52:25.582256+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:25.582370+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:25.586254+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:25.596304+00:00 cks4u kernel: snd_hda_intel 0000:13:00.1: bound 0000:13:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:25.596410+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] DP-2: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:25.597254+00:00 cks4u kernel: amdgpu 0000:13:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:25.597343+00:00 cks4u kernel: amdgpu 0000:13:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:25.608256+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:25.608360+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:25.608432+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:25.609252+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:25.683253+00:00 cks4u kernel: amdgpu 0000:13:00.0: added peer-to-peer DMA memory 0x76800000000-0x76ff6ffffff
+2026-11-08T00:52:25.683315+00:00 cks4u kernel: amdgpu 0000:13:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:25.683356+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:25.683388+00:00 cks4u kernel: amdgpu 0000:13:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:25.683429+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:25.683470+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:25.683509+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:25.683551+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:25.683590+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:25.683630+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:25.683669+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:25.683707+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:25.683748+00:00 cks4u kernel: amdgpu 0000:13:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:25.738251+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:25.740252+00:00 cks4u kernel: amdgpu 0000:13:00.0: Using BACO for runtime pm
+2026-11-08T00:52:25.740310+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:13:00.0 on minor 2
+2026-11-08T00:52:25.744251+00:00 cks4u kernel: amdgpu 0000:13:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:25.764428+00:00 cks4u kernel: amdgpu 0000:63:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:25.764505+00:00 cks4u kernel: amdgpu 0000:63:00.0: register mmio base: 0xB8000000
+2026-11-08T00:52:25.764573+00:00 cks4u kernel: amdgpu 0000:63:00.0: register mmio size: 524288
+2026-11-08T00:52:25.765255+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:25.765389+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:25.765510+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:25.765691+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:25.765901+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:25.766114+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:25.766325+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:25.766514+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:25.766704+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:25.766836+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:25.766939+00:00 cks4u kernel: amdgpu 0000:63:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:25.784251+00:00 cks4u kernel: amdgpu 0000:63:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:25.784300+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:25.786251+00:00 cks4u kernel: amdgpu 0000:63:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:25.786294+00:00 cks4u kernel: amdgpu 0000:63:00.0: MODE1 reset
+2026-11-08T00:52:25.786336+00:00 cks4u kernel: amdgpu 0000:63:00.0: GPU mode1 reset
+2026-11-08T00:52:25.786377+00:00 cks4u kernel: amdgpu 0000:63:00.0: GPU smu mode1 reset
+2026-11-08T00:52:26.797260+00:00 cks4u kernel: amdgpu 0000:63:00.0: MEM ECC is active.
+2026-11-08T00:52:26.797399+00:00 cks4u kernel: amdgpu 0000:63:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:26.797531+00:00 cks4u kernel: amdgpu 0000:63:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:26.797660+00:00 cks4u kernel: amdgpu 0000:63:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:26.797780+00:00 cks4u kernel: amdgpu 0000:63:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:26.797897+00:00 cks4u kernel: amdgpu 0000:63:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:26.798020+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:26.798149+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:26.798314+00:00 cks4u kernel: amdgpu 0000:63:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:26.798462+00:00 cks4u kernel: amdgpu 0000:63:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:26.798592+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:26.798712+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:26.798830+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:26.863251+00:00 cks4u kernel: amdgpu 0000:63:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:26.863302+00:00 cks4u kernel: amdgpu 0000:63:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:26.863341+00:00 cks4u kernel: amdgpu 0000:63:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:27.085254+00:00 cks4u kernel: amdgpu 0000:63:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:27.089253+00:00 cks4u kernel: amdgpu 0000:63:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:27.089367+00:00 cks4u kernel: amdgpu 0000:63:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:27.116255+00:00 cks4u kernel: amdgpu 0000:63:00.0: SMU is initialized successfully!
+2026-11-08T00:52:27.117255+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:27.117371+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:27.122254+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:27.133255+00:00 cks4u kernel: snd_hda_intel 0000:63:00.1: bound 0000:63:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:27.133365+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] DP-3: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:27.133469+00:00 cks4u kernel: amdgpu 0000:63:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:27.133566+00:00 cks4u kernel: amdgpu 0000:63:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:27.144257+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:27.144345+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:27.144409+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:27.144420+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:27.209253+00:00 cks4u kernel: amdgpu 0000:63:00.0: added peer-to-peer DMA memory 0x2f800000000-0x2fff6ffffff
+2026-11-08T00:52:27.209316+00:00 cks4u kernel: amdgpu 0000:63:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:27.209356+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:27.209387+00:00 cks4u kernel: amdgpu 0000:63:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:27.209425+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:27.209463+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:27.209504+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:27.209544+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:27.209582+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:27.209621+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:27.209660+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:27.209697+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:27.209736+00:00 cks4u kernel: amdgpu 0000:63:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:27.265252+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:27.268252+00:00 cks4u kernel: amdgpu 0000:63:00.0: Using BACO for runtime pm
+2026-11-08T00:52:27.268322+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:63:00.0 on minor 3
+2026-11-08T00:52:27.272255+00:00 cks4u kernel: amdgpu 0000:63:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:27.291276+00:00 cks4u kernel: amdgpu 0000:73:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:27.291341+00:00 cks4u kernel: amdgpu 0000:73:00.0: register mmio base: 0xBE000000
+2026-11-08T00:52:27.291405+00:00 cks4u kernel: amdgpu 0000:73:00.0: register mmio size: 524288
+2026-11-08T00:52:27.292254+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:27.292397+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:27.292532+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:27.292642+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:27.292799+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:27.292977+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:27.293241+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:27.293506+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:27.293751+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:27.293971+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:27.294248+00:00 cks4u kernel: amdgpu 0000:73:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:27.309253+00:00 cks4u kernel: amdgpu 0000:73:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:27.309304+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:27.312254+00:00 cks4u kernel: amdgpu 0000:73:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:27.312297+00:00 cks4u kernel: amdgpu 0000:73:00.0: MODE1 reset
+2026-11-08T00:52:27.312337+00:00 cks4u kernel: amdgpu 0000:73:00.0: GPU mode1 reset
+2026-11-08T00:52:27.312377+00:00 cks4u kernel: amdgpu 0000:73:00.0: GPU smu mode1 reset
+2026-11-08T00:52:28.333266+00:00 cks4u kernel: amdgpu 0000:73:00.0: MEM ECC is active.
+2026-11-08T00:52:28.333463+00:00 cks4u kernel: amdgpu 0000:73:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:28.333586+00:00 cks4u kernel: amdgpu 0000:73:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:28.333707+00:00 cks4u kernel: amdgpu 0000:73:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:28.333823+00:00 cks4u kernel: amdgpu 0000:73:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:28.333946+00:00 cks4u kernel: amdgpu 0000:73:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:28.334070+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:28.334199+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:28.334360+00:00 cks4u kernel: amdgpu 0000:73:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:28.334484+00:00 cks4u kernel: amdgpu 0000:73:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:28.334611+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:28.334722+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:28.334834+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:28.398252+00:00 cks4u kernel: amdgpu 0000:73:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:28.398300+00:00 cks4u kernel: amdgpu 0000:73:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:28.398341+00:00 cks4u kernel: amdgpu 0000:73:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:28.621257+00:00 cks4u kernel: amdgpu 0000:73:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:28.625254+00:00 cks4u kernel: amdgpu 0000:73:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:28.625378+00:00 cks4u kernel: amdgpu 0000:73:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:28.654256+00:00 cks4u kernel: amdgpu 0000:73:00.0: SMU is initialized successfully!
+2026-11-08T00:52:28.655254+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:28.655371+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:28.659254+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:28.671254+00:00 cks4u kernel: snd_hda_intel 0000:73:00.1: bound 0000:73:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:28.671366+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] DP-4: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:28.671451+00:00 cks4u kernel: amdgpu 0000:73:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:28.671530+00:00 cks4u kernel: amdgpu 0000:73:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:28.683256+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:28.683345+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:28.683408+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:28.684253+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:28.757252+00:00 cks4u kernel: amdgpu 0000:73:00.0: added peer-to-peer DMA memory 0x1f800000000-0x1fff6ffffff
+2026-11-08T00:52:28.757450+00:00 cks4u kernel: amdgpu 0000:73:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:28.757490+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:28.757522+00:00 cks4u kernel: amdgpu 0000:73:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:28.757567+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:28.757607+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:28.757649+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:28.757687+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:28.757726+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:28.757764+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:28.757801+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:28.757839+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:28.757877+00:00 cks4u kernel: amdgpu 0000:73:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:28.821251+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:28.824252+00:00 cks4u kernel: amdgpu 0000:73:00.0: Using BACO for runtime pm
+2026-11-08T00:52:28.824321+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:73:00.0 on minor 4
+2026-11-08T00:52:28.828254+00:00 cks4u kernel: amdgpu 0000:73:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:28.847494+00:00 cks4u kernel: amdgpu 0000:83:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:28.847570+00:00 cks4u kernel: amdgpu 0000:83:00.0: register mmio base: 0x96000000
+2026-11-08T00:52:28.847636+00:00 cks4u kernel: amdgpu 0000:83:00.0: register mmio size: 524288
+2026-11-08T00:52:28.848251+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:28.848394+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:28.848529+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:28.848643+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:28.848763+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:28.848994+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:28.849179+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:28.849427+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:28.849679+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:28.849932+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:28.850192+00:00 cks4u kernel: amdgpu 0000:83:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:28.866253+00:00 cks4u kernel: amdgpu 0000:83:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:28.866319+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:28.868252+00:00 cks4u kernel: amdgpu 0000:83:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:28.868311+00:00 cks4u kernel: amdgpu 0000:83:00.0: MODE1 reset
+2026-11-08T00:52:28.868365+00:00 cks4u kernel: amdgpu 0000:83:00.0: GPU mode1 reset
+2026-11-08T00:52:28.868421+00:00 cks4u kernel: amdgpu 0000:83:00.0: GPU smu mode1 reset
+2026-11-08T00:52:29.933255+00:00 cks4u kernel: amdgpu 0000:83:00.0: MEM ECC is active.
+2026-11-08T00:52:29.933417+00:00 cks4u kernel: amdgpu 0000:83:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:29.933575+00:00 cks4u kernel: amdgpu 0000:83:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:29.933730+00:00 cks4u kernel: amdgpu 0000:83:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:29.933906+00:00 cks4u kernel: amdgpu 0000:83:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:29.934069+00:00 cks4u kernel: amdgpu 0000:83:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:29.934219+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:29.934389+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:29.934509+00:00 cks4u kernel: amdgpu 0000:83:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:29.934621+00:00 cks4u kernel: amdgpu 0000:83:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:29.934731+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:29.934847+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:29.934958+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:29.996283+00:00 cks4u kernel: amdgpu 0000:83:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:29.996401+00:00 cks4u kernel: amdgpu 0000:83:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:29.996514+00:00 cks4u kernel: amdgpu 0000:83:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:30.217257+00:00 cks4u kernel: amdgpu 0000:83:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:30.222255+00:00 cks4u kernel: amdgpu 0000:83:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:30.222375+00:00 cks4u kernel: amdgpu 0000:83:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:30.251255+00:00 cks4u kernel: amdgpu 0000:83:00.0: SMU is initialized successfully!
+2026-11-08T00:52:30.251372+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:30.251483+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:30.256256+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:30.268255+00:00 cks4u kernel: snd_hda_intel 0000:83:00.1: bound 0000:83:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:30.268428+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] DP-5: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:30.268565+00:00 cks4u kernel: amdgpu 0000:83:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:30.268712+00:00 cks4u kernel: amdgpu 0000:83:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:30.278257+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:30.278394+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:30.278514+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:30.280255+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:30.333258+00:00 cks4u kernel: amdgpu 0000:83:00.0: added peer-to-peer DMA memory 0xdf800000000-0xdfff6ffffff
+2026-11-08T00:52:30.333397+00:00 cks4u kernel: amdgpu 0000:83:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:30.333511+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:30.333601+00:00 cks4u kernel: amdgpu 0000:83:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:30.333713+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:30.333826+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:30.333937+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:30.334052+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:30.334162+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:30.334294+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:30.334403+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:30.334515+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:30.334624+00:00 cks4u kernel: amdgpu 0000:83:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:30.388259+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:30.391254+00:00 cks4u kernel: amdgpu 0000:83:00.0: Using BACO for runtime pm
+2026-11-08T00:52:30.391432+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:83:00.0 on minor 5
+2026-11-08T00:52:30.396258+00:00 cks4u kernel: amdgpu 0000:83:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:30.415443+00:00 cks4u kernel: amdgpu 0000:93:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:30.415620+00:00 cks4u kernel: amdgpu 0000:93:00.0: register mmio base: 0x90000000
+2026-11-08T00:52:30.415769+00:00 cks4u kernel: amdgpu 0000:93:00.0: register mmio size: 524288
+2026-11-08T00:52:30.415912+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:30.416048+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:30.416161+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:30.416323+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:30.416607+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:30.416991+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:30.417422+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:30.417808+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:30.418234+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:30.418562+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:30.418846+00:00 cks4u kernel: amdgpu 0000:93:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:30.435258+00:00 cks4u kernel: amdgpu 0000:93:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:30.435403+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:30.438256+00:00 cks4u kernel: amdgpu 0000:93:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:30.438372+00:00 cks4u kernel: amdgpu 0000:93:00.0: MODE1 reset
+2026-11-08T00:52:30.438483+00:00 cks4u kernel: amdgpu 0000:93:00.0: GPU mode1 reset
+2026-11-08T00:52:30.438593+00:00 cks4u kernel: amdgpu 0000:93:00.0: GPU smu mode1 reset
+2026-11-08T00:52:31.469258+00:00 cks4u kernel: amdgpu 0000:93:00.0: MEM ECC is active.
+2026-11-08T00:52:31.469419+00:00 cks4u kernel: amdgpu 0000:93:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:31.469572+00:00 cks4u kernel: amdgpu 0000:93:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:31.469716+00:00 cks4u kernel: amdgpu 0000:93:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:31.469851+00:00 cks4u kernel: amdgpu 0000:93:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:31.470012+00:00 cks4u kernel: amdgpu 0000:93:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:31.470157+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:31.470322+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:31.470434+00:00 cks4u kernel: amdgpu 0000:93:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:31.470545+00:00 cks4u kernel: amdgpu 0000:93:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:31.470654+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:31.470764+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:31.470874+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:31.533257+00:00 cks4u kernel: amdgpu 0000:93:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:31.533376+00:00 cks4u kernel: amdgpu 0000:93:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:31.533491+00:00 cks4u kernel: amdgpu 0000:93:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:31.755254+00:00 cks4u kernel: amdgpu 0000:93:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:31.760253+00:00 cks4u kernel: amdgpu 0000:93:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:31.760373+00:00 cks4u kernel: amdgpu 0000:93:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:31.790254+00:00 cks4u kernel: amdgpu 0000:93:00.0: SMU is initialized successfully!
+2026-11-08T00:52:31.791254+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:31.791372+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:31.796255+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:31.806314+00:00 cks4u kernel: snd_hda_intel 0000:93:00.1: bound 0000:93:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:31.806485+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] DP-6: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:31.807255+00:00 cks4u kernel: amdgpu 0000:93:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:31.807381+00:00 cks4u kernel: amdgpu 0000:93:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:31.821257+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:31.821396+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:31.821482+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:31.821495+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:31.875263+00:00 cks4u kernel: amdgpu 0000:93:00.0: added peer-to-peer DMA memory 0xfd800000000-0xfdff6ffffff
+2026-11-08T00:52:31.875393+00:00 cks4u kernel: amdgpu 0000:93:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:31.875502+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:31.875587+00:00 cks4u kernel: amdgpu 0000:93:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:31.875698+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:31.875808+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:31.875919+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:31.876027+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:31.876139+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:31.876279+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:31.876389+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:31.876499+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:31.876611+00:00 cks4u kernel: amdgpu 0000:93:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:31.929257+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:31.932259+00:00 cks4u kernel: amdgpu 0000:93:00.0: Using BACO for runtime pm
+2026-11-08T00:52:31.932410+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:93:00.0 on minor 6
+2026-11-08T00:52:31.937255+00:00 cks4u kernel: amdgpu 0000:93:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:31.956483+00:00 cks4u kernel: amdgpu 0000:e3:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:31.956663+00:00 cks4u kernel: amdgpu 0000:e3:00.0: register mmio base: 0xA0000000
+2026-11-08T00:52:31.956799+00:00 cks4u kernel: amdgpu 0000:e3:00.0: register mmio size: 524288
+2026-11-08T00:52:31.956945+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:31.957083+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:31.957231+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:31.957521+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:31.957904+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:31.958307+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:31.958708+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:31.959097+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:31.959454+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:31.959754+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:31.959975+00:00 cks4u kernel: amdgpu 0000:e3:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:31.976257+00:00 cks4u kernel: amdgpu 0000:e3:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:31.976380+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:31.978255+00:00 cks4u kernel: amdgpu 0000:e3:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:31.978376+00:00 cks4u kernel: amdgpu 0000:e3:00.0: MODE1 reset
+2026-11-08T00:52:31.978488+00:00 cks4u kernel: amdgpu 0000:e3:00.0: GPU mode1 reset
+2026-11-08T00:52:31.978599+00:00 cks4u kernel: amdgpu 0000:e3:00.0: GPU smu mode1 reset
+2026-11-08T00:52:33.005259+00:00 cks4u kernel: amdgpu 0000:e3:00.0: MEM ECC is active.
+2026-11-08T00:52:33.005424+00:00 cks4u kernel: amdgpu 0000:e3:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:33.005578+00:00 cks4u kernel: amdgpu 0000:e3:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:33.005727+00:00 cks4u kernel: amdgpu 0000:e3:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:33.005859+00:00 cks4u kernel: amdgpu 0000:e3:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:33.006021+00:00 cks4u kernel: amdgpu 0000:e3:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:33.006168+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:33.006334+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:33.006444+00:00 cks4u kernel: amdgpu 0000:e3:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:33.006555+00:00 cks4u kernel: amdgpu 0000:e3:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:33.006663+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:33.006774+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:33.006884+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:33.069256+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:33.069370+00:00 cks4u kernel: amdgpu 0000:e3:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:33.069482+00:00 cks4u kernel: amdgpu 0000:e3:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:33.291255+00:00 cks4u kernel: amdgpu 0000:e3:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:33.296254+00:00 cks4u kernel: amdgpu 0000:e3:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:33.296374+00:00 cks4u kernel: amdgpu 0000:e3:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:33.320254+00:00 cks4u kernel: amdgpu 0000:e3:00.0: SMU is initialized successfully!
+2026-11-08T00:52:33.320370+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:33.320483+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:33.325254+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:33.336255+00:00 cks4u kernel: snd_hda_intel 0000:e3:00.1: bound 0000:e3:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:33.337255+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] DP-7: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:33.337383+00:00 cks4u kernel: amdgpu 0000:e3:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:33.337495+00:00 cks4u kernel: amdgpu 0000:e3:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:33.346257+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:33.346396+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:33.346520+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:33.348255+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:33.402260+00:00 cks4u kernel: amdgpu 0000:e3:00.0: added peer-to-peer DMA memory 0xaf800000000-0xafff6ffffff
+2026-11-08T00:52:33.402400+00:00 cks4u kernel: amdgpu 0000:e3:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:33.402511+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:33.402595+00:00 cks4u kernel: amdgpu 0000:e3:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:33.402710+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:33.402820+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:33.402931+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:33.403043+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:33.403153+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:33.403282+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:33.403392+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:33.403500+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:33.403612+00:00 cks4u kernel: amdgpu 0000:e3:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:33.457255+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:33.460258+00:00 cks4u kernel: amdgpu 0000:e3:00.0: Using BACO for runtime pm
+2026-11-08T00:52:33.460398+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:e3:00.0 on minor 7
+2026-11-08T00:52:33.465256+00:00 cks4u kernel: amdgpu 0000:e3:00.0: [drm] Cannot find any crtc or sizes
+2026-11-08T00:52:33.484254+00:00 cks4u kernel: amdgpu 0000:f3:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1002:0x0E11 0xC8).
+2026-11-08T00:52:33.484433+00:00 cks4u kernel: amdgpu 0000:f3:00.0: register mmio base: 0xA4000000
+2026-11-08T00:52:33.484576+00:00 cks4u kernel: amdgpu 0000:f3:00.0: register mmio size: 524288
+2026-11-08T00:52:33.484722+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+2026-11-08T00:52:33.484851+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+2026-11-08T00:52:33.485049+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+2026-11-08T00:52:33.485358+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+2026-11-08T00:52:33.485794+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+2026-11-08T00:52:33.486207+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+2026-11-08T00:52:33.486628+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+2026-11-08T00:52:33.487001+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+2026-11-08T00:52:33.487305+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+2026-11-08T00:52:33.487589+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+2026-11-08T00:52:33.487821+00:00 cks4u kernel: amdgpu 0000:f3:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+2026-11-08T00:52:33.503259+00:00 cks4u kernel: amdgpu 0000:f3:00.0: Fetched VBIOS from ROM BAR
+2026-11-08T00:52:33.503377+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] ATOM BIOS: 113-G2870300-100, build: 00175875, ver: 023.008.000.068.000001, 2026/01/23
+2026-11-08T00:52:33.505255+00:00 cks4u kernel: amdgpu 0000:f3:00.0: Trusted Memory Zone (TMZ) feature not supported
+2026-11-08T00:52:33.505375+00:00 cks4u kernel: amdgpu 0000:f3:00.0: MODE1 reset
+2026-11-08T00:52:33.505487+00:00 cks4u kernel: amdgpu 0000:f3:00.0: GPU mode1 reset
+2026-11-08T00:52:33.505593+00:00 cks4u kernel: amdgpu 0000:f3:00.0: GPU smu mode1 reset
+2026-11-08T00:52:34.541258+00:00 cks4u kernel: amdgpu 0000:f3:00.0: MEM ECC is active.
+2026-11-08T00:52:34.541464+00:00 cks4u kernel: amdgpu 0000:f3:00.0: SRAM ECC is not presented.
+2026-11-08T00:52:34.541614+00:00 cks4u kernel: amdgpu 0000:f3:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+2026-11-08T00:52:34.541745+00:00 cks4u kernel: amdgpu 0000:f3:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+2026-11-08T00:52:34.541873+00:00 cks4u kernel: amdgpu 0000:f3:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+2026-11-08T00:52:34.542039+00:00 cks4u kernel: amdgpu 0000:f3:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+2026-11-08T00:52:34.542188+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+2026-11-08T00:52:34.542329+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] RAM width 256bits GDDR6
+2026-11-08T00:52:34.542460+00:00 cks4u kernel: amdgpu 0000:f3:00.0:  32624M of VRAM memory ready
+2026-11-08T00:52:34.542593+00:00 cks4u kernel: amdgpu 0000:f3:00.0:  257737M of GTT memory ready.
+2026-11-08T00:52:34.542732+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+2026-11-08T00:52:34.542854+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+2026-11-08T00:52:34.542988+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A004B00
+2026-11-08T00:52:34.604256+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.13 DEC: 9 VEP: 0 Revision: 1
+2026-11-08T00:52:34.604374+00:00 cks4u kernel: amdgpu 0000:f3:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+2026-11-08T00:52:34.604485+00:00 cks4u kernel: amdgpu 0000:f3:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+2026-11-08T00:52:34.825253+00:00 cks4u kernel: amdgpu 0000:f3:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+2026-11-08T00:52:34.830254+00:00 cks4u kernel: amdgpu 0000:f3:00.0: RAP: optional rap ta ucode is not available
+2026-11-08T00:52:34.830371+00:00 cks4u kernel: amdgpu 0000:f3:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+2026-11-08T00:52:34.853255+00:00 cks4u kernel: amdgpu 0000:f3:00.0: SMU is initialized successfully!
+2026-11-08T00:52:34.854254+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] Display Core v3.2.397 initialized on DCN 4.0.1
+2026-11-08T00:52:34.854369+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] DP-HDMI FRL PCON supported
+2026-11-08T00:52:34.858255+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] DMUB hardware initialized: version=0x0A004B00
+2026-11-08T00:52:34.869254+00:00 cks4u kernel: snd_hda_intel 0000:f3:00.1: bound 0000:f3:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+2026-11-08T00:52:34.869423+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] DP-8: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+2026-11-08T00:52:34.869568+00:00 cks4u kernel: amdgpu 0000:f3:00.0: program CP_MES_CNTL : 0x4000000
+2026-11-08T00:52:34.869697+00:00 cks4u kernel: amdgpu 0000:f3:00.0: program CP_MES_CNTL : 0xc000000
+2026-11-08T00:52:34.881254+00:00 cks4u kernel: kfd kfd: Allocated 3969056 bytes on gart
+2026-11-08T00:52:34.881343+00:00 cks4u kernel: kfd kfd: Total number of KFD nodes to be created: 1
+2026-11-08T00:52:34.881417+00:00 cks4u kernel: amdgpu: Virtual CRAT table created for GPU
+2026-11-08T00:52:34.882252+00:00 cks4u kernel: amdgpu: Topology: Add GPU node [0x1002:0x7551]
+2026-11-08T00:52:34.942254+00:00 cks4u kernel: amdgpu 0000:f3:00.0: added peer-to-peer DMA memory 0x9f800000000-0x9fff6ffffff
+2026-11-08T00:52:34.942311+00:00 cks4u kernel: amdgpu 0000:f3:00.0: AIS: registered 32624MB device memory
+2026-11-08T00:52:34.942353+00:00 cks4u kernel: kfd kfd: added device 1002:7551
+2026-11-08T00:52:34.942383+00:00 cks4u kernel: amdgpu 0000:f3:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 48
+2026-11-08T00:52:34.942421+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+2026-11-08T00:52:34.942460+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+2026-11-08T00:52:34.942497+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+2026-11-08T00:52:34.942536+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+2026-11-08T00:52:34.942574+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+2026-11-08T00:52:34.942612+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+2026-11-08T00:52:34.942652+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+2026-11-08T00:52:34.942689+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+2026-11-08T00:52:34.942727+00:00 cks4u kernel: amdgpu 0000:f3:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+2026-11-08T00:52:34.997256+00:00 cks4u kernel: amdgpu: HMM registered 32624MB device memory
+2026-11-08T00:52:35.000253+00:00 cks4u kernel: amdgpu 0000:f3:00.0: Using BACO for runtime pm
+2026-11-08T00:52:35.000328+00:00 cks4u kernel: [drm] Initialized amdgpu 3.65.0 20150101 for 0000:f3:00.0 on minor 8
+2026-11-08T00:52:35.005258+00:00 cks4u kernel: amdgpu 0000:f3:00.0: [drm] Cannot find any crtc or sizes

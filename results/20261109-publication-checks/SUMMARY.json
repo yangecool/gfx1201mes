@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-09",
+  "hardware_access": false,
+  "direct_gate": {
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "expected_outcomes_verified": 11,
+    "failed": 0
+  },
+  "v2_lifecycle": {
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "failed_candidate_cases": [
+      "A_late_B_error_same_slot"
+    ]
+  },
+  "v3_lifecycle": {
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "failed_candidate_cases": [
+      "liveness_after_all_old_completions_lost (4 slots)",
+      "liveness_after_all_old_completions_lost (1024 slots)"
+    ]
+  },
+  "protocol_cpu_mock": {
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "protocol-mock.log",
+    "firmware": "simulated"
+  },
+  "source_preparation": "All four patches applied independently to verified original inputs with --fuzz=0, after a dry run.",
+  "conclusion": "Expected outcomes reproduced. Passing direct checks does not negate the V2 false-success or V3 liveness counterexamples. No production repair is established.",
+  "compiler": "gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "source_sha256": {
+    "prepare_cpu_inputs.py": "6040a2ffc061b45ea2b93ea938cea252899b1fe867cba8f6dfab913634951fbd",
+    "protocol/probe_mock.py": "571286b3772f53edff571559af751286841c0247634b4fbbe51fee0d8d3d2758",
+    "review_mes_status.py": "3b317fa226f4f197a018830289f703aab0c7883b043559aeb813fc76b047940e",
+    "verify_review_gate.py": "657d7c593d0e767e00cba6f6b293e799c1721202822a371a349b025dbbc37195",
+    "lifecycle/run.py": "8b43f16cce866051e3a3d2674f0dd6503844963a5411ff26e7efbaf514f787ac"
+  }
+}

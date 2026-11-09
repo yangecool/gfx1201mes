@@ -1,0 +1,5 @@
+{
+  "returncode": 0,
+  "stdout": "2026-11-07T09:23:12.705266+00:00 cks4u kernel: amdgpu 0000:f3:00.0: MES(1) failed to respond to msg=INVALIDATE_TLBS\n2026-11-07T09:23:13.469145+00:00 cks4u kernel: amdgpu 0000:e3:00.0: MES(1) failed to respond to msg=INVALIDATE_TLBS\n",
+  "stderr": ""
+}

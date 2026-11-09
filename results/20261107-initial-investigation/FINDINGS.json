@@ -1,0 +1,53 @@
+{
+  "finding": "Two observed MES errors are premature API-status failure decisions after a completed ring fence; status is already 1 at error-branch sampling. No driver patch applied.",
+  "events": [
+    {
+      "t_ns": "24329749600058",
+      "tid": "279606",
+      "device": "0000:f3:00.0",
+      "pasid": "50878",
+      "hub": "0",
+      "flush": "2",
+      "fence_completed": "1",
+      "cpu_status_low": "0",
+      "api_status_late": "0x1",
+      "elapsed_us": "28"
+    },
+    {
+      "t_ns": "24330513845144",
+      "tid": "9641",
+      "device": "0000:e3:00.0",
+      "pasid": "50593",
+      "hub": "0",
+      "flush": "2",
+      "fence_completed": "1",
+      "cpu_status_low": "0",
+      "api_status_late": "0x1",
+      "elapsed_us": "27"
+    }
+  ],
+  "r2_mes_return_errors": [
+    "MES_RETURN t_ns=24329749654880 tid=279606 comm=VLLM::Worker_TP pasid=50878 hub=0 flush=2 ret=-110 duration_us=82",
+    "MES_RETURN t_ns=24330513889941 tid=9641 comm=kworker/124:2 pasid=50593 hub=0 flush=2 ret=-110 duration_us=72"
+  ],
+  "r2_gmc_after_failure": [
+    "GMC_AFTER_MES_FAILURE tid=279606 pasid=50878 all_hub=0 outer_ret=0",
+    "GMC_AFTER_MES_FAILURE tid=9641 pasid=50593 all_hub=1 outer_ret=0"
+  ],
+  "r2_total_mes_api_calls": 278144,
+  "r2_mes_errors": 2,
+  "baseline_hip_allocation_cycles": 512,
+  "baseline_mes_api_calls": 2088,
+  "new_serr": false,
+  "sel_entries_before": 318,
+  "sel_entries_after": 318,
+  "host_rebooted": false,
+  "numa_balancing": 0,
+  "r1_interpretation": "Intermediate zero status with successful API return; broad raw stop label was not proof of a true MES error.",
+  "limits": [
+    "Observed completion window does not explain the historical PCI SERR or reboot.",
+    "Exact ordering versus DMA-visibility cause remains unresolved.",
+    "Kernel probes change timing; durations are diagnostic, not performance anchors.",
+    "Original image includes FN; this is not a full no-FN model comparison."
+  ]
+}

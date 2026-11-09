@@ -1,0 +1,16 @@
+{
+  "runner.py": {
+    "container_path": "/usr/local/lib/python3.12/dist-packages/vllm/models/qwen4_exp/amd/flashnext/runner.py",
+    "sha256": "3c1d7326bb0b7a0e0e57e82c071f0c7a278dd9aea2052c6eeb96bdc6a9db00e5",
+    "has_cleanup_drain_fix": false,
+    "has_accounting_wait": false
+  },
+  "mem_utils.py": {
+    "container_path": "/usr/local/lib/python3.12/dist-packages/vllm/utils/mem_utils.py",
+    "sha256": "8b21755c8cae378b64d2d5c72c901135820072764218808191f266a65cf3aad5",
+    "has_cleanup_drain_fix": false,
+    "has_accounting_wait": false
+  },
+  "trace_processes": [],
+  "numa": "0"
+}

@@ -1,0 +1,17 @@
+Sign command: /usr/bin/kmodsign
+Signing key: /var/lib/shim-signed/mok/MOK.priv
+Public certificate (MOK): /var/lib/shim-signed/mok/MOK.der
+
+Building module:
+Cleaning build area...
+'make' KERNELVER=6.8.0-147-generic....................................
+Signing module /var/tmp/mes-protocol-dkms-jp629lqa/dkms/amdgpu/7.1.9-2407772.24.04/build/amd/amdgpu/amdgpu.ko
+Signing module /var/tmp/mes-protocol-dkms-jp629lqa/dkms/amdgpu/7.1.9-2407772.24.04/build/ttm/amdttm.ko
+Signing module /var/tmp/mes-protocol-dkms-jp629lqa/dkms/amdgpu/7.1.9-2407772.24.04/build/amd/amdkcl/amdkcl.ko
+Signing module /var/tmp/mes-protocol-dkms-jp629lqa/dkms/amdgpu/7.1.9-2407772.24.04/build/scheduler/amd-sched.ko
+Signing module /var/tmp/mes-protocol-dkms-jp629lqa/dkms/amdgpu/7.1.9-2407772.24.04/build/./amddrm_ttm_helper.ko
+Signing module /var/tmp/mes-protocol-dkms-jp629lqa/dkms/amdgpu/7.1.9-2407772.24.04/build/./amddrm_buddy.ko
+Signing module /var/tmp/mes-protocol-dkms-jp629lqa/dkms/amdgpu/7.1.9-2407772.24.04/build/./amddrm_exec.ko
+Signing module /var/tmp/mes-protocol-dkms-jp629lqa/dkms/amdgpu/7.1.9-2407772.24.04/build/amd/amdxcp/amdxcp.ko
+Signing module /var/tmp/mes-protocol-dkms-jp629lqa/dkms/amdgpu/7.1.9-2407772.24.04/build/./amddrm_suballoc_helper.ko
+Cleaning build area...

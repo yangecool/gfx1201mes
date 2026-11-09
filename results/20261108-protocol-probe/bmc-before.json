@@ -1,0 +1,14 @@
+[
+  {
+    "type": "clock",
+    "host_utc": "2026-11-08T00:52:00.129155+00:00",
+    "bmc_utc": "2026-11-08T00:51:58+00:00",
+    "difference_seconds": -2.129155158996582,
+    "raw": "00aec7ef6a"
+  },
+  {
+    "type": "sel-info",
+    "raw": "00513e0182e9f88eee6a000000000f",
+    "entries": 318
+  }
+]

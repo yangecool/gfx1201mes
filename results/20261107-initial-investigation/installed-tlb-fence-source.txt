@@ -1,0 +1,114 @@
+SOURCE /usr/src/amdgpu-7.1.9-2407772.24.04/amd/amdgpu/amdgpu_vm_tlb_fence.c SHA256 e783f221792c77b8025ba6555732d9b400d1673b45ac5a6520619f5fbd5bc159
+1: // SPDX-License-Identifier: GPL-2.0 OR MIT
+2: /*
+3:  * Copyright 2023 Advanced Micro Devices, Inc.
+4:  *
+5:  * Permission is hereby granted, free of charge, to any person obtaining a
+6:  * copy of this software and associated documentation files (the "Software"),
+7:  * to deal in the Software without restriction, including without limitation
+8:  * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+9:  * and/or sell copies of the Software, and to permit persons to whom the
+10:  * Software is furnished to do so, subject to the following conditions:
+11:  *
+12:  * The above copyright notice and this permission notice shall be included in
+13:  * all copies or substantial portions of the Software.
+14:  *
+15:  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+16:  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+17:  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+18:  * THE COPYRIGHT HOLDER(S) OR AUTHOR(S) BE LIABLE FOR ANY CLAIM, DAMAGES OR
+19:  * OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+20:  * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+21:  * OTHER DEALINGS IN THE SOFTWARE.
+22:  */
+23: 
+24: #include <linux/dma-fence.h>
+25: #include <linux/workqueue.h>
+26: 
+27: #include "amdgpu.h"
+28: #include "amdgpu_vm.h"
+29: #include "amdgpu_gmc.h"
+30: 
+31: struct amdgpu_tlb_fence {
+32: 	struct dma_fence	base;
+33: 	struct amdgpu_device	*adev;
+34: 	struct dma_fence	*dependency;
+35: 	struct work_struct	work;
+36: 	spinlock_t		lock;
+37: 	uint16_t		pasid;
+38: 
+39: };
+40: 
+41: static const char *amdgpu_tlb_fence_get_driver_name(struct dma_fence *fence)
+42: {
+43: 	return "amdgpu_tlb_fence";
+44: }
+45: 
+46: static const char *amdgpu_tlb_fence_get_timeline_name(struct dma_fence *f)
+47: {
+48: 	return "amdgpu_tlb_timeline";
+49: }
+50: 
+51: static void amdgpu_tlb_fence_work(struct work_struct *work)
+52: {
+53: 	struct amdgpu_tlb_fence *f = container_of(work, typeof(*f), work);
+54: 	int r;
+55: 
+56: 	if (f->dependency) {
+57: 		dma_fence_wait(f->dependency, false);
+58: 		dma_fence_put(f->dependency);
+59: 		f->dependency = NULL;
+60: 	}
+61: 
+62: 	r = amdgpu_gmc_flush_gpu_tlb_pasid(f->adev, f->pasid, 2, true, 0);
+63: 	if (r) {
+64: 		dev_err(f->adev->dev, "TLB flush failed for PASID %d.\n",
+65: 			f->pasid);
+66: 		dma_fence_set_error(&f->base, r);
+67: 	}
+68: 
+69: 	dma_fence_signal(&f->base);
+70: 	dma_fence_put(&f->base);
+71: }
+72: 
+73: static const struct dma_fence_ops amdgpu_tlb_fence_ops = {
+74: 	.get_driver_name = amdgpu_tlb_fence_get_driver_name,
+75: 	.get_timeline_name = amdgpu_tlb_fence_get_timeline_name
+76: };
+77: 
+78: void amdgpu_vm_tlb_fence_create(struct amdgpu_device *adev, struct amdgpu_vm *vm,
+79: 				struct dma_fence **fence)
+80: {
+81: 	struct amdgpu_tlb_fence *f;
+82: 
+83: 	f = kmalloc_obj(*f);
+84: 	if (!f) {
+85: 		/*
+86: 		 * We can't fail since the PDEs and PTEs are already updated, so
+87: 		 * just block for the dependency and execute the TLB flush
+88: 		 */
+89: 		if (*fence)
+90: 			dma_fence_wait(*fence, false);
+91: 
+92: 		amdgpu_gmc_flush_gpu_tlb_pasid(adev, vm->pasid, 2, true, 0);
+93: 		*fence = dma_fence_get_stub();
+94: 		return;
+95: 	}
+96: 
+97: 	f->adev = adev;
+98: 	f->dependency = *fence;
+99: 	f->pasid = vm->pasid;
+100: 	INIT_WORK(&f->work, amdgpu_tlb_fence_work);
+101: 	spin_lock_init(&f->lock);
+102: 
+103: 	dma_fence_init64(&f->base, &amdgpu_tlb_fence_ops, &f->lock,
+104: 			 vm->tlb_fence_context, atomic64_read(&vm->tlb_seq));
+105: 
+106: 	/* TODO: We probably need a separate wq here */
+107: 	dma_fence_get(&f->base);
+108: 	schedule_work(&f->work);
+109: 
+110: 	*fence = &f->base;
+111: }
+
+STDERR:

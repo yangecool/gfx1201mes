@@ -1,0 +1,7 @@
+[
+  "amdgpu 0000:03:00.0: MES_TAG_PROBE n=0 pasid=1 sent=0x1 first=0x1 last=0x1 fence=2099978 posted=1 rc=0",
+  "amdgpu 0000:03:00.0: MES_TAG_PROBE n=1 pasid=1 sent=0x2 first=0x2 last=0x2 fence=2099936 posted=1 rc=0",
+  "amdgpu 0000:03:00.0: MES_TAG_PROBE n=2 pasid=1 sent=0x5a39c7 first=0x5a39c7 last=0x5a39c7 fence=2099936 posted=1 rc=0",
+  "amdgpu 0000:03:00.0: MES_TAG_PROBE n=3 pasid=1 sent=0x6a95310d first=0x6a95310d last=0x6a95310d fence=2099938 posted=1 rc=0",
+  "amdgpu 0000:03:00.0: MES_TAG_PROBE n=4 pasid=1 sent=0x1 first=0x1 last=0x1 fence=2099936 posted=1 rc=0"
+]

@@ -2,3 +2,4 @@
 *.patch -whitespace
 results/**/*.log -whitespace
 results/**/*.stdout -whitespace
+results/**/*.txt -whitespace

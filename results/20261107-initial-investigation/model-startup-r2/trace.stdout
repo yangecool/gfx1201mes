@@ -1,0 +1,135 @@
+MES_TRACE_READY
+MES_ERROR_BRANCH t_ns=24329749600058 tid=279606 device=0000:f3:00.0 pasid=50878 hub=0 flush=2 fence_completed=1 cpu_status_low=0 api_status_late=0x1 elapsed_us=28
+
+        mes_v12_0_submit_pkt_and_poll_completion.constprop.0+1009
+        mes_v12_0_inv_tlbs_pasid+127
+        gmc_v12_0_flush_gpu_tlb_pasid+354
+        amdgpu_gmc_flush_gpu_tlb_pasid+292
+        amdgpu_vm_flush_compute_tlb+242
+        kfd_ioctl_map_memory_to_gpu+810
+        kfd_ioctl+1404
+        __x64_sys_ioctl+160
+        x64_sys_call+4771
+        do_syscall_64+135
+        entry_SYSCALL_64_after_hwframe+120
+
+MES_RETURN t_ns=24329749654880 tid=279606 comm=VLLM::Worker_TP pasid=50878 hub=0 flush=2 ret=-110 duration_us=82
+
+        gmc_v12_0_flush_gpu_tlb_pasid+354
+        amdgpu_gmc_flush_gpu_tlb_pasid+292
+        amdgpu_vm_flush_compute_tlb+242
+        kfd_ioctl_map_memory_to_gpu+810
+        kfd_ioctl+1404
+        __x64_sys_ioctl+160
+        x64_sys_call+4771
+        do_syscall_64+135
+        entry_SYSCALL_64_after_hwframe+120
+
+GMC_AFTER_MES_FAILURE tid=279606 pasid=50878 all_hub=0 outer_ret=0
+MES_ERROR_BRANCH t_ns=24330513845144 tid=9641 device=0000:e3:00.0 pasid=50593 hub=0 flush=2 fence_completed=1 cpu_status_low=0 api_status_late=0x1 elapsed_us=27
+
+        mes_v12_0_submit_pkt_and_poll_completion.constprop.0+1009
+        mes_v12_0_inv_tlbs_pasid+127
+        gmc_v12_0_flush_gpu_tlb_pasid+354
+        amdgpu_gmc_flush_gpu_tlb_pasid+292
+        amdgpu_tlb_fence_work+115
+        process_one_work+385
+        worker_thread+395
+        kthread+239
+        ret_from_fork+68
+        ret_from_fork_asm+27
+
+MES_RETURN t_ns=24330513889941 tid=9641 comm=kworker/124:2 pasid=50593 hub=0 flush=2 ret=-110 duration_us=72
+
+        gmc_v12_0_flush_gpu_tlb_pasid+354
+        amdgpu_gmc_flush_gpu_tlb_pasid+292
+        amdgpu_tlb_fence_work+115
+        process_one_work+385
+        worker_thread+395
+        kthread+239
+        ret_from_fork+68
+        ret_from_fork_asm+27
+
+GMC_AFTER_MES_FAILURE tid=9641 pasid=50593 all_hub=1 outer_ret=0
+
+
+@callers[
+    gmc_v12_0_flush_gpu_tlb_pasid+354
+    amdgpu_gmc_flush_gpu_tlb_pasid+292
+    amdgpu_vm_flush_compute_tlb+242
+    svm_range_unmap_from_gpus+431
+    svm_range_cpu_invalidate_pagetables+1500
+    __mmu_notifier_invalidate_range_start+407
+    unmap_vmas+390
+    unmap_region+232
+]: 33
+@callers[
+    gmc_v12_0_flush_gpu_tlb_pasid+354
+    amdgpu_gmc_flush_gpu_tlb_pasid+292
+    amdgpu_vm_flush_compute_tlb+242
+    svm_range_validate_and_map+4114
+    svm_range_set_attr+2336
+    svm_ioctl+99
+    kfd_ioctl_svm+94
+    kfd_ioctl+1404
+]: 40
+@callers[
+    gmc_v12_0_flush_gpu_tlb_pasid+354
+    amdgpu_gmc_flush_gpu_tlb_pasid+292
+    amdgpu_vm_flush_compute_tlb+242
+    kfd_ioctl_unmap_memory_from_gpu+466
+    kfd_ioctl+1404
+    __x64_sys_ioctl+160
+    x64_sys_call+4771
+    do_syscall_64+135
+]: 29620
+@callers[
+    gmc_v12_0_flush_gpu_tlb_pasid+432
+    amdgpu_gmc_flush_gpu_tlb_pasid+292
+    amdgpu_tlb_fence_work+115
+    process_one_work+385
+    worker_thread+395
+    kthread+239
+    ret_from_fork+68
+    ret_from_fork_asm+27
+]: 80558
+@callers[
+    gmc_v12_0_flush_gpu_tlb_pasid+354
+    amdgpu_gmc_flush_gpu_tlb_pasid+292
+    amdgpu_tlb_fence_work+115
+    process_one_work+385
+    worker_thread+395
+    kthread+239
+    ret_from_fork+68
+    ret_from_fork_asm+27
+]: 80558
+@callers[
+    gmc_v12_0_flush_gpu_tlb_pasid+354
+    amdgpu_gmc_flush_gpu_tlb_pasid+292
+    amdgpu_vm_flush_compute_tlb+242
+    kfd_ioctl_map_memory_to_gpu+810
+    kfd_ioctl+1404
+    __x64_sys_ioctl+160
+    x64_sys_call+4771
+    do_syscall_64+135
+]: 87335
+@calls[0, -110]: 2
+@calls[8, 0]: 80558
+@calls[0, 0]: 197584
+@duration_us: 
+[16, 32)          149705 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|
+[32, 64)          111988 |@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@              |
+[64, 128)          15180 |@@@@@                                               |
+[128, 256)           925 |                                                    |
+[256, 512)           339 |                                                    |
+[512, 1K)              6 |                                                    |
+
+
+
+
+@gmc_returns[1, 0]: 80558
+@gmc_returns[0, 0]: 117028
+
+
+
+

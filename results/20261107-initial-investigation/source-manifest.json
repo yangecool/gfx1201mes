@@ -1,0 +1,42 @@
+{
+  "FINDINGS.json": {
+    "source": "aiter-tune-gfx1201-vllm/results/cks4u-mes-driver-investigation-20261107-r1/FINDINGS.json",
+    "sha256": "5f5362a1715a5667a813ed7b076c2c7cb6e919f26a5db7cdcb754390959ca36e"
+  },
+  "installed-driver-analysis.txt": {
+    "source": "aiter-tune-gfx1201-vllm/results/cks4u-mes-driver-investigation-20261107-r1/installed-driver-analysis.txt",
+    "sha256": "139dc5bc74e997130cc5ed96cbb0cfff52103d3071f4c110f715d79f95524968"
+  },
+  "installed-tlb-fence-source.txt": {
+    "source": "aiter-tune-gfx1201-vllm/results/cks4u-mes-driver-investigation-20261107-r1/installed-tlb-fence-source.txt",
+    "sha256": "0e806e402bd4d7e2126093da8cc399f2fa8f4de50bd5bd83b53e3a91e24b8b6f"
+  },
+  "installed-image-identity.json": {
+    "source": "aiter-tune-gfx1201-vllm/results/cks4u-mes-driver-investigation-20261107-r1/installed-image-identity.json",
+    "sha256": "b316565029b00d69bc1496d2d629280770b6e5861b51e7bbdf856d3c4d564d3f"
+  },
+  "host-before.json": {
+    "source": "aiter-tune-gfx1201-vllm/results/cks4u-mes-driver-investigation-20261107-r1/host-before.json",
+    "sha256": "153b0ff6bae25398d0a6918d17ebacb0cabf6b15217290ab2f0c1f3156bbde04"
+  },
+  "host-after.json": {
+    "source": "aiter-tune-gfx1201-vllm/results/cks4u-mes-driver-investigation-20261107-r1/host-after.json",
+    "sha256": "5467b8deada78f65c35202f51a2cd823384694174b02f37b1dd107ff19cefba3"
+  },
+  "model-startup-r2/trace.stdout": {
+    "source": "aiter-tune-gfx1201-vllm/results/cks4u-mes-driver-investigation-20261107-r1/model-startup-r2/trace.stdout",
+    "sha256": "67d641a75aa4817678b384c091fde39ce84d13d0c35411a5146e46b0677dd481"
+  },
+  "model-startup-r2/kernel.json": {
+    "source": "aiter-tune-gfx1201-vllm/results/cks4u-mes-driver-investigation-20261107-r1/model-startup-r2/kernel.json",
+    "sha256": "eab210e9b9de67584af8ac0b0e8c746220d9b0ddb20fb5bdc424f76f87317c50"
+  },
+  "serial.json": {
+    "source": "aiter-tune-gfx1201-vllm/results/cks4u-mes-driver-investigation-20261107-r1/serial.json",
+    "sha256": "63c1a56dbb7ac0816d5f50fd3304a930b7f4d0cbbb6f7e07b33933d89732237a"
+  },
+  "parallel.json": {
+    "source": "aiter-tune-gfx1201-vllm/results/cks4u-mes-driver-investigation-20261107-r1/parallel.json",
+    "sha256": "ed7498639a3daf39c12cf0cadc9f79ed1fe128468c71fb2f24d89560feb48a71"
+  }
+}

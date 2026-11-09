@@ -1,0 +1,39 @@
+{
+  "experiment": "one-shot INV_TLBS success-value echo test",
+  "date_utc": "2026-11-08",
+  "start_utc": "2026-11-08 00:52:00",
+  "device": "0000:03:00.0",
+  "firmware": "0x93",
+  "pasid": 1,
+  "flush_type": 2,
+  "hub_id": 0,
+  "samples": [
+    "amdgpu 0000:03:00.0: MES_TAG_PROBE n=0 pasid=1 sent=0x1 first=0x1 last=0x1 fence=2099978 posted=1 rc=0",
+    "amdgpu 0000:03:00.0: MES_TAG_PROBE n=1 pasid=1 sent=0x2 first=0x2 last=0x2 fence=2099936 posted=1 rc=0",
+    "amdgpu 0000:03:00.0: MES_TAG_PROBE n=2 pasid=1 sent=0x5a39c7 first=0x5a39c7 last=0x5a39c7 fence=2099936 posted=1 rc=0",
+    "amdgpu 0000:03:00.0: MES_TAG_PROBE n=3 pasid=1 sent=0x6a95310d first=0x6a95310d last=0x6a95310d fence=2099938 posted=1 rc=0",
+    "amdgpu 0000:03:00.0: MES_TAG_PROBE n=4 pasid=1 sent=0x1 first=0x1 last=0x1 fence=2099936 posted=1 rc=0"
+  ],
+  "baseline_srcversion": "8CF47837F896F00244D880B",
+  "diagnostic_srcversion": "8E467919B48C4C67B2214E0",
+  "restored_srcversion": "8CF47837F896F00244D880B",
+  "original_build_id_restored": true,
+  "all_eight_devices_restored": true,
+  "boot_id_unchanged": true,
+  "numa_before_launch_after": [
+    "0",
+    "0",
+    "0"
+  ],
+  "bmc_entries_before_after": [
+    318,
+    318
+  ],
+  "production_fix_installed": false,
+  "diagnostic_driver_temporarily_loaded": true,
+  "limitations": [
+    "Five success replies on one idle GPU, gfxhub only.",
+    "No injected firmware failure, timeout, reset, concurrent request or arbitrary 64-bit value validation.",
+    "Echoing a request value does not establish DMA ordering, safe slot reuse, or production fix correctness."
+  ]
+}

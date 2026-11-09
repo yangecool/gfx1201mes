@@ -1,0 +1,82 @@
+{
+  "before.json": {
+    "sha256": "7a8efa02476dbbfdb59e403eeea1811fb630638e347f7566bcc376598a63b28b",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/before.json",
+    "repository_path": "results/20261108-protocol-probe/before.json"
+  },
+  "active.json": {
+    "sha256": "4cfcd435defec92f41f0f4e0c5b115559f5514d1bedf39bf9713c6cda2d0b53a",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/active.json",
+    "repository_path": "results/20261108-protocol-probe/active.json"
+  },
+  "after.json": {
+    "sha256": "7a8efa02476dbbfdb59e403eeea1811fb630638e347f7566bcc376598a63b28b",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/after.json",
+    "repository_path": "results/20261108-protocol-probe/after.json"
+  },
+  "restored.json": {
+    "sha256": "7a8efa02476dbbfdb59e403eeea1811fb630638e347f7566bcc376598a63b28b",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/restored.json",
+    "repository_path": "results/20261108-protocol-probe/restored.json"
+  },
+  "samples.json": {
+    "sha256": "ccd4c16df8a41ec21ee2b127e8995a83561049968d6d406545c78dfe04e393d1",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/samples.json",
+    "repository_path": "results/20261108-protocol-probe/samples.json"
+  },
+  "start.json": {
+    "sha256": "275db2cf1726d634b9ee5cd732b2b71e32061741c97ab50cd702a319ec0abf14",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/start.json",
+    "repository_path": "results/20261108-protocol-probe/start.json"
+  },
+  "launch.json": {
+    "sha256": "04d8022311944e059900ea1f762924c473e3f18e82f9f75015770303c5c45ede",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/launch.json",
+    "repository_path": "results/20261108-protocol-probe/launch.json"
+  },
+  "receipt.json": {
+    "sha256": "191b46eba9a7e9b298fe7954229ae3f7a125528a205d6e75086fc80bee30f578",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/receipt.json",
+    "repository_path": "results/20261108-protocol-probe/receipt.json"
+  },
+  "bmc-before.json": {
+    "sha256": "6d7d185266f659b89dc89c34d77f8b6d6c72cd006b6b861ef3713c1b3f140b1c",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/bmc-before.json",
+    "repository_path": "results/20261108-protocol-probe/bmc-before.json"
+  },
+  "bmc-after.json": {
+    "sha256": "a47837182ab68dbfbf63f1ab754916dff8ca72c69675f040f4e2774e307c7d37",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/bmc-after.json",
+    "repository_path": "results/20261108-protocol-probe/bmc-after.json"
+  },
+  "active-kernel.log": {
+    "sha256": "f17ae251b39c594539435f7d4f2ae214c971b4078442a0057e52cd4ac38342ae",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/active-kernel.log",
+    "repository_path": "results/20261108-protocol-probe/active-kernel.log"
+  },
+  "kernel.log": {
+    "sha256": "380b7ebf041869ed7a0127a840678b5f04ef50dfca45019a162b482698d3013f",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/kernel.log",
+    "repository_path": "results/20261108-protocol-probe/kernel.log"
+  },
+  "insmod.log": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/insmod.log",
+    "repository_path": "results/20261108-protocol-probe/insmod.log"
+  },
+  "maint.py": {
+    "sha256": "8fae04cc02029fad4595c6fe7bd05cc7b73c1570557f9d0e2d23076c103eb614",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/maint.py",
+    "repository_path": "protocol/maintenance_20261108.py"
+  },
+  "sel.py": {
+    "sha256": "28ba6c35dc4411f1134dfd8e97f5683019a1cc08350bbf49f0a22555d49b2352",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/sel.py",
+    "repository_path": "protocol/read_sel_info.py"
+  },
+  "build.log": {
+    "sha256": "eb86457bdd3683e71d581342ae797b8958f83ff367e0f96dc02929c075efbced",
+    "source": "CKS4U:/var/tmp/mes-protocol-dkms-jp629lqa/build.log",
+    "repository_path": "results/20261108-protocol-probe/build.log"
+  }
+}

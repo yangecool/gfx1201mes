@@ -1,0 +1,100 @@
+FILE /usr/src/amdgpu-7.1.9-2407772.24.04/amd/amdgpu/mes_v12_0.c
+152: static int mes_v12_0_submit_pkt_and_poll_completion(struct amdgpu_mes *mes,
+153: 					    int pipe, void *pkt, int size,
+154: 					    int api_status_off)
+155: {
+156: 	union MESAPI__QUERY_MES_STATUS mes_status_pkt;
+157: 	signed long timeout = 2100000; /* 2100 ms */
+158: 	struct amdgpu_device *adev = mes->adev;
+159: 	struct amdgpu_ring *ring = &mes->ring[pipe];
+160: 	spinlock_t *ring_lock = &mes->ring_lock[pipe];
+161: 	struct MES_API_STATUS *api_status;
+162: 	union MESAPI__MISC *x_pkt = pkt;
+163: 	const char *op_str, *misc_op_str;
+164: 	unsigned long flags;
+165: 	u64 status_gpu_addr;
+166: 	u32 seq, status_offset;
+167: 	u64 *status_ptr;
+168: 	signed long r;
+169: 	int ret;
+170: 
+171: 	if (x_pkt->header.opcode >= MES_SCH_API_MAX)
+172: 		return -EINVAL;
+173: 
+174: 	if (amdgpu_emu_mode) {
+175: 		timeout *= 100;
+176: 	} else if (amdgpu_sriov_vf(adev)) {
+177: 		/* Worst case in sriov where all other 15 VF timeout, each VF needs about 600ms */
+178: 		timeout = 15 * 600 * 1000;
+179: 	}
+234: 	r = amdgpu_fence_wait_polling(ring, seq, timeout);
+235: 
+236: 	/*
+237: 	 * status_ptr[31:0] == 0 (fail) or status_ptr[63:0] == 1 (success).
+238: 	 * If status_ptr[31:0] == 0 then status_ptr[63:32] will have debug error information.
+239: 	 */
+240: 	if (r < 1 || !(lower_32_bits(*status_ptr))) {
+241: 
+242: 		if (misc_op_str)
+243: 			dev_err(adev->dev, "MES(%d) failed to respond to msg=%s (%s)\n",
+244: 				pipe, op_str, misc_op_str);
+245: 		else if (op_str)
+246: 			dev_err(adev->dev, "MES(%d) failed to respond to msg=%s\n",
+247: 				pipe, op_str);
+248: 		else
+249: 			dev_err(adev->dev, "MES(%d) failed to respond to msg=%d\n",
+250: 				pipe, x_pkt->header.opcode);
+251: 
+252: 		while (halt_if_hws_hang)
+253: 			schedule();
+254: 
+255: 		r = -ETIMEDOUT;
+256: 		goto error_wb_free;
+257: 	}
+258: 
+259: 	amdgpu_wb_free(adev, status_offset);
+260: 	return 0;
+261: 
+262: error_undo:
+263: 	dev_err(adev->dev, "MES ring buffer is full.\n");
+264: 	amdgpu_ring_undo(ring);
+265: 
+266: error_unlock_free:
+267: 	spin_unlock_irqrestore(ring_lock, flags);
+268: 
+269: error_wb_free:
+270: 	amdgpu_wb_free(adev, status_offset);
+271: 	return r;
+1183: static int mes_v12_0_inv_tlbs_pasid(struct amdgpu_mes *mes,
+1184: 				    struct mes_inv_tlbs_pasid_input *input)
+1185: {
+1186: 	union MESAPI__INV_TLBS mes_inv_tlbs;
+1187: 	int ret;
+1188: 
+1189: 	memset(&mes_inv_tlbs, 0, sizeof(mes_inv_tlbs));
+1190: 
+1191: 	mes_inv_tlbs.header.type = MES_API_TYPE_SCHEDULER;
+1192: 	mes_inv_tlbs.header.opcode = MES_SCH_API_INV_TLBS;
+1193: 	mes_inv_tlbs.header.dwsize = API_FRAME_SIZE_IN_DWORDS;
+1194: 
+1195: 	mes_inv_tlbs.invalidate_tlbs.inv_sel = 0;
+1196: 	mes_inv_tlbs.invalidate_tlbs.flush_type = input->flush_type;
+1197: 	mes_inv_tlbs.invalidate_tlbs.inv_sel_id = input->pasid;
+1198: 
+1199: 	/*convert amdgpu_mes_hub_id to mes expected hub_id */
+1200: 	ret = mes_v12_inv_tlb_convert_hub_id(input->hub_id);
+1201: 	if (ret < 0)
+1202: 		return -EINVAL;
+1203: 	mes_inv_tlbs.invalidate_tlbs.hub_id = ret;
+1204: 	return mes_v12_0_submit_pkt_and_poll_completion(mes, AMDGPU_MES_KIQ_PIPE,
+1205: 			&mes_inv_tlbs, sizeof(mes_inv_tlbs),
+1206: 			offsetof(union MESAPI__INV_TLBS, api_status));
+1207: 
+FILE /usr/src/amdgpu-7.1.9-2407772.24.04/amd/amdgpu/amdgpu_mes.h
+63: 	AMDGPU_MES_PIPE_0 = 0,
+64: 	AMDGPU_MES_PIPE_1,
+68: #define AMDGPU_MES_SCHED_PIPE AMDGPU_MES_PIPE_0
+69: #define AMDGPU_MES_KIQ_PIPE AMDGPU_MES_PIPE_1
+NUMA balancing: 0
+
+STDERR:

@@ -1,5 +1,7 @@
 # 4U MES 驱动安装审查 · 2026-11-08
 
+> Historical review snapshot. Later ownership tests and the completed hardware protocol trial are indexed in [README.md](README.md).
+
 **4U 继续运行原驱动。V2 和 V3 都被可复跑的测试截住了。** V3 已在 4U 的独立目录内，用主机现有 DKMS 签名证书构建了 9 个模块。生产模块、系统 DKMS 注册和当前启动保持原状。[签名构建回执](results/20261108-install-review/v3-signed-build.json) · [运行模块核验](results/20261108-install-review/production-driver.txt)
 
 | CPU 故障注入 | 原驱动源码 | V2 | V3 |

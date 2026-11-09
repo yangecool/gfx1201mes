@@ -1,0 +1,232 @@
+Subject: [DIAGNOSTIC ONLY] drm/amdgpu: sample INV_TLBS fence values on one isolated PASID
+
+Opt in only for 0000:03:00.0 and the verified firmware version. Each test
+packet writes to a fresh pinned address. Keep the page and reserved PASID
+until software teardown. Normal submissions retain the stock checks.
+
+---
+
+diff --git a/amd/amdgpu/mes_v12_0.c b/amd/amdgpu/mes_v12_0.c
+--- a/amd/amdgpu/mes_v12_0.c
++++ b/amd/amdgpu/mes_v12_0.c
+@@ -22,6 +22,7 @@
+  */
+ 
+ #include <linux/firmware.h>
++#include <linux/iopoll.h>
+ #include <linux/module.h>
+ #include "amdgpu.h"
+ #include "gfx_v12_0.h"
+@@ -149,9 +150,24 @@
+ 	return op_str;
+ }
+ 
+-static int mes_v12_0_submit_pkt_and_poll_completion(struct amdgpu_mes *mes,
++struct mes_tag_sample {
++	u64 *cpu;
++	u64 gpu;
++	u64 sent;
++	u64 first;
++	u64 last;
++	long fence_left;
++	bool submitted;
++};
++
++static bool mes_tag_probe;
++module_param(mes_tag_probe, bool, 0400);
++MODULE_PARM_DESC(mes_tag_probe, "Run one isolated gfx1201 MES fence-value test on 0000:03:00.0");
++
++static int mes_v12_0_submit_with_probe(struct amdgpu_mes *mes,
+ 					    int pipe, void *pkt, int size,
+-					    int api_status_off)
++					    int api_status_off,
++				    struct mes_tag_sample *sample)
+ {
+ 	union MESAPI__QUERY_MES_STATUS mes_status_pkt;
+ 	signed long timeout = 2100000; /* 2100 ms */
+@@ -163,7 +179,7 @@
+ 	const char *op_str, *misc_op_str;
+ 	unsigned long flags;
+ 	u64 status_gpu_addr;
+-	u32 seq, status_offset;
++	u32 seq, status_offset = 0;
+ 	u64 *status_ptr;
+ 	signed long r;
+ 	int ret;
+@@ -178,12 +194,16 @@
+ 		timeout = 15 * 600 * 1000;
+ 	}
+ 
+-	ret = amdgpu_wb_get(adev, &status_offset);
+-	if (ret)
+-		return ret;
+-
+-	status_gpu_addr = adev->wb.gpu_addr + (status_offset * 4);
+-	status_ptr = (u64 *)&adev->wb.wb[status_offset];
++	if (sample) {
++		status_gpu_addr = sample->gpu;
++		status_ptr = sample->cpu;
++	} else {
++		ret = amdgpu_wb_get(adev, &status_offset);
++		if (ret)
++			return ret;
++		status_gpu_addr = adev->wb.gpu_addr + (status_offset * 4);
++		status_ptr = (u64 *)&adev->wb.wb[status_offset];
++	}
+ 	*status_ptr = 0;
+ 
+ 	spin_lock_irqsave(ring_lock, flags);
+@@ -200,7 +220,7 @@
+ 
+ 	api_status = (struct MES_API_STATUS *)((char *)pkt + api_status_off);
+ 	api_status->api_completion_fence_addr = status_gpu_addr;
+-	api_status->api_completion_fence_value = 1;
++	api_status->api_completion_fence_value = sample ? sample->sent : 1;
+ 
+ 	amdgpu_ring_write_multiple(ring, pkt, size / 4);
+ 
+@@ -232,6 +252,16 @@
+ 			pipe, x_pkt->header.opcode);
+ 
+ 	r = amdgpu_fence_wait_polling(ring, seq, timeout);
++	if (sample) {
++		sample->submitted = true;
++		sample->fence_left = r;
++		sample->first = READ_ONCE(*status_ptr);
++		sample->last = sample->first;
++		if (r > 0 && !sample->last)
++			read_poll_timeout(READ_ONCE, sample->last, sample->last, 10,
++					  20000, false, *status_ptr);
++		return r > 0 && sample->last ? 0 : -ETIMEDOUT;
++	}
+ 
+ 	/*
+ 	 * status_ptr[31:0] == 0 (fail) or status_ptr[63:0] == 1 (success).
+@@ -267,8 +297,16 @@
+ 	spin_unlock_irqrestore(ring_lock, flags);
+ 
+ error_wb_free:
+-	amdgpu_wb_free(adev, status_offset);
++	if (!sample)
++		amdgpu_wb_free(adev, status_offset);
+ 	return r;
++}
++
++static int mes_v12_0_submit_pkt_and_poll_completion(struct amdgpu_mes *mes,
++					    int pipe, void *pkt, int size,
++					    int api_status_off)
++{
++	return mes_v12_0_submit_with_probe(mes, pipe, pkt, size, api_status_off, NULL);
+ }
+ 
+ static int convert_to_mes_queue_type(int queue_type)
+@@ -1864,6 +1902,92 @@
+ 	return 0;
+ }
+ 
++static DEFINE_MUTEX(mes_tag_probe_mutex);
++static struct {
++	bool attempted;
++	struct amdgpu_device *owner;
++	struct amdgpu_bo *bo;
++	u64 gpu;
++	void *cpu;
++	int pasid;
++} mes_tag_run;
++
++static int mes_v12_0_probe_late_init(struct amdgpu_ip_block *ip_block)
++{
++	static const u32 values[] = { 1, 2, 0x005a39c7, 0x6a95310d, 1 };
++	struct amdgpu_device *adev = ip_block->adev;
++	union MESAPI__INV_TLBS pkt = {};
++	unsigned int i;
++	int r;
++
++	if (!mes_tag_probe || strcmp(pci_name(adev->pdev), "0000:03:00.0"))
++		return 0;
++	mutex_lock(&mes_tag_probe_mutex);
++	if (mes_tag_run.attempted)
++		goto out;
++	mes_tag_run.attempted = true;
++	if (amdgpu_ip_version(adev, GC_HWIP, 0) != IP_VERSION(12, 0, 1) ||
++	    !adev->enable_uni_mes || !adev->mes.ring[AMDGPU_MES_SCHED_PIPE].sched.ready ||
++	    (adev->mes.kiq_version & AMDGPU_MES_VERSION_MASK) != 0x93) {
++		dev_warn(adev->dev, "MES_TAG_PROBE skipped: IP, ring or firmware mismatch\n");
++		goto out;
++	}
++	/* Reserve a fresh, unmapped address-space ID until the test driver exits. */
++	mes_tag_run.pasid = amdgpu_pasid_alloc(16, NULL);
++	if (mes_tag_run.pasid <= 0) {
++		dev_warn(adev->dev,
++			 "MES_TAG_PROBE PASID allocation failed %d\n", mes_tag_run.pasid);
++		goto out;
++	}
++	r = amdgpu_bo_create_kernel(adev, PAGE_SIZE, PAGE_SIZE, AMDGPU_GEM_DOMAIN_GTT,
++				    &mes_tag_run.bo, &mes_tag_run.gpu, &mes_tag_run.cpu);
++	if (r) {
++		dev_warn(adev->dev, "MES_TAG_PROBE page allocation failed %d\n", r);
++		amdgpu_pasid_free(mes_tag_run.pasid);
++		goto out;
++	}
++	mes_tag_run.owner = adev;
++	pkt.header.type = MES_API_TYPE_SCHEDULER;
++	pkt.header.opcode = MES_SCH_API_INV_TLBS;
++	pkt.header.dwsize = API_FRAME_SIZE_IN_DWORDS;
++	pkt.invalidate_tlbs.inv_sel = 0;
++	pkt.invalidate_tlbs.flush_type = 2;
++	pkt.invalidate_tlbs.inv_sel_id = mes_tag_run.pasid;
++	pkt.invalidate_tlbs.hub_id = 0;
++	for (i = 0; i < ARRAY_SIZE(values); i++) {
++		struct mes_tag_sample sample = {
++			.cpu = (u64 *)((u8 *)mes_tag_run.cpu + 32 * i),
++			.gpu = mes_tag_run.gpu + 32 * i,
++			.sent = values[i],
++		};
++
++		r = mes_v12_0_submit_with_probe(&adev->mes, AMDGPU_MES_KIQ_PIPE,
++				&pkt, sizeof(pkt), offsetof(union MESAPI__INV_TLBS, api_status),
++				&sample);
++		dev_info(adev->dev, "MES_TAG_PROBE n=%u pasid=%d sent=%#llx first=%#llx last=%#llx fence=%ld posted=%d rc=%d\n",
++			 i, mes_tag_run.pasid, sample.sent, sample.first, sample.last,
++			 sample.fence_left, sample.submitted, r);
++		if (r || !sample.submitted || (sample.last != 1 && sample.last != sample.sent))
++			break;
++	}
++out:
++	mutex_unlock(&mes_tag_probe_mutex);
++	return 0;
++}
++
++static void mes_v12_0_probe_fini(struct amdgpu_device *adev)
++{
++	if (!mes_tag_probe || strcmp(pci_name(adev->pdev), "0000:03:00.0"))
++		return;
++	mutex_lock(&mes_tag_probe_mutex);
++	if (mes_tag_run.owner == adev) {
++		amdgpu_bo_free_kernel(&mes_tag_run.bo, &mes_tag_run.gpu, &mes_tag_run.cpu);
++		amdgpu_pasid_free(mes_tag_run.pasid);
++		mes_tag_run.owner = NULL;
++	}
++	mutex_unlock(&mes_tag_probe_mutex);
++}
++
+ static int mes_v12_0_sw_fini(struct amdgpu_ip_block *ip_block)
+ {
+ 	struct amdgpu_device *adev = ip_block->adev;
+@@ -1901,6 +2025,7 @@
+ 		mes_v12_0_free_ucode_buffers(adev, AMDGPU_MES_SCHED_PIPE);
+ 	}
+ 
++	mes_v12_0_probe_fini(adev);
+ 	amdgpu_mes_fini(adev);
+ 	return 0;
+ }
+@@ -2139,7 +2264,7 @@
+ static const struct amd_ip_funcs mes_v12_0_ip_funcs = {
+ 	.name = "mes_v12_0",
+ 	.early_init = mes_v12_0_early_init,
+-	.late_init = NULL,
++	.late_init = mes_v12_0_probe_late_init,
+ 	.sw_init = mes_v12_0_sw_init,
+ 	.sw_fini = mes_v12_0_sw_fini,
+ 	.hw_init = mes_v12_0_hw_init,

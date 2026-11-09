@@ -1,0 +1,818 @@
+/sys/kernel/debug/dri/0000:03:00.0/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/0000:13:00.0/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/0000:63:00.0/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/0000:73:00.0/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/0000:83:00.0/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/0000:93:00.0/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/0000:e3:00.0/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/0000:f3:00.0/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/1/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/128/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/129/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/130/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/131/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/132/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/133/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/134/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/135/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/2/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/3/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/4/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/5/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/6/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/7/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+/sys/kernel/debug/dri/8/amdgpu_firmware_info
+VCE feature version: 0, firmware version: 0x00000000
+UVD feature version: 0, firmware version: 0x00000000
+MC feature version: 0, firmware version: 0x00000000
+ME feature version: 29, firmware version: 0x00000c12
+PFP feature version: 29, firmware version: 0x00000c76
+CE feature version: 0, firmware version: 0x00000000
+RLC feature version: 1000, firmware version: 0x00be7e04
+RLC SRLC feature version: 0, firmware version: 0x00000000
+RLC SRLG feature version: 0, firmware version: 0x00000000
+RLC SRLS feature version: 0, firmware version: 0x00000000
+RLCP feature version: 0, firmware version: 0x00000000
+RLCV feature version: 0, firmware version: 0x00000000
+MEC feature version: 29, firmware version: 0x00000d7a
+IMU feature version: 0, firmware version: 0x0c302b00
+SOS feature version: 3805716, firmware version: 0x003a1214
+ASD feature version: 553648367, firmware version: 0x210000ef
+TA XGMI feature version: 0x00000000, firmware version: 0x00000000
+TA RAS feature version: 0x00000000, firmware version: 0x1b3a0001
+TA HDCP feature version: 0x00000000, firmware version: 0x17000046
+TA DTM feature version: 0x00000000, firmware version: 0x12000019
+TA RAP feature version: 0x00000000, firmware version: 0x00000000
+TA SECUREDISPLAY feature version: 0x00000000, firmware version: 0x00000000
+SMC feature version: 0, program: 0, firmware version: 0x00685000 (104.80.0)
+SDMA0 feature version: 1081708182, firmware version: 0x00798e96
+SDMA1 feature version: 1081708182, firmware version: 0x00798e96
+VCN feature version: 0, firmware version: 0x0910d001
+DMCU feature version: 0, firmware version: 0x00000000
+DMCUB feature version: 0, firmware version: 0x0a004b00
+TOC feature version: 0, firmware version: 0x00000000
+MES_KIQ feature version: 1, firmware version: 0x00000093
+MES feature version: 1, firmware version: 0x00000093
+VPE feature version: 0, firmware version: 0x00000000
+VBIOS version: 113-G2870300-100
+
+STDERR:
